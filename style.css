@@ -10,3 +10,10 @@
 .center {
     text-align: center;
 }
+
+.soul {
+    text-align: center;
+    background: linear-gradient(180deg, silver, gold);
+    color: black;
+    font-family: cinzel;
+}
