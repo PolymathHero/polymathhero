@@ -1,0 +1,18 @@
+.fieldset1 label {
+  display: block;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(90deg, gold, gold);
+  font-family: verdana;
+}
+
+fieldset {
+  padding: 1em;
+}
+
+form {
+  width: 60vw;
+  margin: 0 auto;
+}
