@@ -18,3 +18,12 @@
     padding: 50px;
     font-family: cursive;
 }
+
+.forme-picture {
+    width: 10vw;
+    height: auto;
+}
+
+.burlywood {
+    background-color: burlywood;
+}
