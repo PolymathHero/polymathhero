@@ -29,14 +29,13 @@
 }
 
 .gummytable {
-    border: 5px solid black;
-    margin: auto;
+    margin: auto auto auto auto;
+    border-collapse: collapse;
 }
 
 .gummytable th, .gummytable td {
-    border-right: 5px solid greenyellow;
-    margin: 0px;
-    padding: 20px;
+    border: 2px solid greenyellow;
+    width: 100px;
 }
 
 .gummypicture {
