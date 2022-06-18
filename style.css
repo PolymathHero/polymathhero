@@ -27,3 +27,18 @@
 .burlywood {
     background-color: burlywood;
 }
+
+.gummytable {
+    border: 5px solid black;
+    margin: auto;
+}
+
+.gummytable th, .gummytable td {
+    border-right: 5px solid greenyellow;
+    margin: 0px;
+    padding: 20px;
+}
+
+.gummypicture {
+    width: 30px;
+}
