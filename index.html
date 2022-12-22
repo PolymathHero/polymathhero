@@ -1,114 +1,24 @@
-<!doctype html>
-<html>
-<head>
-  <title>Saleh Bader Alees | From Zero to One Sale</title>
-  <style>
-    /* Add some basic styles to the page */
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-    }
-
-    .page-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Style the navigation menu */
-    .nav-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-    }
-
-    .nav-menu a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    .nav-menu a:hover {
-      color: #f5f5f5;
-    }
-
-    /* Style the course offer section */
-    #course-offer {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-
-    #course-offer h2 {
-      margin: 0;
-      font-size: 22px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    #course-offer p {
-      margin: 0;
-      font-size: 16px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    #course-offer ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #course-offers li {
-      margin: 10px 0;
-    }
-
-    #course-offer .payment-button {
-      background-color: #3a6f8c;
-      border: none;
-      border-radius: 4px;
-      color: #fff;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 12px 24px;
-      transition: all 0.2s ease-in-out;
-    }
-
-    #course-offer .payment-button:hover {
-      background-color: #306075;
-    }
-
-    /* Style the footer */
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    /* Stack the elements vertically on small screens */
-    @media (max-width: 600px) {
-      .page-container {
-        flex-direction: column;
-      }
-
-      .nav-menu {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
-</head>
-<body
+<div id="course-offer">
+  <h2>From Zero to One Sale</h2>
+  <p>Join my exclusive course and learn how to go from zero to your first electronic commerce sale, even if you live outside the United States.</p>
+  <ul>
+    <li>Learn the essential strategies and tactics for making your first sale</li>
+    <li>Get access to an exclusive Telegram group where you can grow and thrive with like-minded individuals</li>
+    <li>Receive personalized coaching and support from me, Saleh Bader Alees</li>
+  </ul>
+  <form action="https://buy.stripe.com/fZe5o11XpaQx1K8fYY" method="POST">
+    <script
+      src="https://checkout.stripe.com/checkout.js"
+      class="stripe-button"
+      data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+      data-amount="50000"
+      data-name="From Zero to One Sale"
+      data-description="Exclusive course with Saleh Bader Alees"
+      data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+      data-locale="auto"
+      data-zip-code="true"
+      data-currency="usd">
+    </script>
+  </form>
+  <p>After you complete your purchase, please DM me on Twitter (@salehbaderalees) with your email and I will add you to the exclusive Telegram group.</p>
+</div>
