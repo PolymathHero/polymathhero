@@ -36,6 +36,16 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.profile-picture-container {
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
+}
+
 button {
   font-size: 1rem;
   padding: 0.5rem 1rem;
