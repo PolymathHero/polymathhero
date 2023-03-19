@@ -38,26 +38,19 @@ h2 {
 
 .profile-picture-container {
   margin-bottom: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .profile-picture {
   border-radius: 50%;
   width: 200px;
   height: auto;
+  transition: transform 0.3s;
 }
 
-button {
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-  background-color: #000;
-  color: #fff;
+.profile-picture-container:hover .profile-picture {
+  transform: scale(1.1);
 }
