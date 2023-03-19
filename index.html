@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Saleh Aleesa - Personal Website</title>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Saleh Aleesa's Website</h1>
+    <header class="sticky-nav">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
-    <main>
-        <div class="container">
-            <div class="card">
-                <div class="circle"></div>
-                <h2>About Me</h2>
-                <p>Discover more about Saleh Aleesa and his professional background.</p>
-            </div>
-            <div class="card">
-                <div class="circle"></div>
-                <h2>My Work</h2>
-                <p>Explore my portfolio and learn about the projects I've been involved in.</p>
-            </div>
-            <div class="card">
-                <div class="circle"></div>
-                <h2>Contact Me</h2>
-                <p>Get in touch with me to discuss potential collaborations or just to say hi.</p>
-            </div>
+    <section class="banner">
+        <div class="banner-text">
+            <h1>Saleh Aleesa</h1>
+            <p>Welcome to my personal website</p>
         </div>
-    </main>
+        <div class="banner-video">
+            <video src="video.mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    <section class="content-cards">
+        <div class="card">
+            <h2>Card Title</h2>
+            <img src="image1.jpg" alt="Card image">
+            <p>Card description</p>
+        </div>
+        <div class="card">
+            <h2>Card Title</h2>
+            <img src="image2.jpg" alt="Card image">
+            <p>Card description</p>
+        </div>
+        <div class="card">
+            <h2>Card Title</h2>
+            <img src="image3.jpg" alt="Card image">
+            <p>Card description</p>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2023 Saleh Aleesa. All rights reserved.</p>
+        <p>Copyright &copy; 2023 Saleh Aleesa. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
