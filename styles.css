@@ -33,6 +33,7 @@ header h2 {
   width: 100%;
   max-width: 500px;
   margin: 20px auto;
+  display: block;
 }
 
 .hero h3 {
@@ -66,4 +67,27 @@ footer {
   text-align: center;
   background: #333333;
   color: #ffffff;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 10px;
+  }
+
+  .hero img {
+    max-width: 300px;
+  }
+
+  .cta {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
 }
