@@ -70,7 +70,7 @@ footer {
 }
 
 /* Media Queries for Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 896px) {
   header {
     padding: 10px;
   }
