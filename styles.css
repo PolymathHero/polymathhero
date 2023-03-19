@@ -4,57 +4,66 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6B73FF, #000DFF);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  text-align: center;
+  line-height: 1.6;
 }
 
 header {
-  margin-bottom: 2rem;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
 }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+header h1 {
+  margin-bottom: 10px;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+header h2 {
+  margin-top: 10px;
 }
 
-.profile-picture-container {
-  margin-bottom: 2rem;
+.hero {
+  padding: 20px;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.hero h3 {
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-top: 10px;
+}
+
+.cta {
+  padding: 20px;
+  text-align: center;
+}
+
+.cta a {
   display: inline-block;
-  border-radius: 50%;
-  cursor: pointer;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.profile-picture-container:focus,
-.profile-picture-container:active {
-  outline: none;
+.cta a:hover {
+  background: linear-gradient(to right, #2a5298, #1e3c72);
 }
 
-.profile-picture {
-  border-radius: 50%;
-  width: 200px;
-  height: auto;
-  transition: transform 0.3s;
-}
-
-.profile-picture-container:hover .profile-picture {
-  transform: scale(1.1);
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #333333;
+  color: #ffffff;
 }
