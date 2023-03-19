@@ -44,6 +44,11 @@ h2 {
   cursor: pointer;
 }
 
+.profile-picture-container:focus,
+.profile-picture-container:active {
+  outline: none;
+}
+
 .profile-picture {
   border-radius: 50%;
   width: 200px;
