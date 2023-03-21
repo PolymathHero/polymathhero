@@ -7,6 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background: url('https://source.unsplash.com/random/1920x1080') center center fixed;
+    background-size: cover;
 }
 
 header {
@@ -43,8 +45,8 @@ nav {
 .hero {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(10px);
-    padding: 100px 0;
     text-align: center;
+    padding: 100px 0;
 }
 
 .hero h1 {
@@ -53,47 +55,35 @@ nav {
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
 .cta {
-    display: inline-block;
     text-decoration: none;
     background: #333;
     color: #fff;
-    padding: 10px 30px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 18px;
 }
 
-#services {
-    padding: 100px 0;
-    text-align: center;
+section {
+    padding: 60px 0;
 }
 
-.service {
+section h2 {
+    font-size: 36px;
     margin-bottom: 20px;
 }
 
-#portfolio {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-    backdrop-filter: blur(10px);
-    padding: 100px 0;
+.service {
     text-align: center;
-}
-
-#contact {
-    padding: 100px 0;
-    text-align: center;
+    padding: 30px;
 }
 
 footer {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(10px);
-    padding: 20px;
     text-align: center;
-}
-
-footer p {
-    font-size: 14px;
+    padding: 20px;
 }
