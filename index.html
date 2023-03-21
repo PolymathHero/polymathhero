@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saleh Aleesa</title>
+    <title>Saleh Aleesa - Ebook Writer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Saleh Aleesa</h1>
+        <p>Professional Ebook Writer</p>
     </header>
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Saleh Aleesa</h1>
-            <p>Web Designer & Developer</p>
-        </div>
-    </section>
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am Saleh Aleesa, a skilled web designer and developer with a passion for creating beautiful and functional websites. My expertise lies in HTML, CSS, and JavaScript, and I have experience working with a variety of web development projects. I enjoy working with clients to bring their ideas to life and create unique online experiences that are both visually stunning and user-friendly.</p>
-    </section>
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Responsive Design</li>
-            <li>UI/UX</li>
-        </ul>
-    </section>
-    <section class="portfolio">
-        <h2>Portfolio</h2>
-        <p>Coming soon!</p>
-    </section>
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>If you're interested in working with me, feel free to reach out via email at example@email.com or connect with me on Twitter: <a href="https://twitter.com/your_handle" target="_blank">@your_handle</a>.</p>
-    </section>
-    <footer>
-        &copy; 2023 Saleh Aleesa. All rights reserved.
+    <main class="main">
+        <section class="intro">
+            <h2>Transform Your Ideas Into Engaging Ebooks</h2>
+            <p>As an experienced ebook writer, I help individuals and businesses turn their ideas into professionally written and engaging ebooks. Let's bring your story to life!</p>
+            <a href="#services" class="cta-btn">Learn More</a>
+        </section>
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Ebook Writing</h3>
+                    <p>Whether you have a detailed outline or just a basic concept, I'll craft a compelling, well-researched, and professionally written ebook tailored to your needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Ebook Editing</h3>
+                    <p>Already have a manuscript? I can polish your work, ensuring it's free of errors, flows smoothly, and maintains a consistent tone and style.</p>
+                </div>
+                <div class="card">
+                    <h3>Content Planning</h3>
+                    <p>Struggling to organize your thoughts? I'll help you create a detailed content plan and outline, ensuring your ebook is structured, focused, and engaging.</p>
+                </div>
+            </div>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>Ready to bring your ebook to life? Get in touch to discuss your project and receive a free, no-obligation quote.</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2023 Saleh Aleesa. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
