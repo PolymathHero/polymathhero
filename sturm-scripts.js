@@ -1,4 +1,3 @@
-```javascript
 // Simple animation to fade in the title
 document.addEventListener('DOMContentLoaded', function() {
   const title = document.getElementById('animated-title');
