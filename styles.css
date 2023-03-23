@@ -17,34 +17,22 @@ header h1 {
   margin: 0;
 }
 
-.product-info {
+.quote-section,
+.share-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
 }
 
-.product-info img {
-  width: 300px;
-  height: auto;
+.quote-text,
+.quote-author {
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.product-info h2 {
-  margin-bottom: 1rem;
-}
-
-.product-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 1rem;
-}
-
-.product-info li {
-  margin-bottom: 0.5rem;
-}
-
-.cta-button {
+.quote-button,
+.twitter-share {
   display: inline-block;
   background-color: #4CAF50;
   color: white;
@@ -52,8 +40,10 @@ header h1 {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
+  margin-bottom: 1rem;
 }
 
-.cta-button:hover {
+.quote-button:hover,
+.twitter-share:hover {
   background-color: #43A047;
 }
