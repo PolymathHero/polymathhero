@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const image = document.querySelector(".product-image");
   const buttons = document.querySelectorAll("button");
 
-  title.animate([{opacity: 0}, {opacity: document.addEventListener("DOMContentLoaded", () => {
-  const title = document.querySelector(".product-title");
-  const image = document.querySelector(".product-image");
-  const buttons = document.querySelectorAll("button");
-
   title.animate([{opacity: 0}, {opacity: 1}], {duration: 1000, easing: 'ease-out'});
   image.animate([{transform: 'scale(0)'}, {transform: 'scale(1)'}], {duration: 1000, easing: 'ease-out'});
 
