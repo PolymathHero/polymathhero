@@ -55,4 +55,28 @@
         left: 0;
         top: 0.5rem;
         width: 0.8rem;
-       
+        height: 0.8rem;
+        background-color: #47a8e5;
+        border-radius: 50%;
+    }
+
+    .cta {
+        text-align: center;
+    }
+
+    .cta a {
+        display: inline-block;
+        background-color: #47a8e5;
+        color: #ffffff;
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta a:hover {
+        background-color: #2b8bc6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+</style>
