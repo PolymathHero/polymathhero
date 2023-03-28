@@ -1,67 +1,53 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: "Poppins", sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     color: #333;
-}
-
-.container {
-    max-width: 800px;
+    max-width: 960px;
     margin: 0 auto;
+    line-height: 1.5;
     padding: 2rem;
 }
 
-.header {
+header {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.header h1 {
+header h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.benefits, .price-details, .guarantee, .cta {
+header h2 {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+section {
     margin-bottom: 2rem;
 }
 
-.benefits h2, .price-details h2, .guarantee h2 {
-font-size: 1.75rem;
-margin-bottom: 1rem;
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 ul {
-list-style-type: none;
-}
-
-li {
-margin-bottom: 0.5rem;
-}
-
-.cta {
-text-align: center;
-}
-
-.cta p {
-margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cta-button {
-display: inline-block;
-text-decoration: none;
-color: #fff;
-background-image: linear-gradient(45deg, #6ab1d7, #33d9b2);
-padding: 0.75rem 1.5rem;
-border-radius: 5px;
-font-size: 1.25rem;
-transition: background-image 0.3s ease-in-out;
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-background-image: linear-gradient(45deg, #33d9b2, #6ab1d7);
+    background-color: #3f8f3f;
 }
