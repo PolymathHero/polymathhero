@@ -51,3 +51,10 @@ ul {
 .cta-button:hover {
     background-color: #3f8f3f;
 }
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
