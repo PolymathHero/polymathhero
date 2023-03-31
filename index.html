@@ -168,6 +168,29 @@
           padding: 0px 0;
   text-align: center;
     }
+    
+    .animated-heading {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  background-image: linear-gradient(135deg, #007BFF, #2CDA9D);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  animation: gradient-animation1 6s linear infinite;
+}
+
+@keyframes gradient-animation1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
   </style>
   
@@ -521,7 +544,7 @@
   
   <section class="section guarantee-section">
     <div class="container">
-      <h2>Investment and GUARANTEE</h2>
+      <h2 class="animated-heading">Investment and GUARANTEE</h2>
       <p>Your investment for this 6-week coaching program is $5,000. This includes:</p>
       <ul>
         <li>$2,000 for our coaching services</li>
