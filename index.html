@@ -489,7 +489,7 @@
   </footer>
   
   
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
     const goldenText = document.querySelector('.golden-text');
     let angle = 0;
@@ -502,6 +502,7 @@
       requestAnimationFrame(rotateText);
     }
 
+    // Call the rotateText function after the DOM is fully loaded
     rotateText();
   });
 </script>
