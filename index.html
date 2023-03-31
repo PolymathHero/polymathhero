@@ -143,27 +143,25 @@
 }
 
 
-.button-container {
-text-align: center;
-}
-
-.button-85 {
+.button-glow {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
+  color: #fff;
+  background-color: #111;
   border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.button-85:before {
-  content: "";
+.button-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     45deg,
     #ff0000,
@@ -176,42 +174,34 @@ text-align: center;
     #ff00c8,
     #ff0000
   );
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 1000%;
   z-index: -1;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  animation: glowing-button-glow 2s linear infinite;
 }
 
-@keyframes glowing-button-85 {
+.button-glow:hover::before {
+  opacity: 1;
+}
+
+@keyframes glowing-button-glow {
   0% {
-    background-position: 0 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
   }
   50% {
-    background-position: 400% 0;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
   }
   100% {
-    background-position: 0 0;
+    transform: translate(50%, 50%);
+    opacity: 0;
   }
-}
-
-.button-85:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #222;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
 }
     
 
@@ -236,9 +226,7 @@ text-align: center;
   </section>
   
 
-      <div class="button-container">
-  <button class="button-85" role="button">GET YOUR FIRST SALE IN DROPSHIPPING NOW, GUARANTEED</button>
-</div>
+<button class="button-glow" role="button">GET YOUR FIRST DROPSHIPPING SALE NOW, GUARANTEED</button>
 
   
         <section class="section">
