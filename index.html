@@ -70,6 +70,30 @@
     height: 100%;
 }
 
+    .guarantee-text {
+  font-size: 1.5em;
+  background-image: linear-gradient(to left, red, orange);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pulse 2s infinite;
+}
+    
+    @keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000;
+  }
+}
+In this code, I added the "guarantee" class to the section and created a new "guarantee-text" class for the text. I applied a gradient background color to the text and made the text color transparent to show the gradient. Additionally, I added a pulsing text-shadow animation to draw attention to the guarantee text.
+
+Include this CSS code in your existing CSS file or within a <style> tag in the <head> of your HTML document. This should create a gradient, pulsing guarantee text that grabs the prospect's attention.
+
+
+
+
+
 
   </style>
 </head>
@@ -81,7 +105,7 @@
   
     <section class="section">
     <div class="container">
-      <p>GUARANTEE: If you don't make your FIRST SALE within the 6-week time frame, I will refund my FULL fee of $2,000.</p>
+      <p class="guarantee-text">GUARANTEE: If you don't make your FIRST SALE within the 6-week time frame, I will refund my FULL fee of $2,000.</p>
     </div>
   </section>
   
