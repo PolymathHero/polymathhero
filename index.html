@@ -79,41 +79,6 @@
     }
   }
 
-    
-    .guarantee-section {
-  background-color: #f5f5f5;
-  padding: 30px 0;
-}
-
-.guarantee-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #d9534f;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 2px solid #d9534f;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    text-shadow: 0 0 10px #d9534f, 0 0 20px #d9534f, 0 0 30px #d9534f, 0 0 40px #d9534f;
-  }
-  100% {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-}
-
-@media (max-width: 767px) {
-  .guarantee-text {
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-}
-
 .golden-text {
   color: #FFD700;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(255, 215, 0, 0.6);
@@ -179,28 +144,7 @@
   text-align: center;
     }
     
-    .animated-heading {
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
-  background-image: linear-gradient(135deg, #007BFF, #2CDA9D);
-  -webkit-background-clip: text;
-  color: transparent;
-  text-transform: uppercase;
-  animation: gradient-animation 6s linear infinite;
-}
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
     
 .salesimage {
   border: 4px solid #007BFF;
@@ -299,6 +243,79 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.simple-heading {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #007BFF;
+  text-transform: uppercase;
+}
+
+.pricing-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pricing-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #007BFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 30%;
+  min-width: 200px;
+}
+
+.pricing-item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.pricing-item p {
+  font-size: 1.2rem;
+}
+
+.guarantee-section {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.guarantee-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d9534f;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #d9534f;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: guarantee-pulse 2s infinite;
+  margin-top: 20px;
+}
+
+@keyframes guarantee-pulse {
+  0% {
+    text-shadow: 0 0 10px #d9534f, 0 0 20px #d9534f, 0 0 30px #d9534f, 0 0 40px #d9534f;
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  }
+}
+
+@media (max-width: 767px) {
+  .guarantee-text {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .pricing-item {
+    width: 100%;
+  }
+}
 
 
   </style>
@@ -652,18 +669,27 @@
     </div>
   </div>
   
-  <section class="section guarantee-section">
-    <div class="container">
-      <h2 class="animated-heading">Investment and Guarantee</h2>
-      <p>Your investment for this 6-week coaching program is $5,000. This includes:</p>
-      <ul>
-        <li>$2,000 for our coaching services</li>
-        <li>$2,000 for marketing expenses</li>
-        <li>$1,000 for additional tools and resources</li>
-      </ul>
-      <p class="guarantee-text">GUARANTEE: If you don't make your FIRST SALE within the 6-WEEK time frame, WE will refund YOU our FULL fee of $2,000.</p>
+<section class="section guarantee-section">
+  <div class="container">
+    <h2 class="simple-heading">Investment and Guarantee</h2>
+    <div class="pricing-table">
+      <div class="pricing-item">
+        <h3>Coaching Services</h3>
+        <p>$2,000</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Marketing Expenses</h3>
+        <p>$2,000</p>
+      </div>
+      <div class="pricing-item">
+        <h3>Additional Tools and Resources</h3>
+        <p>$1,000</p>
+      </div>
     </div>
-  </section>
+    <p class="guarantee-text">GUARANTEE: If you don't make your FIRST SALE within the 6-WEEK time frame, WE will refund YOU our FULL fee of $2,000.</p>
+  </div>
+</section>
+
 
   <div ontouchstart="">
     <div class="button">
