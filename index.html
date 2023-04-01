@@ -351,6 +351,75 @@
   vertical-align: middle;
   margin-left: 8px;
 }
+    
+    .wall-section {
+  perspective: 1000px;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.wall-container {
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) translateY(-50%);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wall-title-container {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transform: rotateX(-60deg) translateY(0);
+}
+
+.wall-title-container h2 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.wall-title-container .wall-main-title {
+  font-size: 36px;
+  color: #333333;
+}
+
+.wall-title-container .wall-highlight {
+  color: #f0ad4e;
+}
+
+.wall-title-container .wall-emoji {
+  font-size: 32px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.wall-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: rotateX(-60deg) translateY(0);
+}
+
+.wall-benefit {
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 
 
@@ -418,13 +487,13 @@
 </div>
   
   
- <section class="section">
-  <div class="container">
-    <div class="title-container">
-      <h2><span class="main-title">WHAT YOU WILL</span> <span class="highlight">GET TO DO</span><br>INSIDE OUR PROGRAM<span class="emoji">&#128071;</span></h2>
+<section class="wall-section">
+  <div class="wall-container">
+    <div class="wall-title-container">
+      <h2><span class="wall-main-title">WHAT YOU WILL</span> <span class="wall-highlight">GET TO DO</span><br>INSIDE OUR PROGRAM<span class="wall-emoji">&#128071;</span></h2>
     </div>
-    <div class="benefits">
-      <div class="benefit">
+    <div class="wall-benefits">
+      <div class="wall-benefit">
         <h3>Create Your First LLC</h3>
         <p>Set up a legal business structure for your e-commerce venture with our guidance.</p>
       </div>
@@ -437,6 +506,7 @@
     <a>GET YOUR <span class="golden-text">GUARANTEED</span> FIRST SALE IN DROPSHIPPING RIGHT NOW</a>
   </div>
 </div>
+
 
   
   
