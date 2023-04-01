@@ -247,7 +247,21 @@
     }
   }
     
-    .cta-button {
+.animated-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cta-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.animated-cta-button {
   display: inline-block;
   background: linear-gradient(135deg, #007BFF, #2CDA9D);
   color: white;
@@ -255,12 +269,27 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
 }
 
-.cta-button:active {
-  transform: scale(0.05);
+.animated-cta-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  z-index: -1;
 }
+
+.animated-cta-button:active:before {
+  transform: translateY(0);
+}
+
 
 
   </style>
@@ -284,11 +313,12 @@
   </section>
   
 
-<section class="section cta">
-  <div class="cta-container">
-    <a href="mailto:saleh@salehaleesa.com" class="cta-button">GET YOUR FIRST SALE IN DROPSHIPPING NOW, GUARANTEED</a>
+<section class="section animated-cta">
+  <div class="cta-wrapper">
+    <a href="mailto:saleh@salehaleesa.com" class="animated-cta-button">GET YOUR FIRST SALE IN DROPSHIPPING NOW, GUARANTEED</a>
   </div>
 </section>
+
   
         <section class="section">
     <div class="audiogram-container">
