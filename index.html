@@ -216,6 +216,43 @@
     border-color: #007BFF;
   }
 }
+    
+    .cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #007BFF, #2CDA9D);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  animation: cta-pulse 2s infinite;
+  -webkit-animation: cta-pulse 2s infinite;
+}
+
+@keyframes cta-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cta-pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
 
   </style>
   
@@ -238,11 +275,12 @@
   </section>
   
 
-    <section class="section cta">
-    <div class="container">
-      <a href="mailto:saleh@salehaleesa.com">GET YOUR FIRST SALE IN DROPSHIPPING NOW, GUARANTEED</a>
-    </div>
-  </section>
+<section class="section cta">
+  <div class="container">
+    <a href="mailto:saleh@salehaleesa.com" class="cta-button">GET YOUR FIRST SALE IN DROPSHIPPING NOW, GUARANTEED</a>
+  </div>
+</section>
+
 
   
         <section class="section">
