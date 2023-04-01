@@ -259,6 +259,27 @@
     .cta-container {
       position: relative;
     }
+    
+    
+      .main-headline {
+    background-image: linear-gradient(135deg, #FFFFFF, #B0E0E6);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: headline-animation 6s linear infinite;
+  }
+
+  @keyframes headline-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 
   </style>
@@ -267,7 +288,7 @@
 </head>
 <body>
   <header>
-    <h1>GET YOUR <span class="golden-text">GUARANTEED</span> FIRST SALE IN DROPSHIPPING RIGHT NOW</h1>
+    <h1 class="main-headline">GET YOUR <span class="golden-text">GUARANTEED</span> FIRST SALE IN DROPSHIPPING RIGHT NOW</h1>
       <div class="header-details">
     <span>YOUR TIME: 6 WEEKS</span>
     <span>YOUR TOTAL INVESTMENT: $5000 ($2000 FOR OUR COACHING SERVICES)</span>
