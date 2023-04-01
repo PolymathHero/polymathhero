@@ -261,23 +261,18 @@
     }
     
     
-      .main-headline {
-    background-image: linear-gradient(135deg, #FFFFFF, #B0E0E6);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    animation: headline-animation 6s linear infinite;
+  .main-headline {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    animation: headline-glow 2s infinite alternate;
   }
 
-  @keyframes headline-animation {
+  @keyframes headline-glow {
     0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
     }
     100% {
-      background-position: 0% 50%;
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
     }
   }
 
