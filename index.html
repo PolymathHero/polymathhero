@@ -614,26 +614,32 @@
     <p>&copy; 2023 GETYOURFIRSTSALEDROPSHIPPING. All rights reserved.</p>
   </footer>
   
-  
-  <script>
-  const button = document.querySelector('.cta-button');
+<script>
+  const buttons = document.querySelectorAll('.cta-button');
 
-  let position = 0;
-  let direction = 1;
+  function moveButton(button) {
+    let position = 0;
+    let direction = 1;
 
-  function moveButton() {
-    position += direction;
-    button.style.left = position + 'px';
+    function animate() {
+      position += direction;
+      button.style.left = position + 'px';
 
-    if (position >= 20 || position <= -20) {
-      direction = -direction;
+      if (position >= 20 || position <= -20) {
+        direction = -direction;
+      }
+
+      requestAnimationFrame(animate);
     }
 
-    requestAnimationFrame(moveButton);
+    animate();
   }
 
-  moveButton();
+  buttons.forEach((button) => {
+    moveButton(button);
+  });
 </script>
+
 
 </body>
 </html>
