@@ -230,31 +230,6 @@
   }
 }
     
-.cta-button {
-  display: inline-block;
-  background: linear-gradient(135deg, #007BFF, #2CDA9D);
-  color: white;
-  padding: 10px 30px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  will-change: transform, box-shadow;
-  animation: cta-bg-animation 5s linear infinite;
-}
-    
-    @keyframes cta-bg-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
     
     
   .main-headline {
@@ -271,6 +246,21 @@
       text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
     }
   }
+    
+    .cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #007BFF, #2CDA9D);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:active {
+  transform: scale(0.95);
+}
 
 
   </style>
