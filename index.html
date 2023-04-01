@@ -218,6 +218,18 @@
       border-radius: 5px;
       text-decoration: none;
     }
+    
+    .cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #007BFF, #2CDA9D);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
 
 
 
@@ -593,6 +605,25 @@
   </footer>
   
   
-  
+  <script>
+  const button = document.querySelector('.cta-button');
+
+  let position = 0;
+  let direction = 1;
+
+  function moveButton() {
+    position += direction;
+    button.style.left = position + 'px';
+
+    if (position >= 20 || position <= -20) {
+      direction = -direction;
+    }
+
+    requestAnimationFrame(moveButton);
+  }
+
+  moveButton();
+</script>
+
 </body>
 </html>
