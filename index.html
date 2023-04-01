@@ -251,47 +251,6 @@
   padding: 30px 0;
 }
 
-.investment-title {
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  color: #007bff;
-  margin-bottom: 20px;
-}
-
-.pricing-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.pricing-item {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 5px;
-  border: 2px solid #007bff;
-  text-align: center;
-}
-
-.pricing-item i {
-  font-size: 2em;
-  color: #007bff;
-  margin-bottom: 10px;
-}
-
-.investment-details,
-.program-conditions {
-  font-size: 1.1em;
-  text-align: center;
-  margin-bottom: 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .guarantee-text {
   font-size: 1.5rem;
   font-weight: bold;
@@ -315,18 +274,49 @@
 }
 
 @media (max-width: 767px) {
-  .investment-title {
-    font-size: 1.8em;
-  }
-
-  .pricing-item i {
-    font-size: 1.5em;
-  }
-
   .guarantee-text {
     font-size: 1.2rem;
     padding: 10px;
   }
+}
+    
+    .investment-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.investment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.investment-table th,
+.investment-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.investment-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.investment-table tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.program-conditions {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.investment-details {
+  display: none;
 }
 
 
@@ -685,31 +675,33 @@
 
 <section class="guarantee-section">
   <h2 class="investment-title">Investment Breakdown and Guarantee</h2>
-  <div class="pricing-table">
-    <div class="pricing-item">
-      <i class="fas fa-graduation-cap"></i>
-      <h4>Coaching Services</h4>
-      <p>$2,000</p>
-    </div>
-    <div class="pricing-item">
-      <i class="fas fa-video"></i>
-      <h4>Content Creation</h4>
-      <p>$1,300</p>
-    </div>
-    <div class="pricing-item">
-      <i class="fas fa-ad"></i>
-      <h4>Advertisement Placements</h4>
-      <p>$700</p>
-    </div>
-    <div class="pricing-item">
-      <i class="fas fa-tools"></i>
-      <h4>Tools &amp; Resources</h4>
-      <p>$1,000</p>
-    </div>
-  </div>
-  <p class="investment-details">
-    Expenses breakdown: $1300 for content creation from Fiverr, Billo and other independent content creators; $700 for advertisement placements; $2 for two months Shopify subscription; $80 for two months subscription of a reviews app for your store; $40 for two months OpenPhone subscription; $12 for one-year domain rental; $24 for two months of one Google Workspace user; and the remaining amount for Doola or Stripe Atlas to form a US company and any other expenses needed.
-  </p>
+  <table class="investment-table">
+    <tr>
+      <th>Item</th>
+      <th>Cost</th>
+      <th>Details</th>
+    </tr>
+    <tr>
+      <td><i class="fas fa-graduation-cap"></i> Coaching Services</td>
+      <td>$2,000</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-video"></i> Content Creation</td>
+      <td>$1,300</td>
+      <td>From Fiverr, Billo and other independent content creators</td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-ad"></i> Advertisement Placements</td>
+      <td>$700</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><i class="fas fa-tools"></i> Tools & Resources</td>
+      <td>$1,000</td>
+      <td>Shopify, reviews app, OpenPhone, domain, Google Workspace, Doola/Stripe Atlas</td>
+    </tr>
+  </table>
   <p class="program-conditions">
     Note: Once you make your first sale, you will be required to leave the program immediately.
   </p>
@@ -717,6 +709,7 @@
     GUARANTEE: If you don't make your FIRST SALE within the 6-WEEK time frame, WE will refund YOU our FULL fee of $2,000.
   </p>
 </section>
+
 
 
 
