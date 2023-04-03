@@ -157,6 +157,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: salesimage-border 5s linear infinite;
+  width: 90%;
+  max-width: 100%;
 }
 
 @keyframes salesimage-border {
@@ -170,6 +172,13 @@
     border-color: #007BFF;
   }
 }
+    
+    @media (min-width: 768px) {
+  .salesimage {
+    width: 50%; /* Adjust the width for larger screens */
+  }
+}
+
     
     
 .button{
