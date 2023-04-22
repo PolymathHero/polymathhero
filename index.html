@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Unlock the Secrets to a Leaner, Healthier You!</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const emailInput = document.getElementById("email-input");
+    emailInput.addEventListener("focus", function(event) {
+      event.preventDefault();
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 0);
+    });
+  });
+</script>
+
 </head>
 <body>
 
