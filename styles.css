@@ -14,7 +14,6 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
-
 .container {
     max-width: 600px;
     margin: 100px auto;
@@ -38,13 +37,15 @@ input[type="submit"] {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 16px 16px; /* Increase the padding value */
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 14px; /* Decrease the font size */
     width: 100%;
+    white-space: normal; /* Add this to wrap the text inside the button */
+    line-height: 1.2; /* Add this to adjust the line height */
 }
 
 @media (min-width: 768px) {
