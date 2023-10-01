@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 html, body {
@@ -9,6 +11,10 @@ html, body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
     height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -16,7 +22,6 @@ html, body {
 
 .container {
     max-width: 600px;
-    margin: 100px auto;
     text-align: center;
     background-color: #ffffff;
     padding: 40px;
@@ -50,15 +55,18 @@ input[type="submit"], .cta-button {
 
 /* Styles for the new Calendly section */
 .calendly-section {
+    max-width: 600px;
+    text-align: center;
     background-color: #ffffff;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
 .calendly-section h2 {
-    color: #4CAF50; /* Green color for the heading */
+    color: #4CAF50;
     font-size: 24px;
+    text-align: center; /* Center the title */
 }
 
 .calendly-section p {
