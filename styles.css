@@ -7,7 +7,7 @@ body {
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0 auto;
     text-align: center;
     background-color: #ffffff;
     padding: 40px;
@@ -39,25 +39,27 @@ input[type="submit"], .cta-button {
     text-align: center;
 }
 
-.calendly-section {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Styles for Section 1: Email Subscriber Section */
+.subscriber-section {
+    background-color: #f0f0f0;
 }
 
-.calendly-section h2 {
+.subscriber-section h1 {
+    color: #333;
+}
+
+/* Styles for Section 2: Schedule a 30-Minute Talk Section */
+.calendly-section {
+    background-color: #ffffff;
+}
+
+.calendly-section h1 {
     color: #4CAF50;
-    font-size: 24px;
-    text-align: center;
 }
 
 .calendly-section p {
     font-size: 16px;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .calendly-section iframe {
