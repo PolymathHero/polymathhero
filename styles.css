@@ -1,28 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-
-html, body {
-    height: 100%;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    min-height: 100%; /* Use min-height instead of height */
-    -webkit-overflow-scrolling: touch;
-}
-
-.container {
+/* Styles for the new Calendly section */
+.calendly-section {
     max-width: 600px;
-    text-align: center;
+    text-align: center; /* Center the content horizontally */
     background-color: #ffffff;
     padding: 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    margin: 20px auto; /* Center the entire section horizontally */
+}
+
+.calendly-section h2 {
+    color: #4CAF50;
+    font-size: 24px;
+}
+
+.calendly-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text horizontally */
 }
