@@ -1,21 +1,67 @@
-/* Styles for the new Calendly section */
-.calendly-section {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
     max-width: 600px;
-    text-align: center; /* Center the content horizontally */
+    margin: 50px auto;
+    text-align: center;
     background-color: #ffffff;
     padding: 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    margin: 20px auto; /* Center the entire section horizontally */
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"], .cta-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
+}
+
+.calendly-section {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .calendly-section h2 {
     color: #4CAF50;
     font-size: 24px;
+    text-align: center;
 }
 
 .calendly-section p {
     font-size: 16px;
     margin-bottom: 20px;
-    text-align: center; /* Center the text horizontally */
+    text-align: center;
+}
+
+.calendly-section iframe {
+    border: none;
+    width: 100%;
+    height: 600px;
 }
