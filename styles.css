@@ -10,7 +10,7 @@ header {
     font-family: 'HKGrotesk-Bold', sans-serif;
     font-weight: bold;
     font-size: 36px; /* Adjust the font size as needed */
-    letter-spacing: 40px; /* Adjust the value to increase or decrease letter spacing */
+    letter-spacing: 4px; /* Adjust the value to increase or decrease letter spacing */
 
 }
 
