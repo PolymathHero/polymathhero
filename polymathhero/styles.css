@@ -1,0 +1,66 @@
+/* CSS to style the header */
+
+@font-face {
+    font-family: 'HK Grotesk Bold';
+    src: url('fonts/HKGrotesk-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Regular';
+    src: url('fonts/HKGrotesk-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HK Grotesk Medium';
+    src: url('fonts/HKGrotesk-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS to style the header */
+header {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#header-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#brand-title {
+    position: absolute;
+    top: 0px; /* Adjust the top spacing as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #fff; /* Set your desired text color */
+    font-family: 'HK Grotesk Medium', sans-serif;
+    font-size: 36px; /* Adjust the font size as needed */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    letter-spacing: 1px; /* Adjust the value to increase or decrease letter spacing */
+}
