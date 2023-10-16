@@ -7,7 +7,14 @@ header {
 }
 
 #brand-title {
-    font-family: 'HK Grotesk', sans-serif;
+    font-family: 'HKGrotesk-Bold', sans-serif;
     font-weight: bold;
     font-size: 36px; /* Adjust the font size as needed */
+}
+
+@font-face {
+    font-family: 'HKGrotesk-Bold';
+    src: url('fonts/HKGrotesk-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
 }
