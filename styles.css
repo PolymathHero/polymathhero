@@ -1,0 +1,13 @@
+/* CSS to style the header */
+header {
+    background-color: #333; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    text-align: center;
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+#brand-title {
+    font-family: 'HK Grotesk', sans-serif;
+    font-weight: bold;
+    font-size: 36px; /* Adjust the font size as needed */
+}
