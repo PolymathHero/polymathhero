@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Product of the Day</title>
+    <link rel="stylesheet" href="shop-styles.css">
 </head>
 <body>
-    <h1>Welcome to Your Shop</h1>
+    <h1>Product of the Day</h1>
 
-    <div class="products">
-        <div class="product">
-            <img src="product1.jpg" alt="Product 1">
-            <h2>Product 1</h2>
-            <p>Description of Product 1.</p>
-            <p>Price: $10</p>
-            <button class="add-to-cart">Add to Cart</button>
+    <div class="product">
+        <h2>Product of the Day</h2>
+        <p>Description of the Product of the Day.</p>
+        <div class="product-images">
+            <img src="product-of-the-day-image.jpg" alt="Product of the Day Image">
         </div>
-        <!-- Add more product listings here -->
+        <a class="checkout-button" href="YOUR_STRIPE_CHECKOUT_LINK">Buy Now</a>
     </div>
 
-    <div class="cart">
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p>Total: <span id="cart-total">$0.00</span></p>
+    <h2>Sneak Peek for Tomorrow</h2>
+    <div class="sneak-peek">
+        <h3>Product Name</h3>
+        <img src="sneak-peek-image.jpg" alt="Sneak Peek Image">
+        <p>Get ready for tomorrow's exciting new product!</p>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
