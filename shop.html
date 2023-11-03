@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product of the Day</title>
+    <title>Short-Sleeved Cotton T-Shirt</title>
     <link rel="stylesheet" href="shop-styles.css">
 </head>
 <body>
-    <h1>Product of the Day</h1>
+    <h1><a href="index.html">POLYMATH HERO</a></h1>
 
     <div class="product">
-        <h2>Product of the Day</h2>
-        <p>Description of the Product of the Day.</p>
+        <h2>Short-Sleeved Cotton T-Shirt</h2>
+        <p class="price">$51.00</p> <!-- Add the price here -->
+        <p>100% Cotton</p>
         <div class="product-images">
-            <img src="product-of-the-day-image.jpg" alt="Product of the Day Image">
+            <img src="1.webp" alt="Product of the Day Image1">
+            <div class="size-guide">
+                <p class="size-chart"><a id="sizelink" href="size-guide.html" target="_blank">Size Guide</a> (select size at checkout)</p>
+            </div>
+            <stripe-buy-button class="checkout-button2"
+    buy-button-id="buy_btn_1O8BlmBVkkJYdwgMK5CYEetR"
+    publishable-key="pk_live_51M7jlYBVkkJYdwgMrpoMwGHP0Uy8ViJm9ugfMGctPb1B7ypDASB6dvrTTAJwJ2Pmg9apOkLXF5CZZcd2QGNo281N00HuddHl6G"
+  >
+  </stripe-buy-button>
+            <img src="3.webp" alt="Product of the Day Image3">
+            <img src="4.webp" alt="Product of the Day Image4">
+            <img src="5.webp" alt="Product of the Day Image5">
         </div>
-        <a class="checkout-button" href="YOUR_STRIPE_CHECKOUT_LINK">Buy Now</a>
+        <stripe-buy-button class="checkout-button2"
+    buy-button-id="buy_btn_1O8BlmBVkkJYdwgMK5CYEetR"
+    publishable-key="pk_live_51M7jlYBVkkJYdwgMrpoMwGHP0Uy8ViJm9ugfMGctPb1B7ypDASB6dvrTTAJwJ2Pmg9apOkLXF5CZZcd2QGNo281N00HuddHl6G"
+  >
+  </stripe-buy-button>
     </div>
 
-    <h2>Sneak Peek for Tomorrow</h2>
-    <div class="sneak-peek">
-        <h3>Product Name</h3>
-        <img src="sneak-peek-image.jpg" alt="Sneak Peek Image">
-        <p>Get ready for tomorrow's exciting new product!</p>
-    </div>
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+  </script>
 </body>
 </html>
