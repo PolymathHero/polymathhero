@@ -1,5 +1,16 @@
 /* shop-styles.css */
 
+@font-face {
+    font-family: 'HKGrotesk-SemiBold';
+    src: url('fonts/HKGrotesk-SemiBold.otf') format('opentype');
+    /* You can add other font formats (e.g., woff, woff2, ttf) for better browser compatibility */
+}
+
+@font-face {
+    font-family: 'HKGrotesk-Medium';
+    src: url('fonts/HKGrotesk-Medium.otf') format('opentype');
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
@@ -7,24 +18,66 @@ body {
     padding: 0;
 }
 
-h1 {
+footer {
+    border-top: 1px solid #ececec;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline;
+    margin: 0 20px;
+    font-size: 0.875rem;
+}
+
+footer a {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Add styling for the brand name section */
+.brand-name {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin: 30px;
+    font-family: 'HKGrotesk-SemiBold', sans-serif;
+    letter-spacing: 1px;
+}
+
+#herobrandname {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
-    padding: 10px;
+    padding: 23px;
     margin: 0;
     position: -webkit-sticky;
     top: 0;
     border-bottom: 1px solid #ececec;
+    font-family: 'HKGrotesk-SemiBold', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px; /* Adjust the value as needed */
+}
+
+#brandnameanchor {
+    color: black;
 }
 
 .product {
     max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top:1%;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    text-align: left;
+    margin-top: 0%;
 }
 
 .product h4 {
@@ -40,7 +93,12 @@ h1 {
 .product-images img {
     max-width: 100%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    border: 1px solid #ececec;
 }
 
 .checkout-button {
@@ -52,10 +110,14 @@ h1 {
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 10px;
+    border: 1px solid white;
+    text-align: center;
 }
 
 .checkout-button:hover {
-    background-color: #909090;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 #hero {
@@ -75,3 +137,7 @@ a, a:visited {
     text-decoration:underline;
 }
 
+.men-pant-size-image img {
+    max-width: 100%;
+    max-height: auto;
+}
