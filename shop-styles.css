@@ -52,18 +52,35 @@ footer a {
     letter-spacing: 1px;
 }
 
+header {
+    position: -webkit-sticky;
+    top: 0;
+}
+
 #herobrandname {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
     padding: 23px;
     margin: 0;
-    position: -webkit-sticky;
-    top: 0;
     border-bottom: 1px solid #ececec;
     font-family: 'HKGrotesk-SemiBold', sans-serif;
     font-size: 32px;
     letter-spacing: 1px; /* Adjust the value as needed */
+}
+
+#menu-button {
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 23px;
+    margin: 0;
+    position: absolute;
+    border-bottom: 1px solid #ececec;
+    font-family: 'HKGrotesk-SemiBold', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px; /* Adjust the value as needed */
+    z-index: 0;
 }
 
 #brandnameanchor {
@@ -110,7 +127,7 @@ footer a {
     border-radius: 50px;
     margin-top: 20px;
     margin-bottom: 10px;
-    border: 1px solid white;
+    border: 1px solid black;
     text-align: center;
 }
 
