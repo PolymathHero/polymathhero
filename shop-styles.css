@@ -61,11 +61,11 @@ footer a {
     text-align: center;
     background-color: #ffffff;
     color: #000000;
-    padding: 23px;
+    padding: 0.75em;
     margin: 0;
     border-bottom: 1px solid #ececec;
     font-family: 'HKGrotesk-SemiBold', sans-serif;
-    font-size: 32px;
+    font-size: 2em;
     letter-spacing: 1px; /* Adjust the value as needed */
 }
 
@@ -80,14 +80,14 @@ header {
   }
   
   #menu-bar {
-    width: 45px;
+    width: 3vw;
     height: 40px;
     margin-top: 0;
     cursor: pointer;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     padding-top: 36px;
-    padding-left: 70px;
-    padding-right: 65px;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 12px;
     z-index: 999;
   }
