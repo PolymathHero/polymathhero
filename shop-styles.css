@@ -314,3 +314,63 @@ a, a:visited {
 .home-page-links:hover {
     text-decoration: underline;
 }
+
+.about-links {
+    max-width: 50vw;
+    background-color: white;
+    height: 100vh;
+}
+
+#find-us-p {
+    font-size: 1.44em;
+    padding-left: 10vw;
+    line-height: 2.0;
+    margin-bottom: 0;
+}
+
+.about-links ul {
+    list-style: none;
+    width: 50vw;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.about-links li {
+    padding-left: 0vw;
+    line-height: 2.0;
+}
+
+.about-links a {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: black;
+    display: flex;
+    padding-left: 10vw;
+    margin-left: 0;
+    align-items: center;
+}
+
+.about-links a:visited {
+    color: black;
+}
+
+.about-links a:hover {
+    background-color: #eaeded;
+}
+
+.about-links p {
+    font-size: 1.2em;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0vw;
+}
+
+.dark-side {
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+    background-color: rgba(0,0,0,0.8);
+    max-width: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
