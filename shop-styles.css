@@ -320,7 +320,7 @@ a, a:visited {
 }
 
 #find-us-p {
-    font-size: 1.44em;
+    font-size: 1em;
     padding-left: 10vw;
     line-height: 2.0;
     margin-bottom: 0;
@@ -342,7 +342,7 @@ a, a:visited {
 
 .about-links a {
     display: flex;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 0;
     color: black;
     padding-left: 10vw;
@@ -360,7 +360,7 @@ a, a:visited {
 }
 
 .about-links p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 0;
     padding-top: 0;
     padding-left: 0vw;
