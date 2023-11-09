@@ -255,7 +255,7 @@ header {
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
     background-image: url("first-frame-image.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 70vh;
+    background-size: cover;
 }
 
 video {
