@@ -252,12 +252,10 @@ header {
     object-fit: cover; /* Crop the video to cover the container */
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
     background-color: transparent;
-    border-bottom: 1px solid transparent;
 }
 
 video {
     background-color: transparent;
-    border-bottom: 1px solid transparent;
 }
 
 #videoOverlay {
