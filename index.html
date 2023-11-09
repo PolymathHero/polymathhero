@@ -9,7 +9,7 @@
 
 <body>
 
-    <div class="announcement-bar">Just in: The new Ko-fi 2024 Women's Collection. <a href="https://ko-fi.com/polymathhero/shop" target="_blank">Shop now.</a></div>
+    <div class="announcement-bar">Just in: The new Ko-fi 2024 Collection. <a href="https://ko-fi.com/polymathhero/shop" target="_blank">Shop now.</a></div>
 
     <header>
     <!--<div id="menu">
@@ -32,6 +32,20 @@
 
         <p id="herobrandname"><a id="hero" href="index.html">POLYMATH HERO</a></p>
     </header>
+
+    <div id="videoContainer">
+        <video id="myVideo" autoplay loop muted onended="resetVideo()">
+            <source src="ko-fi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div id="videoOverlay">
+            <div id="collectionText">Ko-fi 2024</div>
+            <a id="exploreButton" href="https://ko-fi.com/polymathhero/shop" target="_blank">Explore the Collection</a>
+        </div>
+
+        <button id="playPauseBtn" onclick="togglePlayPause()">⏸</button>
+    </div>
 
     <div class="dark-side">
     <div class="about-links">
@@ -189,6 +203,19 @@
              <p><a id="brandnameanchor" href="index.html">POLYMATH HERO</a></p>
          </div>
         </footer>
+
+        <script>
+            function togglePlayPause() {
+                var video = document.getElementById("myVideo");
+                if (video.paused) {
+                    video.play();
+                    document.getElementById("playPauseBtn").innerHTML = "⏸"; // Pause symbol
+                } else {
+                    video.pause();
+                    document.getElementById("playPauseBtn").innerHTML = "▶️"; // Play symbol
+                }
+            }
+        </script>
         
         <!--<Script>
             function menuOnClick() {

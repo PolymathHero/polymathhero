@@ -11,12 +11,17 @@
     src: url('fonts/HKGrotesk-Medium.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'HKGrotesk-Regular';
+    src: url('fonts/HKGrotesk-Regular.otf') format('opentype');
+}
+
 html {
     position: relative;
   }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'HKGrotesk-Regular', Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -235,11 +240,61 @@ header {
     color: black;
 }
 
+#videoContainer {
+    position: relative;
+    overflow: hidden; /* Ensure that the video doesn't overflow its container */
+}
+
+#myVideo {
+    width: 100%;
+    height: 85vh; /* Adjust the height as needed */
+    object-fit: cover; /* Crop the video to cover the container */
+}
+
+#videoOverlay {
+    position: absolute;
+    bottom: 40px; /* Added space below the button */
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+#collectionText {
+    font-size: 24px;
+    margin-bottom: 20px; /* Increased space between text and button */
+}
+
+#exploreButton {
+    background-color: rgba(0, 0, 0, 0.8); /* Translucent white background */
+    border: 2px solid white;
+    border-radius: 20px; /* Added rounded border */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Remove default underline for links */
+}
+
+#playPauseBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    line-height: 1; /* Adjusted line height for a thicker appearance */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px; /* Adjusted width for consistency */
+}
+
 .announcement-bar {
     margin-top: 0vw;
     margin-bottom: 0vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
+    padding-top: 4.5vw;
+    padding-bottom: 4.5vw;
     text-align: center;
     background-color: #f6f5f3;
     color: black;
@@ -255,6 +310,14 @@ header {
 #announcement-link {
     margin-top: 1vw;
     margin-bottom: 1vw;
+}
+
+@media (min-width: 768px) {
+    /* Apply styles only for devices with a screen width of 768 pixels and above (non-mobile) */
+    .announcement-bar {
+        padding-top: 0.7vh; /* Adjust the padding as needed */
+        padding-bottom: 0.7vh; /* Adjust the padding as needed */
+    }
 }
 
 .product {
@@ -342,6 +405,7 @@ a, a:visited {
     margin-left: 0;
     padding-left: 0;
     background-color: white;
+    margin-top: 0;
 }
 
 #find-us-p {
@@ -349,13 +413,14 @@ a, a:visited {
     padding-left: 10vw;
     line-height: 2.0;
     margin-bottom: 0;
+    margin-top: 0vw;
 }
 
 .about-links ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 2vw;
 }
 
 .about-links li {
