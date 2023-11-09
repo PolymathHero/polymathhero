@@ -48,8 +48,8 @@ body {
 
 #herobrandname {
     text-align: center;
-    background-color: transparent;
-    color: white; /* Initially white text */
+    background-color: white;
+    color: black; /* Initially white text */
     padding: 1em;
     margin: 0;
     border-bottom: 0px solid #ececec;
@@ -71,6 +71,7 @@ body {
             padding: 0.6em;
             z-index: 20000;
             text-align: center;
+            background-color: white;
         }
 
         #menu {
@@ -94,8 +95,7 @@ header {
 }
 
 #hero {
-    color: white; /* Set the color for the link */
-    text-decoration: none; /* Remove default underline for links */
+    color: black;
 }
 
 #main-header.fixed #hero {
