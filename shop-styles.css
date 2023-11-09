@@ -243,12 +243,14 @@ header {
 #videoContainer {
     position: relative;
     overflow: hidden; /* Ensure that the video doesn't overflow its container */
+    z-index: 0;
 }
 
 #myVideo {
     width: 100%;
-    height: 85vh; /* Adjust the height as needed */
+    height: 80vh; /* Adjust the height as needed */
     object-fit: cover; /* Crop the video to cover the container */
+    z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
 }
 
 #videoOverlay {
@@ -259,6 +261,7 @@ header {
     color: white;
     padding: 20px;
     box-sizing: border-box; /* Include padding in the width */
+    z-index: 1; /* Set a higher z-index for the overlay to ensure it appears on top of the video */
 }
 
 #collectionText {
@@ -275,6 +278,7 @@ header {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none; /* Remove default underline for links */
+    z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
 }
 
 #playPauseBtn {
@@ -288,6 +292,7 @@ header {
     border: none;
     cursor: pointer;
     width: 40px; /* Adjusted width for consistency */
+    z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
 }
 
 .announcement-bar {
