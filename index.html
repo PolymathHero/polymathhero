@@ -11,7 +11,7 @@
 
 <!--    <div class="announcement-bar">Just in: The new Ko-fi 2024 Collection. <a href="https://ko-fi.com/polymathhero/shop" target="_blank">Shop now.</a></div>-->
 
-    <header>
+    <header id="main-header">
       <!--  <div id="menu">
             <div id="menu-bar" onclick="menuOnClick()">
               <div id="bar1" class="bar"></div>
@@ -239,6 +239,40 @@
     }
   });
 </script>
+
+<script>
+    // JavaScript code for handling the scroll event and toggling the header class
+    window.addEventListener('scroll', function() {
+        var header = document.getElementById('main-header');
+        var herobrandname = document.getElementById('herobrandname');
+        
+        if (window.scrollY > 50) {
+            header.classList.add('header-fixed');
+            herobrandname.style.color = 'black';
+            herobrandname.style.backgroundColor = 'white';
+            herobrandname.style.borderBottom = '1px solid #ececec';
+        } else {
+            header.classList.remove('header-fixed');
+            herobrandname.style.color = '#000000';
+            herobrandname.style.backgroundColor = '#ffffff';
+            herobrandname.style.transition = 'background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease'; /* Add transitions for both color and background-color */
+        }
+        
+        // Additional logic for handling the fixed header
+        if (window.scrollY > 0) {
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+            
+            // Reset styles to initial state
+            herobrandname.style.color = 'black';
+            herobrandname.style.backgroundColor = 'transparent';
+            herobrandname.style.borderBottom = '0px solid #ececec';
+        }
+    });
+</script>
+
+
 
 </body>
 </html>
