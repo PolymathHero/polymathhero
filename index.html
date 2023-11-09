@@ -3,39 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing | Polymath Hero</title>
+    <title>Polymath Hero</title>
     <link rel="stylesheet" href="shop-styles.css">
 </head>
 
 <body>
 
-    <div class="announcement-bar">Just in: The new Ko-fi 2024 Collection. <a href="https://ko-fi.com/polymathhero/shop" target="_blank">Shop now.</a></div>
+<!--    <div class="announcement-bar">Just in: The new Ko-fi 2024 Collection. <a href="https://ko-fi.com/polymathhero/shop" target="_blank">Shop now.</a></div>-->
 
     <header>
-    <!--<div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
+      <!--  <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </nav> 
         </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </nav> 
-    </div>
-      
-      <div class="menu-bg" id="menu-bg"></div>-->
-
-        <p id="herobrandname"><a id="hero" href="index.html">POLYMATH HERO</a></p>
-    </header>
+          <div class="menu-bg" id="menu-bg"></div>-->
+    
+            <p id="herobrandname"><a id="hero" href="index.html">POLYMATH HERO</a></p>
+        </header>
 
     <div id="videoContainer">
         <video id="myVideo" playsinline loop muted onended="resetVideo()">
-            <source src="ko-fi.mp4#t=0.1" type="video/mp4">
+            <source src="ko-fi.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         
@@ -192,17 +191,17 @@
     </div>
 </div>
         
-        <footer>
-            <ul>
-            <li><a href="selection.html">Selection</a></li>
-              <li><a href="return-policy.html">Returns</a></li>
-             <li><a href="shipping-policy.html">Shipping</a></li>
-             <li><a href="privacy-policy.html">Privacy Policy</a></li>
-             </ul>
-         <div class="brand-name">
-             <p><a id="brandnameanchor" href="index.html">POLYMATH HERO</a></p>
-         </div>
-        </footer>
+<footer>
+    <ul>
+    <li><a href="selection.html">Selection</a></li>
+      <li><a href="return-policy.html">Returns</a></li>
+     <li><a href="shipping-policy.html">Shipping</a></li>
+     <li><a href="privacy-policy.html">Privacy Policy</a></li>
+     </ul>
+ <div class="brand-name">
+     <p><a id="brandnameanchor" href="index.html">POLYMATH HERO</a></p>
+ </div>
+</footer>
 
         <script>
             function togglePlayPause() {
@@ -217,34 +216,29 @@
             }
         </script>
         
-        <!--<Script>
-            function menuOnClick() {
-                document.getElementById("menu-bar").classList.toggle("change");
-                document.getElementById("nav").classList.toggle("change");
-                document.getElementById("menu-bg").classList.toggle("change-bg");
-              }
+<script>
+  function menuOnClick() {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
     
-                        // Add an event listener to the document to close the menu when clicking away
-                        document.addEventListener("click", function (event) {
-          var menu = document.getElementById("menu");
-          var menuBar = document.getElementById("menu-bar");
-    
-          // Check if the click target is outside of the menu and menu-bar
-          if (!menu.contains(event.target) && !menuBar.contains(event.target)) {
-            document.getElementById("nav").classList.remove("change");
-            document.getElementById("menu-bg").classList.remove("change-bg");
-            menuBar.classList.remove("change");
-          }
-        });
-    
-        function menuOnClick() {
-      document.getElementById("menu-bar").classList.toggle("change");
-      document.getElementById("nav").classList.toggle("change");
-      var menuBg = document.getElementById("menu-bg");
-      menuBg.classList.toggle("change-bg");
-      menuBg.classList.toggle("active"); // Add or remove "active" class
+    var menuBg = document.getElementById("menu-bg");
+    menuBg.classList.toggle("change-bg");
+    menuBg.classList.toggle("active"); // Add or remove "active" class
+  }
+
+  // Add an event listener to the document to close the menu when clicking away
+  document.addEventListener("click", function (event) {
+    var menu = document.getElementById("menu");
+    var menuBar = document.getElementById("menu-bar");
+
+    // Check if the click target is outside of the menu and menu-bar
+    if (!menu.contains(event.target) && !menuBar.contains(event.target)) {
+      document.getElementById("nav").classList.remove("change");
+      document.getElementById("menu-bg").classList.remove("change-bg");
+      menuBar.classList.remove("change");
     }
-      </Script>-->
+  });
+</script>
 
 </body>
 </html>
