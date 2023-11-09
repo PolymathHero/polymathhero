@@ -295,7 +295,6 @@ header {
     margin-bottom: 0;
     align-items: center;
     background-color: transparent;
-    border: 1px solid white;
     cursor: pointer;
     z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
 }
