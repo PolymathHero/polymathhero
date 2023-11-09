@@ -253,7 +253,7 @@ header {
     height: 70vh; /* Adjust the height as needed */
     object-fit: cover; /* Crop the video to cover the container */
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
-    background-image: url("first-frame-image.jpg");
+    /*background-image: url("first-frame-image.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
