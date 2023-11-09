@@ -35,17 +35,6 @@ body {
     padding: 0;
 }
 
-#main-header {
-    position: fixed;
-    top: 0;
-    margin-bottom: 0;
-    border-bottom: 0;
-    width: 100%;
-    background-color: transparent; /* Initially transparent */
-    z-index: 10000;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; /* Add transitions for both color and background-color */
-}
-
 #herobrandname {
     text-align: center;
     background-color: white;
@@ -57,11 +46,6 @@ body {
     font-size: 2em;
     letter-spacing: 1px; /* Adjust the value as needed */
     z-index: 20000;
-}
-
-#main-header.fixed {
-    background-color: white; /* Initially transparent background */
-    border-bottom: 1px solid #ececec;
 }
 
     /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
@@ -96,10 +80,6 @@ header {
 
 #hero {
     color: black;
-}
-
-#main-header.fixed #hero {
-    color: #000000; /* Change text color when header is fixed */
 }
 
 #menu {
