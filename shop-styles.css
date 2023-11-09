@@ -251,11 +251,11 @@ header {
     height: 70vh; /* Adjust the height as needed */
     object-fit: cover; /* Crop the video to cover the container */
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
-    background-color: transparent;
+    background-image: url("first-frame-image.jpg");
 }
 
 video {
-    background-color: transparent;
+    background-image: url("first-frame-image.jpg");
 }
 
 #videoOverlay {
