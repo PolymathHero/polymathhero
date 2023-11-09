@@ -285,13 +285,18 @@ header {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: white;
     font-size: 20px;
-    line-height: 1; /* Adjusted line height for a thicker appearance */
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    align-items: center;
     background-color: transparent;
-    border: none;
+    border: 1px solid white;
     cursor: pointer;
-    width: 0px; /* Adjusted width for consistency */
     z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
 }
 
@@ -313,8 +318,6 @@ header {
 }
 
 #announcement-link {
-    margin-top: 1vw;
-    margin-bottom: 1vw;
 }
 
 @media (min-width: 768px) {
