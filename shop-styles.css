@@ -312,7 +312,7 @@ header {
 
 #videoOverlay {
     position: absolute;
-    bottom: 40px; /* Added space below the button */
+    bottom: 100px; /* Added space below the button */
     width: 100%;
     text-align: center;
     color: white;
@@ -323,8 +323,8 @@ header {
 }
 
 #collectionText {
-    font-size: 24px;
-    margin-bottom: 20px; /* Increased space between text and button */
+    font-size: 1.5rem;
+    margin-bottom: 30px; /* Increased space between text and button */
 }
 
 #exploreButton {
