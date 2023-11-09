@@ -291,7 +291,7 @@ header {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 40px; /* Adjusted width for consistency */
+    width: 0px; /* Adjusted width for consistency */
     z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
 }
 
