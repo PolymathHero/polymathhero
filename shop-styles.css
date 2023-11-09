@@ -256,6 +256,7 @@ header {
     background-image: url("first-frame-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 video {
