@@ -104,7 +104,7 @@ header {
 
 #videoOverlay {
     position: absolute;
-    bottom: 110px; /* Added space below the button */
+    bottom: 140px; /* Added space below the button */
     width: 100%;
     text-align: center;
     color: white;
