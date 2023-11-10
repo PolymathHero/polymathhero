@@ -37,7 +37,7 @@ body {
 
 #herobrandname {
     text-align: center;
-    background-color: white;
+    background-color: rgba(255,255,255,1);
     color: black; /* Initially white text */
     padding: 1em;
     margin: 0;
@@ -120,9 +120,9 @@ header {
 }
 
 #exploreButton {
-    background-color: rgba(55, 80, 76, 0.2); /* Translucent white background */
-    backdrop-filter: blur(20px); /* Adjust the blur radius */
-    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(55,80,76,0.2);
+    backdrop-filter: blur(200px); /* Adjust the blur radius */
+    -webkit-backdrop-filter: blur(200px);
     border: 2px solid white;
     border-radius: 20px; /* Added rounded border */
     color: white;
@@ -264,12 +264,13 @@ a, a:visited {
     margin-top: 0;
 }
 
-#find-us-p {
-    font-size: 1em;
-    padding-left: 10vw;
+#follow-us-p {
+    font-size: 2em;
+    padding-left: 0;
     line-height: 2.0;
     margin-bottom: 0;
     margin-top: 0vw;
+    text-align: center;
 }
 
 .about-links ul {
