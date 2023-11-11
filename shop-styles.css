@@ -1,8 +1,35 @@
 /* shop-styles.css */
 
-body, h1, h2, h3, p, ul, li {
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {    
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
 }
 
 @font-face {
@@ -21,18 +48,10 @@ body, h1, h2, h3, p, ul, li {
     src: url('fonts/HKGrotesk-Regular.otf') format('opentype');
 }
 
-html {
-    position: relative;
-    padding: 0;
-    margin: 0;
-  }
-
 body {
     font-family: 'HKGrotesk-Regular', Arial, sans-serif;
     background-color: white;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
+    line-height: 0;
 }
 
 #herobrandname {
@@ -41,11 +60,12 @@ body {
     color: black; /* Initially white text */
     padding: 1em;
     margin: 0;
-    border-bottom: 0px solid #ececec;
+    border-bottom: 1px solid #ececec;
     font-family: 'HKGrotesk-SemiBold', sans-serif;
     font-size: 2em;
     letter-spacing: 1px; /* Adjust the value as needed */
     z-index: 20000;
+    line-height: 1;
 }
 
     /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
@@ -56,16 +76,7 @@ body {
             z-index: 20000;
             text-align: center;
             background-color: white;
-        }
-
-        #menu {
-            z-index: 10000;
-            align-items: center;
-          }
-
-        .bar {
-            height: 100%;
-            width: 100%;
+            line-height: 1;
         }
     }
 
@@ -76,6 +87,7 @@ header {
     z-index: 5001;
     max-width: 100vw;
     margin-top: 0;
+    line-height: 1;
 }
 
 #hero {
@@ -86,11 +98,17 @@ header {
     color: black;
 }
 
+video {
+    margin-bottom: 0;
+    padding: 0;
+}
+
 #videoContainer {
     position: relative;
-    overflow: hidden; /* Ensure that the video doesn't overflow its container */
     z-index: 0;
-    max-width: 100vw;
+    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #myVideo {
@@ -112,25 +130,27 @@ header {
     box-sizing: border-box; /* Include padding in the width */
     z-index: 1; /* Set a higher z-index for the overlay to ensure it appears on top of the video */
     max-width: 100vw;
+    margin-bottom: 0;
 }
 
 #collectionText {
     font-size: 1.5rem;
     margin-bottom: 35px; /* Increased space between text and button */
+    line-height: 1;
 }
 
 #exploreButton {
     background-color: rgba(55,80,76,0.2);
-    backdrop-filter: blur(200px); /* Adjust the blur radius */
-    -webkit-backdrop-filter: blur(200px);
     border: 2px solid white;
     border-radius: 20px; /* Added rounded border */
     color: white;
-    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none; /* Remove default underline for links */
     z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
+    margin-bottom: 0;
+    padding: 10px 20px;
+    line-height: 1;
 }
 
 #playPauseBtn {
@@ -167,9 +187,6 @@ header {
 .announcement-bar a {
     color: black;
     text-decoration: underline;
-}
-
-#announcement-link {
 }
 
 @media (min-width: 768px) {
@@ -262,10 +279,12 @@ a, a:visited {
     padding-left: 0;
     background-color: white;
     margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 #follow-us-p {
-    font-size: 2em;
+    font-size: 1.2em;
     padding-left: 0;
     line-height: 2.0;
     margin-bottom: 0;
@@ -277,7 +296,7 @@ a, a:visited {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 2vw;
+    margin-bottom: 0;
 }
 
 .about-links li {
@@ -312,25 +331,20 @@ a, a:visited {
     padding-left: 0vw;
 }
 
-.dark-side {
-    width: 100vw;
-    margin-top: 0;
-    background-color: rgba(0,0,0,0.8);
-    max-width: 100%;
-    margin-bottom: 0;
-}
-
 footer {
     border-top: 1px solid #ececec;
     background-color: #ffffff;
     color: #333333;
     padding: 20px;
     text-align: center;
+    margin: 0;
+    line-height: 1;
 }
 
 footer ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 footer li {
@@ -352,4 +366,5 @@ footer a {
     margin: 30px;
     font-family: 'HKGrotesk-SemiBold', sans-serif;
     letter-spacing: 1px;
+    line-height: 1;
 }
