@@ -22,6 +22,18 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+h1, h2, p, ul {
+    line-height: 2;
+}
+
+a:visited {
+    color: black;
+}
+
+.black-colored-visited-links {
+    text-decoration: underline;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {    
@@ -351,6 +363,7 @@ footer li {
     display: inline;
     margin: 0 20px;
     font-size: 0.875rem;
+    white-space: nowrap;
 }
 
 footer a {
@@ -359,7 +372,7 @@ footer a {
 }
 
 /* Add styling for the brand name section */
-.brand-name {
+.footer-brand-name {
     text-align: center;
     font-size: 20px;
     color: black;
@@ -367,4 +380,18 @@ footer a {
     font-family: 'HKGrotesk-SemiBold', sans-serif;
     letter-spacing: 1px;
     line-height: 1;
+}
+
+.warning {
+    color: red;
+}
+
+.footer-first-ul {
+    border-bottom: 1px solid #ececec;
+    padding: 1rem;
+}
+
+.footer-last-ul {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
