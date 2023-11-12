@@ -87,7 +87,7 @@ body {
             padding: 0.8rem;
             z-index: 20000;
             text-align: center;
-            background-color: white;
+            background-color: rgba(255,255,255,1);
             line-height: 1;
         }
     }
@@ -370,7 +370,6 @@ footer li {
 }
 
 footer a {
-    color: #333333;
     text-decoration: none;
 }
 
@@ -418,6 +417,10 @@ footer a {
     display: inline;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+}
+
+.footer-last-ul li a {
+    color: #333333;
 }
 
 .news-container {
