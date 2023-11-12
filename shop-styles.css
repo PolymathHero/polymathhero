@@ -445,11 +445,11 @@ footer a {
     font-size: 1em;
     margin-bottom: 15px;
   }
-  .news-container .github-link {
+  .news-container .link-in-newswire-article {
     color: #0366d6; /* GitHub link color */
     text-decoration: none;
   }
-  .github-link:hover {
+  .link-in-newswire-article:hover {
     text-decoration: underline;
   }
 
