@@ -83,8 +83,8 @@ body {
     /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
     @media (max-width: 768px) {
         #herobrandname {
-            font-size: 1.3em; /* Adjust the font size for mobile screens as needed */
-            padding: 0.6em;
+            font-size: 1.3rem; /* Adjust the font size for mobile screens as needed */
+            padding: 0.8rem;
             z-index: 20000;
             text-align: center;
             background-color: white;
@@ -152,7 +152,7 @@ video {
 }
 
 #exploreButton {
-    background-color: rgba(55,80,76,0.2);
+    background-color: rgba(0,0,0,0.5);
     border: 2px solid white;
     border-radius: 20px; /* Added rounded border */
     color: white;
@@ -178,7 +178,8 @@ video {
     margin-left: 0;
     margin-bottom: 0;
     align-items: center;
-    border: none;
+    border: 0px solid white;
+    border-radius: 0px; /* Added rounded border */
     background-color: transparent;
     cursor: pointer;
     z-index: 2; /* Set a higher z-index for the button to ensure it appears on top of the video */
@@ -344,12 +345,11 @@ a, a:visited {
 }
 
 footer {
-    border-top: 1px solid #ececec;
     background-color: #ffffff;
     color: #333333;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
-    margin: 0;
+    margin-top: 0rem;
     line-height: 1;
 }
 
@@ -360,10 +360,13 @@ footer ul {
 }
 
 footer li {
-    display: inline;
-    margin: 0 20px;
-    font-size: 0.875rem;
+    margin: 0;
+    font-size: 1rem;
     white-space: nowrap;
+    padding-top: 0;
+    padding-right: 0.0rem;
+    padding-bottom: 0;
+    padding-left: 0.0rem;
 }
 
 footer a {
@@ -372,26 +375,86 @@ footer a {
 }
 
 /* Add styling for the brand name section */
-.footer-brand-name {
-    text-align: center;
-    font-size: 20px;
+.footer-brand-name-div {
+    text-align: left;
+    font-size: 1.3rem;
     color: black;
-    margin: 30px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
     font-family: 'HKGrotesk-SemiBold', sans-serif;
     letter-spacing: 1px;
     line-height: 1;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
 }
 
 .warning {
     color: red;
 }
 
+.footer-first-ul-div {
+    margin-top: 0;
+    border-bottom: 0px solid #ececec;
+    padding: 0;
+    margin: 0;
+}
+
 .footer-first-ul {
-    border-bottom: 1px solid #ececec;
     padding: 1rem;
+    border-bottom: 1px solid #ececec;
+    text-align: left;
 }
 
 .footer-last-ul {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
+
+.footer-last-ul li {
+    display: inline;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.news-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .date {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  .article-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .article-content {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  .news-container .github-link {
+    color: #0366d6; /* GitHub link color */
+    text-decoration: none;
+  }
+  .github-link:hover {
+    text-decoration: underline;
+  }
+
+  .about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .about-container p {
+    margin-bottom: 20px;
+  }
