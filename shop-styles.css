@@ -136,14 +136,14 @@ video {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 61vh; /* Adjust the height as needed */
+    height: 81vh; /* Adjust the height as needed */
     object-fit: cover; /* Crop the video to cover the container */
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
 }
 
 #videoOverlay {
     position: absolute;
-    bottom: 70px; /* Added space below the button */
+    bottom: 30px; /* Added space below the button */
     width: 100%;
     text-align: center;
     color: white;
