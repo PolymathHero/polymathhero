@@ -159,6 +159,7 @@ video {
     margin-bottom: 35px; /* Increased space between text and button */
     line-height: 1;
     color: black;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
     }
 
 #exploreButton {
