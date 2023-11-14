@@ -110,6 +110,15 @@ header {
     color: black;
 }
 
+#video-link-hero {
+    display: block;
+    position: relative;
+    text-decoration: none; /* Remove default underline for links */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
 video {
     margin-bottom: 0;
     padding: 0;
@@ -127,14 +136,14 @@ video {
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 81vh; /* Adjust the height as needed */
+    height: 61vh; /* Adjust the height as needed */
     object-fit: cover; /* Crop the video to cover the container */
     z-index: -1; /* Set a lower z-index for the video so that it appears behind other elements */
 }
 
 #videoOverlay {
     position: absolute;
-    bottom: 140px; /* Added space below the button */
+    bottom: 70px; /* Added space below the button */
     width: 100%;
     text-align: center;
     color: white;
@@ -146,16 +155,22 @@ video {
 }
 
 #collectionText {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin-bottom: 35px; /* Increased space between text and button */
     line-height: 1;
-}
+    color: black;
+    text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    }
 
 #exploreButton {
-    background-color: rgba(0,0,0,0.5);
-    border: 2px solid white;
+    background-color: rgba(255,255,255,1);
+    border: 2px solid black;
     border-radius: 20px; /* Added rounded border */
-    color: white;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     text-decoration: none; /* Remove default underline for links */
