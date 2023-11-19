@@ -205,6 +205,7 @@ video {
     color: black;
     font-size: 0.8rem;
     letter-spacing: 0px;
+    line-height: 1.5;
 }
 
 .announcement-bar a {
@@ -306,7 +307,7 @@ a, a:visited {
     line-height: 1;
 }
 
-#follow-us-p {
+#page-title-p {
     font-size: 1.2em;
     padding-left: 0;
     line-height: 2.0;
@@ -436,6 +437,11 @@ footer a {
     color: #333333;
 }
 
+.page-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
 .news-container {
     padding: 20px;
     max-width: 600px;
@@ -469,14 +475,24 @@ footer a {
     margin: 0 auto;
     padding: 20px;
     color: black;
-    text-align: justify;
     line-height: 1.6;
   }
   .about-container p {
     margin-bottom: 20px;
   }
 
-  .page-container {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    line-height: 1.6;
+  }
+
+  .contact-container .contact-email {
+    color: #0366d6; /* GitHub link color */
+    text-decoration: none;
+  }
+  .contact-email:hover {
+    text-decoration: underline;
   }
