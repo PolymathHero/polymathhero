@@ -65,7 +65,18 @@ ol, ul {
     src: url('fonts/HKGrotesk-Regular.otf') format('opentype');
 }
 
-body {
+@font-face {
+    font-family: 'HKGrotesk-SemiBold';
+    src: url('fonts/HKGrotesk-SemiBold.otf') format('opentype');
+}
+
+.news-container .bold {
+    font-family: 'HKGrotesk-SemiBold', Arial, sans-serif;
+    color: red;
+    border: 1px solid red;
+  }
+
+  body {
     font-family: 'HKGrotesk-Regular', Arial, sans-serif;
     background-color: white;
     line-height: 0;
@@ -98,8 +109,8 @@ body {
     }
 
 header {
-    position: sticky;
     position: -webkit-sticky;
+    position: sticky;
     top: 0;
     z-index: 5001;
     max-width: 100vw;
