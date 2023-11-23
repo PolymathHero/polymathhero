@@ -3,31 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POLYMATH HERO</title>
+    <title>POLYMATH HERO Official International Website</title>
     <link rel="stylesheet" href="shop-styles.css">
 </head>
 
 <body>
-    <div class="announcement-bar"><p>🚀 Exciting News! Brace Yourself for Rapid Changes! 🚀</p><p>We're embarking on a transformative journey! Expect significant updates, especially to our homepage feed. Stay tuned as we take bold steps to enhance your Polymath Hero experience!</p></div>
-    <header>    
-            <p id="herobrandname"><a id="hero" href="index.html">POLYMATH HERO</a></p>
+    <header>
+        <!-- BEGIN MENU -->
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+              <div id="bar1" class="bar"></div>
+              <div id="bar2" class="bar"></div>
+              <div id="bar3" class="bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+              <ul>
+                <li><a href="newswire.html">Newswire</a></li>
+                <li><a href="https://ko-fi.com/chicaffair/shop">Women's Clothes</a></li>
+                <!--<li><a href="#">RegalRack</a></li>
+                <li><a href="#">Uplift</a></li>-->
+                <hr>
+                <li class="menu-secondary-list-item"><a href="about-page.html">About Polymath Hero</a></li>
+                <li class="menu-secondary-list-item"><a href="follow-us.html">Follow Us</a></li>
+                <li class="menu-secondary-list-item"><a href="contact-us.html">Contact Us</a></li>
+                <hr>
+                <li class="menu-tertiary-list-item"><a href="return-policy.html">Returns</a></li>
+                <li class="menu-tertiary-list-item"><a href="shipping-policy.html">Shipping</a></li>
+                <li class="menu-tertiary-list-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </nav> 
+          </div>
+          
+          <div class="menu-bg" id="menu-bg"></div>
+          <!-- END MENU -->
+
+            <p id="herobrandname-p-block"><a id="hero" href="index.html">POLYMATH HERO</a></p>
         </header>
 
-        <a href="newswire.html#article-1347" id="video-link-hero">
+        <div class="announcement-bar"><p>🚀 Exciting News! Brace Yourself for Rapid Changes! 🚀</p><p>We're embarking on a transformative journey! Expect significant updates, especially to our homepage feed. Stay tuned as we take bold steps to enhance your Polymath Hero experience!</p></div>
+
+        <a href="newswire.html#article-1349" id="feed-post-link">
             <div class="feed-post-container">
-                <h1 class="article-title">Coming Soon: A Dynamic Feed on Polymath Hero's Homepage</h1>
+                <div class="date">Published on November 23, 2023</div>
+                <h1 class="article-title">Celebrating the Hamburger Menu Launch</h1>
+                <p class="read-more">Read More</p>
         </div>
     </a>
 
-    <a href="newswire.html#article-1346" id="video-link-hero">
+        <a href="newswire.html#article-1348" id="feed-post-link">
+            <div class="feed-post-container">
+                <div class="date">Published on November 22, 2023</div>
+                <h1 class="article-title">Innovative Loading Experience Coming Soon to Polymath Hero</h1>
+                <p class="read-more">Read More</p>
+        </div>
+    </a>
+
+        <a href="newswire.html#article-1347" id="feed-post-link">
+            <div class="feed-post-container">
+                <div class="date">Published on November 22, 2023</div>
+                <h1 class="article-title">Coming Soon: A Dynamic Feed on Polymath Hero's Homepage</h1>
+                <p class="read-more">Read More</p>
+        </div>
+    </a>
+
+    <a href="newswire.html#article-1346" id="feed-post-link">
         <div class="feed-post-container">
+            <div class="date">Published on November 22, 2023</div>
             <h1 class="article-title">Breaking the Limits: Rethinking Conversations in the Digital Age</h1>
+            <p class="read-more">Read More</p>
     </div>
 </a>
 
-<a href="newswire.html#article-1345" id="video-link-hero">
+<a href="newswire.html#article-1345" id="feed-post-link">
     <div class="feed-post-container">
+        <div class="date">Published on November 22, 2023</div>
         <h1 class="article-title">Introducing 'Uplift': Crafting Your Public Persona through Conversations</h1>
+        <p class="read-more">Read More</p>
 </div>
 </a>
 
@@ -38,17 +89,14 @@
             Your browser does not support the video tag.
         </video>
         <div id="videoOverlay">
-            <div id="collectionText">Women's Clothing</div>
+            <h1 id="collectionText">Women's Clothing</h1>
             <a id="exploreButton" href="https://ko-fi.com/chicaffair/shop" target="_blank">Explore the Collection</a>
         </div>
         <button id="playPauseBtn" onclick="togglePlayPause()">⏸</button>
     </div>
 </a>
 
-<div class="announcement-bar">    <p>🚀 Exciting News! Changes Ahead 🚀</p>
-    <p>We're experimenting with new layouts! The area under this section might be moved in the future. Stay tuned as we explore sticky bottom menu bars and hamburger menus for an enhanced browsing experience!</p></div>
-
-    <footer>
+<!--<footer>
         <div class="footer-brand-name-div">
             <p><a id="brandnameanchor" href="index.html">POLYMATH HERO</a></p>
         </div>
@@ -58,7 +106,7 @@
             <li><a href="about-page.html">About Polymath Hero</a></li>
             <li><a href="follow-us.html">Follow Us</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
-            <!--<li><a href="selection.html"><span class="warning">&#9888; WARNING!</span> Selection</a></li>-->
+            <!- -<li><a href="selection.html"><span class="warning">&#9888; WARNING!</span> Selection</a></li>- ->
         </div>
         </ul>
         <ul class="footer-last-ul">
@@ -66,7 +114,7 @@
             <li><a href="shipping-policy.html">Shipping</a></li>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
         </ul>
-    </footer>
+    </footer>-->
 
         <script>
             function togglePlayPause() {
@@ -80,6 +128,14 @@
                 }
             }
         </script>
+
+<!-- BEGIN MENU SCRIPT-->
+    <script>function menuOnClick() {
+        document.getElementById("menu-bar").classList.toggle("change");
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+      }</script>
+      <!-- END MENU SCRIPT-->
 
 <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
