@@ -210,8 +210,9 @@ header {
     background: white;
   }
   
-  .change {
+  .change-nav {
     display: block;
+    position: absolute;
   }
   
   .change .bar {
