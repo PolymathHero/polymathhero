@@ -88,6 +88,9 @@ header {
     display: block flex;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 #herobrandname-p-block {
@@ -123,7 +126,6 @@ header {
   
   #menu {
     z-index: 2;
-    border: 1px solid black;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -140,7 +142,6 @@ header {
     padding-bottom: 0.8rem;
     padding-left: 0.8rem;
     cursor: pointer;
-    border: 0px solid black;
   }
   
   .bar {
