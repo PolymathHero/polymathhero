@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,83 +9,61 @@
 </head>
 
 <body id="body-id">
-  <header>
-    <!-- BEGIN MENU -->
-    <div id="menu">
-        <div id="menu-bar" onclick="menuOnClick()">
-          <div id="bar1" class="bar"></div>
-          <div id="bar2" class="bar"></div>
-          <div id="bar3" class="bar"></div>
-        </div>
-        <nav class="nav" id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="newswire.html">Blog</a></li>
-            <li><a href="https://ko-fi.com/chicaffair/shop">Products</a></li>
-            <!--<li><a href="#">RegalRack</a></li>
-            <li><a href="#">Uplift</a></li>-->
-            </ul>
-            <hr>
-            <ul>
-            <li class="menu-secondary-list-item"><a href="about-page.html">About us</a></li>
-            <li class="menu-secondary-list-item"><a href="follow-us.html">Follow us</a></li>
-            <li class="menu-secondary-list-item"><a href="contact-us.html">Contact us</a></li>
-        </ul>
-        <hr>
-        <ul>
-            <li class="menu-tertiary-list-item"><a href="return-policy.html">Returns</a></li>
-            <li class="menu-tertiary-list-item"><a href="shipping-policy.html">Shipping</a></li>
-            <li class="menu-tertiary-list-item"><a href="privacy-policy.html">Privacy policy</a></li>
-          </ul>
-        </nav> 
-      </div>
-
-      <div class="menu-bg" id="menu-bg"></div>
-      
-      <!-- END MENU -->
-
+    <header id="myHeader" class="non-index-header">
         <p id="herobrandname-p-block"><a id="hero" href="index.html">POLYMATH HERO</a></p>
+        <!-- BEGIN MENU -->
+        <div id="menu">
+            <div id="menu-bar" onclick="menuOnClick()">
+                <div id="bar1" class="bar non-index-bar"></div>
+                <div id="bar2" class="bar non-index-bar"></div>
+                <div id="bar3" class="bar non-index-bar"></div>
+            </div>
+            <nav class="nav" id="nav">
+                <ul>
+                    <li class="menu-primary-list-item"><a href="index.html">Home</a></li>
+                    <li class="menu-primary-list-item"><a href="newswire.html">Blog</a></li>
+                    <li class="menu-primary-list-item"><a href="https://ko-fi.com/chicaffair/shop">Products</a></li>
+                    <!--<li><a href="#">RegalRack</a></li>
+                    <li><a href="#">Uplift</a></li>
+                    <li class="menu-primary-list-item"><a href="34-feedback-app.html">Feedback App</a></li>-->
+                </ul>
+                <hr>
+                <ul>
+                    <li class="menu-secondary-list-item"><a href="about-page.html">About us</a></li>
+                    <li class="menu-secondary-list-item"><a href="follow-us.html">Follow us</a></li>
+                    <li class="menu-secondary-list-item"><a href="contact-us.html">Contact us</a></li>
+                </ul>
+                <!--
+                <hr>
+                <ul>
+                    <li class="menu-tertiary-list-item"><a href="return-policy.html">Returns</a></li>
+                    <li class="menu-tertiary-list-item"><a href="shipping-policy.html">Shipping</a></li>
+                    <li class="menu-tertiary-list-item"><a href="privacy-policy.html">Privacy policy</a></li>
+                </ul>-->
+            </nav>
+        </div>
+        <div class="menu-bg" id="menu-bg"></div>
+        <!-- END MENU -->
     </header>
 
-    <div class="page-container">
-        <p id="page-title-p">Contact Us</p>
-        
-        <div class="contact-container">
-            <p class="contact-text">We'd love to hear from you! Please reach out to us via email: <a class="contact-email" href="mailto:polymathhero@outlook.com">polymathhero@outlook.com</a>.</p>
+    <main>
+        <div class="page-container">
+            <p id="page-title-p">Contact Us</p>
+
+            <div class="contact-container">
+                <p class="contact-text">We'd love to hear from you! Please reach out to us via email: <a
+                        class="contact-email" href="mailto:polymathhero@outlook.com">polymathhero@outlook.com</a>.</p>
+            </div>
         </div>
-    </div>
+    </main>
 
-            <!-- BEGIN CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH-->
-            <script>
-              // Function to adjust menu-bg height based on header height
-              function adjustMenuBgHeight() {
-                var headerHeight = document.querySelector('header').offsetHeight;
-                document.getElementById('menu-bg').style.height = `calc(100vh - ${headerHeight}px)`;
-              }
-            
-              // Call the function on page load
-              window.addEventListener('load', adjustMenuBgHeight);
-            
-              // Call the function on window resize to handle responsive design
-              window.addEventListener('resize', adjustMenuBgHeight);
-            </script>
-          <!-- END CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH-->
-
-        <!-- BEGIN MENU SCRIPT-->
-        <script>function menuOnClick() {      
-              document.getElementById("menu-bar").classList.toggle("change");
-              document.getElementById("nav").classList.toggle("change-nav");
-              document.getElementById("menu-bg").classList.toggle("change-bg");
-
-                  // Toggle menu-opened class on body
-    document.body.classList.toggle("menu-opened");
-            }</script>
-            <!-- END MENU SCRIPT-->
+    <script defer src="script.js"></script>
 
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
-      
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
 </body>
+
 </html>

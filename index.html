@@ -6,40 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POLYMATH HERO Official International Website</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" as="image" href="pex1.jpg">
-    <link rel="preload" as="image" href="pex2.jpg">
-    <link rel="preload" as="image" href="pex3.jpg">
-    <link rel="preload" as="image" href="pex4.jpg">
-    <link rel="preload" as="image" href="pex5.jpg">
-    <link rel="preload" as="image" href="pex6.jpg">
-    <link rel="preload" as="image" href="pex7.jpg">
-    <link rel="preload" as="image" href="pex8.jpg">
-    <link rel="preload" as="image" href="pex9.jpg">
-    <link rel="preload" as="image" href="pex10.jpg">
-    <link rel="preload" as="image" href="pex11.jpg">
-    <link rel="preload" as="image" href="pex21.jpg">
-    <link rel="preload" as="image" href="pex13.jpg">
-    <link rel="preload" as="image" href="pex14.jpg">
-    <link rel="preload" as="image" href="pex15.jpg">
-    <link rel="preload" as="image" href="pex16.jpg">
-    <link rel="preload" as="image" href="pex17.jpg">
-    <link rel="preload" as="image" href="pex18.jpg">
-    <link rel="preload" as="image" href="pex19.jpg">
-    <link rel="preload" as="image" href="pex20.jpg">
-    <link rel="preload" as="image" href="pex21.jpg">
-    <link rel="preload" as="image" href="pex22.jpg">
-    <link rel="preload" as="image" href="pex23.jpg">
-
 </head>
 
 <body id="body-id">
-    <header>
+    <header id="myHeader" class="index-header">
+        <p id="herobrandname-p-block"><a id="hero" href="index.html">POLYMATH HERO</a></p>
         <!-- BEGIN MENU -->
         <div id="menu">
             <div id="menu-bar" onclick="menuOnClick()">
-                <div id="bar1" class="bar"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
+                <div id="bar1" class="bar index-bar"></div>
+                <div id="bar2" class="bar index-bar"></div>
+                <div id="bar3" class="bar index-bar"></div>
             </div>
             <nav class="nav" id="nav">
                 <ul>
@@ -47,8 +24,8 @@
                     <li class="menu-primary-list-item"><a href="newswire.html">Blog</a></li>
                     <li class="menu-primary-list-item"><a href="https://ko-fi.com/chicaffair/shop">Products</a></li>
                     <!--<li><a href="#">RegalRack</a></li>
-                <li><a href="#">Uplift</a></li>-->
-                    <li class="menu-primary-list-item"><a href="34-feedback-app.html">Feedback App</a></li>
+                <li><a href="#">Uplift</a></li>
+                    <li class="menu-primary-list-item"><a href="34-feedback-app.html">Feedback App</a></li>-->
                 </ul>
                 <hr>
                 <ul>
@@ -56,20 +33,18 @@
                     <li class="menu-secondary-list-item"><a href="follow-us.html">Follow us</a></li>
                     <li class="menu-secondary-list-item"><a href="contact-us.html">Contact us</a></li>
                 </ul>
+                <!--
                 <hr>
                 <ul>
                     <li class="menu-tertiary-list-item"><a href="return-policy.html">Returns</a></li>
                     <li class="menu-tertiary-list-item"><a href="shipping-policy.html">Shipping</a></li>
                     <li class="menu-tertiary-list-item"><a href="privacy-policy.html">Privacy policy</a></li>
-                </ul>
+                </ul>-->
             </nav>
         </div>
-
+        <!---->
         <div class="menu-bg" id="menu-bg"></div>
-
         <!-- END MENU -->
-
-        <p id="herobrandname-p-block"><a id="hero" href="index.html">POLYMATH HERO</a></p>
     </header>
 
     <!-- <div class="announcement-bar">
@@ -80,7 +55,12 @@
 
     <a href="newswire.html#article-1361" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex22.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pex64m.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pex64i.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 27, 2023</div>
@@ -91,7 +71,12 @@
 
     <a href="newswire.html#article-1360" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex5.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pex65m.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pex65i.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 27, 2023</div>
@@ -99,10 +84,15 @@
             <p class="read-more">Read More</p>
         </div>
     </a>
-
+    
     <a href="newswire.html#article-1359" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex6.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pex66m.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pex66i.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 26, 2023</div>
@@ -113,7 +103,12 @@
 
     <a href="newswire.html#article-1358" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex7.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pex67m.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pex67i.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 25, 2023</div>
@@ -124,7 +119,12 @@
 
     <a href="newswire.html#article-1357" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex8.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm81.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi68.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 25, 2023</div>
@@ -135,7 +135,12 @@
 
     <a href="newswire.html#article-1356" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex23.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm82.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi69.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -146,7 +151,12 @@
 
     <a href="newswire.html#article-1355" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex10.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm94.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi70.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -157,7 +167,12 @@
 
     <a href="newswire.html#article-1354" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex11.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm84.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi71.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -168,7 +183,12 @@
 
     <a href="newswire.html#article-1353" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex21.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm85.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi72.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -179,7 +199,12 @@
 
     <a href="newswire.html#article-1352" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex13.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm86.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi73.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -190,7 +215,12 @@
 
     <a href="newswire.html#article-1351" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex14.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm87.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi74.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -201,7 +231,12 @@
 
     <a href="newswire.html#article-1350" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex15.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm88.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi75.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -212,7 +247,12 @@
 
     <a href="newswire.html#article-1349" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex16.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm89.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi76.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 23, 2023</div>
@@ -223,7 +263,12 @@
 
     <a href="newswire.html#article-1348" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex17.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm90.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi77.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 22, 2023</div>
@@ -234,7 +279,12 @@
 
     <a href="newswire.html#article-1347" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex18.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm91.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi78.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 22, 2023</div>
@@ -245,7 +295,12 @@
 
     <a href="newswire.html#article-1346" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex19.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm92.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi79.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 22, 2023</div>
@@ -256,7 +311,12 @@
 
     <a href="newswire.html#article-1345" class="feed-post-link">
         <div class="feed-post-image-container">
-            <img src="pex20.jpg" class="feed-post-image">
+            <picture>
+                <!-- Source for MacBook Pro or larger screens -->
+                <source media="(min-width: 768px)" srcset="images/pexm93.jpg">
+                <!-- Default source for smaller screens like iPhone -->
+                <img src="images/pexi80.jpg" class="feed-post-image" alt="Image Description">
+            </picture>
         </div>
         <div class="feed-post-container">
             <div class="date">November 22, 2023</div>
@@ -300,45 +360,7 @@
         </ul>
     </footer>-->
 
-    <script>
-        function togglePlayPause() {
-            var video = document.getElementById("myVideo");
-            if (video.paused) {
-                video.play();
-                document.getElementById("playPauseBtn").innerHTML = "⏸"; // Pause symbol
-            } else {
-                video.pause();
-                document.getElementById("playPauseBtn").innerHTML = "▶️"; // Play symbol
-            }
-        }
-    </script>
-
-    <!-- BEGIN CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH-->
-    <script>
-        // Function to adjust menu-bg height based on header height
-        function adjustMenuBgHeight() {
-            var headerHeight = document.querySelector('header').offsetHeight;
-            document.getElementById('menu-bg').style.height = `calc(100vh - ${headerHeight}px)`;
-        }
-
-        // Call the function on page load
-        window.addEventListener('load', adjustMenuBgHeight);
-
-        // Call the function on window resize to handle responsive design
-        window.addEventListener('resize', adjustMenuBgHeight);
-    </script>
-    <!-- END CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH-->
-
-    <!-- BEGIN MENU SCRIPT-->
-    <script>function menuOnClick() {
-            document.getElementById("menu-bar").classList.toggle("change");
-            document.getElementById("nav").classList.toggle("change-nav");
-            document.getElementById("menu-bg").classList.toggle("change-bg");
-
-            // Toggle menu-opened class on body
-            document.body.classList.toggle("menu-opened");
-        }</script>
-    <!-- END MENU SCRIPT-->
+    <script defer src="script.js"></script>
 
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
