@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 // END HEADER APPEARANCE ON HOVER
 
 // BEGIN VIDEO PLAY PAUSE BUTTON
@@ -71,22 +70,6 @@ function togglePlayPause() {
     }
 }
 // END VIDEO PLAY PAUSE BUTTON
-
-/*
-// BEGIN CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH
-// Function to adjust menu-bg height based on header height
-function adjustMenuBgHeight() {
-    var headerHeight = document.querySelector('header').offsetHeight;
-    document.getElementById('menu-bg').style.height = `calc(100vh - ${headerHeight}px)`;
-}
-
-// Call the function on page load
-window.addEventListener('load', adjustMenuBgHeight);
-
-// Call the function on window resize to handle responsive design
-window.addEventListener('resize', adjustMenuBgHeight);
-// END CALCULATE #MENU-BG HEIGHT BY REDUCING HEADER HEIGHT FROM 100VH
-*/
 
 // BEGIN MENU (On click) SCRIPT
 function menuOnClick() {
