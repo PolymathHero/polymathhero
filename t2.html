@@ -296,8 +296,9 @@
             .product-card-div {
                 align-items: center;
                 justify-content: center;
-                border: 1px solid brown;
                 position: relative;
+                width: 50%;
+                border: 0px solid red;
             }
 
             .product-card-product-name-h2 {
@@ -310,18 +311,12 @@
                 width: 100%;
             }
 
-            .product-card-div {
-                width: 50%;
-                border: 0px solid red;
-            }
-
             .product-card-a-pc {
                 color: black;
                 position: relative;
                 border: 0px solid red;
                 width: 100%;
                 height: 100%;
-                position: absolute;
                 z-index: 1;
                 top: 0;
                 right: 0;
@@ -364,7 +359,6 @@
             .product-card-text-details-div {
                 background-color: white;
                 width: 100%;
-                margin-left: 0;
             }
 
             .product-card-text-details-div-inner-div {
@@ -472,7 +466,6 @@
 
             .feed-post-link:hover .read-more {
                 box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.8);
-                /* Add a light effect on hover */
             }
 
             .announcement-bar {
@@ -584,7 +577,7 @@
             }
 
             .product-card-invsibile-img {
-                visibility: visible;
+                visibility: hidden;
                 opacity: 0.5;
                 border: 0px solid black;
                 width: 100%;
@@ -606,12 +599,12 @@
                 background-color: transparent;
                 border-radius: 100vmax;
                 cursor: pointer;
-                /*visibility: hidden;*/
+                visibility: hidden;
                 padding: 1rem;
-                border: 1px solid red;
+                border: 0px solid red;
                 box-sizing: border-box;
                 z-index: 2;
-                /*opacity: 0;*/
+                opacity: 0;
                 transition: opacity .3s cubic-bezier(.39, .575, .565, 1);
             }
 
@@ -631,12 +624,12 @@
                 border-radius: 100vmax;
                 border: none;
                 cursor: pointer;
-                /*visibility: hidden;*/
+                visibility: hidden;
                 padding: 1rem;
-                border: 1px solid red;
+                border: 0px solid red;
                 box-sizing: border-box;
                 z-index: 2;
-                /*opacity: 0;*/
+                opacity: 0;
                 transition: opacity 0.3s cubic-bezier(.39, .575, .565, 1);
             }
 
@@ -649,6 +642,7 @@
             .product-card-text-details-div-inner-div {
                 display: block;
                 border: 0px solid red;
+                padding: 1rem 1rem;
             }
 
             .product-card-product-name-h2 {
@@ -1355,7 +1349,18 @@
 
         /* BEGIN PRODUCT LISTING PAGE */
 
+        .product-card-product-name-h2 {
+            font-size: 0.875rem;
+            letter-spacing: 0.025rem;
+            line-height: 1rem;
+            padding: 0.5rem 0;
+        }
 
+        .product-card-price {
+            font-size: 0.875rem;
+            letter-spacing: 0.025rem;
+            line-height: 1rem;
+        }
 
         /* END PRODUCT LISTING PAGE */
 
@@ -1469,12 +1474,79 @@
                 </div>
             </div>
 
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-
-
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
 
             <div class="product-card-div">
                 <a class="product-card-a-pc" href="product-page.html" title="Product Page">
@@ -1549,6 +1621,569 @@
                     </div>
                 </div>
             </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card-div">
+                <a class="product-card-a-pc" href="product-page.html" title="Product Page">
+                    <div class="product-card-product-thumbnail-image-layer-div">
+                        <div class="product-card-img-container-div">
+                            <img alt="alternate text" class="product-card-img"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                            <img alt="alternate text" class="product-card-img2"
+                                src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                        </div>
+                    </div>
+                    <div class="product-card-text-details-div">
+                        <div class="product-card-text-details-div-inner-div">
+                            <h2 class="product-card-product-name-h2">
+                                Cotton Polo
+                            </h2>
+                            <p class="product-card-price">$1,250.00</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-card-button-layer-div">
+                    <div class="product-card-button-layer-div-img-container-div">
+                        <img alt="alternate text" class="product-card-invsibile-img"
+                            src="louis-vuitton-cotton-polo--HQN33WAUR605_PM2_Front view.png">
+                    </div>
+                    <div class="left-chevron-button-container-div">
+                        <button class="product-card-left-chevron-button" onclick="scrollLeft()"><img
+                                src="svg/left-chevron.svg" alt="Left Chevron"></button>
+                    </div>
+                    <div class="right-chevron-button-container-div">
+                        <button class="product-card-right-chevron-button" onclick="scrollRight()"><img
+                                src="svg/right-chevron.svg" alt="Right Chevron"></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
 
         </div>
     </main>

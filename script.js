@@ -146,19 +146,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Loop through each product card
 document.querySelectorAll('.product-card-div').forEach((card, index) => {
     const container = card.querySelector('.product-card-img-container-div');
     const leftBtn = card.querySelector('.product-card-left-chevron-button');
     const rightBtn = card.querySelector('.product-card-right-chevron-button');
+    const scrollAmount = 1;
 
-    let scrollAmount = 150;
+    // Get the total width of the container
+    const containerWidth = container.scrollWidth;
 
     leftBtn.addEventListener('click', () => {
         container.scrollBy({
             left: -scrollAmount,
             behavior: 'smooth'
         });
+
+        // Check if the scroll position is less than 0, then wrap to the end
+        if (container.scrollLeft <= 0) {
+            container.scrollLeft = containerWidth;
+        }
     });
 
     rightBtn.addEventListener('click', () => {
@@ -166,5 +172,10 @@ document.querySelectorAll('.product-card-div').forEach((card, index) => {
             left: scrollAmount,
             behavior: 'smooth'
         });
+
+        // Check if the scroll position is at the end, then wrap to the beginning
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }
     });
 });
