@@ -142,17 +142,86 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  z-index: 3;
-  max-width: 100vw;
   margin-top: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   transition: all .3s cubic-bezier(.39, .575, .565, 1);
+  border: 0px solid #ececec;
+  box-sizing: border-box;
+}
+
+.shopping-bag-icon-container-div-2 {
   border: 0px solid red;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.shopping-bag-icon-container-div {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0.75rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  border: 0px solid red;
+  padding: ;
+}
+
+.shopping-bag-icon-svg {
+  border: 0px solid red;
+}
+
+.initially-black-shopping-bag-svg path {
+  fill: black;
+}
+
+.header-shopping-bag-quantity-notification-span {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  left: 1rem;
+  margin-top: -.875rem;
+  border-radius: 50%;
+  font-size: .5rem;
+  font-weight: 600;
+  letter-spacing: 0.025rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid red;
+  text-align: center;
+}
+
+.transparent-header-shopping-bag-quantity-notification-span {
+  background-color: white;
+  color: black;
+}
+
+.non-transparent-header-shopping-bag-quantity-notification-span {
+  background-color: black;
+  color: white;
+}
+
+.header-shopping-bag-quantity-notification-span.scrolled {
+  background-color: black;
+  color: white;
+}
+
+.header-shopping-bag-quantity-notification-span.on-header-hover {
+  background-color: black;
+  color: white;
+}
+
+.header-shopping-bag-quantity-notification-span.on-menu-click {
+  background-color: black;
+  color: white;
 }
 
 .non-index-header {
@@ -203,15 +272,15 @@ header.scrolled a {
   border: 0px solid red;
 }
 
-.header-icon-img path {
+.initially-white-shopping-bag-svg path {
   fill: white;
 }
 
-.header-icon-img.scrolled path {
+.header-icon-svg.scrolled path {
   fill: black;
 }
 
-.header-icon-img.on-header-hover path {
+.header-icon-svg.on-header-hover path {
   fill: black;
 }
 
@@ -224,6 +293,8 @@ header.scrolled a {
 
   header {
     padding: 0.45rem;
+    z-index: 3;
+    border: 0px solid red;
   }
 
   #herobrandname-p-block {
@@ -234,17 +305,60 @@ header.scrolled a {
     background-color: transparent;
   }
 
+  #menu {
+    z-index: 2;
+  }
+
+  .nav {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s;
+    top: 100%;
+    border: 0px solid red;
+  }
+
   .change-nav {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+    margin-top: 1px;
+    transition: opacity 0.15s;
+    transition-delay: 0.15s;
     left: 0;
     width: 100vw;
   }
 
   .menu-bg {
     transition: 0.15s;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 0;
+    /* Initially set height to 0 */
+    width: 100vw;
+    margin-top: 1px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border: 0px;
+    background: white;
   }
 
   .change-bg {
     transition: 0.15s;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .shopping-bag-icon-container-div-2 {
+    display: none;
   }
 
   .email-us-background {
@@ -361,6 +475,9 @@ header.scrolled a {
   /*BEGIN PRODUCT PAGE*/
   .image-section-on-mobile {
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 0;
   }
 
   .image-section-on-mobile img {
@@ -381,6 +498,12 @@ header.scrolled a {
   }
 
   /* Add styles for the product details section */
+  .product-details-section-on-mobile {
+    background-color: white;
+    position: relative;
+    z-index: 3;
+  }
+
   .product-details-div {
     padding: 20px;
   }
@@ -408,16 +531,215 @@ header.scrolled a {
 
   header {
     padding: 1.45rem;
+    z-index: 3;
+  }
+
+  .header-hero-brand-name-span-container-div {
+    z-index: -1;
+  }
+
+  #menu {
+    z-index: 0;
+    border: 0px solid red;
+  }
+
+  #menu-bar {
+    position: relative;
+    z-index: 2;
+  }
+
+  .header-hamburger-menu-white-strip-div-for-computer {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -33.3333333333%;
+    width: 33.3333333333%;
+    height: 100%;
+    max-width: 30rem;
+    border: 0px solid red;
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+    z-index: 0;
+  }
+
+  .header-hamburger-menu-white-strip-div-for-computer.after-clicking-on-hamburger-menu-icon-to-open-hamburger-menu {
+    left: 0;
+    opacity: 1;
+    height: 100%;
+    background-color: white;
+  }
+
+  .nav {
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    left: -33.3333333333%;
+    width: 33.3333333333%;
+    height: 100vh;
+    max-width: 30rem;
+    border: 0px solid red;
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .change-nav {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    margin-top: 0px;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
   }
 
   .menu-bg {
-    transition: 0.15s;
+    transition: opacity 0.3s, width 0s ease 0.3s;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 100vh;
+    width: 0;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border: 0px;
+    background: black;
+    opacity: 0;
+  }
+
+  .change-bg {
+    width: 100vw;
+    opacity: 0.8;
+    transition: opacity 0.3s, width 0s ease 0s;
+    z-index: -1;
+  }
+
+  .menu-bg-inside-bg-div {
+    transition: opacity 0.3s, width 0s ease 0.3s;
+    z-index: -1;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    height: 100vh;
+    width: 0;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border: 0px;
+    background: black;
+    opacity: 0;
+  }
+
+  .menu-bg-inside-bg-div.after-clicking-on-hamburger-menu-icon-in-header {
+    width: 100vw;
+    opacity: 0.8;
+    transition: opacity 0.3s, width 0s ease 0s;
+    z-index: -1;
   }
 
   .nav li a {
     line-height: 1.2;
+    padding-left: 0.8rem;
   }
 
+  /* BEGIN SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
+  .shopping-bag-icon-container-div-2 {
+    position: relative;
+    z-index: 0;
+  }
+
+  .shopping-bag-icon-container-div {
+    cursor: pointer;
+    z-index: -1;
+  }
+
+  .shopping-bag-in-page-menu-div-for-computer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0px solid red;
+    z-index: 5;
+  }
+
+  .shopping-bag-in-page-menu-div-for-computer.after-clicking-on-shopping-bag-icon {
+    z-index: 5;
+    position: fixed;
+    display: block;
+  }
+
+  .shopping-bag-white-menu-half-div-for-computer {
+    width: 50%;
+    height: 100VW;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    border: 0px solid red;
+    transition: opacity 0.3s ease, right 0.3s ease;
+    opacity: 0;
+  }
+
+  .shopping-bag-white-menu-half-div-for-computer.after-clicking-on-shopping-bag-icon {
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .white-half-menu-title-and-close-button-container-div-for-computer {
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid red;
+    margin-top: 3rem;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+    background-color: transparent;
+  }
+
+  .white-half-menu-title-h1-for-computer {
+    font-size: 1.125rem;
+  }
+
+  .close-shopping-bag-in-page-menu-div-button-for-computer {
+    background-color: transparent;
+    border: 0px solid blue;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .shopping-bag-dark-menu-half-div-for-computer {
+    width: 0%;
+    height: 100VW;
+    background-color: black;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border: 0px solid red;
+    transition: opacity 0.3s ease, width 0s ease 0.3s;
+    opacity: 0%;
+  }
+
+  .shopping-bag-dark-menu-half-div-for-computer.after-clicking-on-shopping-bag-icon {
+    width: 100%;
+    opacity: 80%;
+    z-index: 0;
+    transition: opacity 0.3s ease, width 0s ease 0s;
+  }
+
+  /* END SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
   .email-us-header-text-span {
     cursor: pointer;
   }
@@ -649,8 +971,14 @@ header.scrolled a {
   /*END PRODUCT LISTING PAGE*/
 
   /*BEGIN PRODUCT PAGE*/
+  .product-page-main {
+    display: flex;
+  }
+
+  .product-page-main-for-computer {}
+
   .left-hand-side-image-section {
-    max-width: 50%;
+    width: 50%;
   }
 
   .left-hand-side-image-section img {
@@ -666,10 +994,6 @@ header.scrolled a {
     top: 50%;
     display: flex;
     justify-content: center;
-  }
-
-  .product-page-main {
-    display: flex;
   }
 
   .product-details-div {
@@ -709,7 +1033,6 @@ header.scrolled a {
 
 /* BEGIN MENU */
 #menu {
-  z-index: 2;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -726,6 +1049,7 @@ header.scrolled a {
   padding-bottom: 0.8rem;
   padding-left: 0.8rem;
   cursor: pointer;
+  border: 0px solid red;
 }
 
 .bar {
@@ -765,26 +1089,6 @@ header.scrolled .bar {
   transform: translateY(4px);
 }
 
-.nav {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.15s;
-  top: 100%;
-}
-
-.change-nav {
-  position: absolute;
-  visibility: visible;
-  opacity: 1;
-  top: 100%;
-  margin-top: 1px;
-  transition: opacity 0.15s;
-  transition-delay: 0.15s;
-  /*height: 100vh;
-  background-color: white;*/
-}
-
 hr {
   border-top: 0px;
   border-bottom: 1px solid #ececec;
@@ -792,6 +1096,10 @@ hr {
 
 .nav ul {
   padding: 0 22px;
+}
+
+.header-hamburger-menu-first-unordered-list {
+  border-bottom: 1px solid #ececec;
 }
 
 .nav li {
@@ -820,31 +1128,6 @@ hr {
   font-size: 16px;
 }
 
-.menu-bg {
-  top: 100%;
-  left: 0;
-  position: absolute;
-  max-width: 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  height: 0;
-  /* Initially set height to 0 */
-  width: 100vw;
-  z-index: 1;
-  margin-top: 1px;
-  margin-right: 0;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  border: 0px;
-  background: white;
-}
-
-.change-bg {
-  height: 100vh;
-  width: 100vw;
-}
-
 .change .bar {
   background-color: black;
 }
@@ -870,6 +1153,10 @@ hr {
 
 .on-menu-click-header a:visited {
   color: black;
+}
+
+.on-menu-click-header .bar {
+  background-color: black;
 }
 
 /* END MENU */
