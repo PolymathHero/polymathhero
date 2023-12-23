@@ -76,9 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
 // END HEADER APPEARANCE ON HOVER on computers
 
-// BEGIN MENU (On click) SCRIPT
+// BEGIN hamburger menu (On click) SCRIPT
 function menuOnClick() {
     document.getElementById("menu-bar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change-nav");
@@ -99,8 +100,24 @@ function menuOnClick() {
 
     // Toggle menu-opened class on body
     document.body.classList.toggle("menu-opened");
+
+    // Begin mouseout event on header if you close the menu and your mouse is under the header bar
+    // Define header like the close shopping bag menu function so that we can trigger mouseout on the header when we close the menu
+    const header = document.getElementById('myHeader');
+
+    // Check if the mouse cursor is below the header offset height
+    const mouseY = event.clientY || event.touches[0].clientY;
+    const headerHeight = header.offsetHeight;
+
+    // if mouse cursor is under the header offset height whatever that means then trigger a mouseout event as if the user just left the header
+    if (mouseY > headerHeight) {
+        // Trigger mouseout on the header
+        const mouseoutEvent = new Event('mouseout');
+        header.dispatchEvent(mouseoutEvent);
+    }
 }
-// END MENU (On click) SCRIPT
+
+// END hamburger menu (On click) SCRIPT
 
 // BEGIN EMAIL US (On click)
 function emailUsOnClick() {
@@ -140,7 +157,7 @@ function togglePlayPause() {
 }
 // END VIDEO PLAY PAUSE BUTTON
 
-// Add JavaScript for swipe functionality
+// BEGIN Add JavaScript for swipe functionality for the product page image container ??
 document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.querySelector(".product-page-image-container");
 
@@ -222,7 +239,8 @@ window.onload = function () {
 // END UPDATE .header-shopping-bag-quantity-notification-span WITH bagQuantity from localStorage on page load
 
 //BEGIN OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
-document.querySelector('.shopping-bag-icon-container-div').addEventListener('click', function () {
+document.querySelector('.shopping-bag-icon-container-button').addEventListener('click', function () {
+    document.querySelector('.shopping-bag-icon-container-div-2').classList.add('after-clicking-on-shopping-bag-icon');
     document.querySelector('.shopping-bag-white-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
     document.querySelector('.shopping-bag-in-page-menu-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
     document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
@@ -243,16 +261,19 @@ document.querySelector('.shopping-bag-icon-container-div').addEventListener('cli
 });
 
 //END OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
-// BEGIN CLOSE SHOPPING BAG ICON ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
-// Function to remove the class and trigger mouseout on the header
+// BEGIN CLOSE SHOPPING BAG ICON MENU ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
+// Function to remove classes, and trigger mouseout on the header when we close the shopping bag menu
 function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
-    // Select the elements
+
     const closeButton = document.querySelector('.close-shopping-bag-in-page-menu-div-button-for-computer');
     const darkMenu = document.querySelector('.shopping-bag-dark-menu-half-div-for-computer');
     const whiteMenu = document.querySelector('.shopping-bag-white-menu-half-div-for-computer');
     const header = document.getElementById('myHeader');
-    // Begin keep header changed when shopping bag menu is open (not only one hover): close header classes
-    // because this function is for when the shopping bag menu is closed
+
+    document.querySelector('.shopping-bag-icon-container-div-2').classList.remove('after-clicking-on-shopping-bag-icon');
+
+    /* Begin keep header changed when shopping bag menu is open (not only on hover): close header classes
+     because this function is for when the shopping bag menu is closed */
     document.getElementById("myHeader").classList.remove("on-menu-click-header");
 
     // Iterate over each header-icon-svg element and toggle the class
@@ -265,18 +286,16 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
     let headerShoppingBagCounter = document.querySelector('.header-shopping-bag-quantity-notification-span');
     headerShoppingBagCounter.classList.remove('on-menu-click');
 
-    // End keep header changed when shopping bag menu is open (not only one hover): close header classes
-    // because this function is for when the shopping bag menu is closed
-
-    // Check if the mouse cursor is below the header offset height
-    const mouseY = event.clientY || event.touches[0].clientY;
-    const headerHeight = header.offsetHeight;
+    /* End keep header changed when shopping bag menu is open (not only one hover): close header classes
+     because this function is for when the shopping bag menu is closed */
 
     // Remove classes on shopping bag menu close
     whiteMenu.classList.remove('after-clicking-on-shopping-bag-icon');
     darkMenu.classList.remove('after-clicking-on-shopping-bag-icon');
 
-
+    // Check if the mouse cursor is below the header offset height
+    const mouseY = event.clientY || event.touches[0].clientY;
+    const headerHeight = header.offsetHeight;
 
     // if mouse cursor is under the header offset height whatever that means then trigger a mouseout event as if the user just left the header
     if (mouseY > headerHeight) {
@@ -286,11 +305,9 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
     }
 }
 
-// Add the event listeners
+// Add the event listeners so that the function is called when the user clicks the close button or the dark half
 document.querySelector('.close-shopping-bag-in-page-menu-div-button-for-computer').addEventListener('click', removeClassesAndTriggerMouseoutOnShoppingBagMenuClose);
 document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').addEventListener('click', removeClassesAndTriggerMouseoutOnShoppingBagMenuClose);
-
-
 
 // END CLOSE SHOPPING BAG ICON ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 /* END SHOPPING BAG */
