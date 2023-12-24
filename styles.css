@@ -199,7 +199,6 @@ header {
 }
 
 .non-index-header {
-  border-bottom: 1px solid #ececec;
   background-color: white;
 }
 
@@ -217,7 +216,7 @@ header {
 
 header.scrolled {
   background-color: white;
-  border-bottom: 1px solid #ececec;
+  box-shadow: inset 0 -1px 0 0 #ececec;
 }
 
 header.scrolled a {
@@ -296,11 +295,58 @@ header.scrolled a {
     visibility: visible;
     opacity: 1;
     top: 100%;
-    margin-top: 1px;
+    margin-top: 0px;
     transition: opacity 0.15s;
     transition-delay: 0.15s;
     left: 0;
     width: 100vw;
+  }
+
+  .hamburger-menu-nav ul {
+    padding-left: 6.4vw;
+    padding-right: 6.4vw;
+
+  }
+
+  .header-hamburger-menu-first-unordered-list {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .nav li {
+    list-style: none;
+  }
+
+  .hamburger-menu-nav .menu-secondary-list-item a {
+    font-size: 1rem;
+  }
+
+  .nav li a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .hamburger-menu-nav button {
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    padding: .75rem 0;
+    border: 0;
+    text-align: left;
+    margin: 0;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .hamburger-menu-nav button img {
+    width: 1rem;
+    height: 1rem;
+    visibility: visible;
   }
 
   .menu-bg {
@@ -316,7 +362,7 @@ header.scrolled a {
     height: 0;
     /* Initially set height to 0 */
     width: 100vw;
-    margin-top: 1px;
+    margin-top: 0px;
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -534,6 +580,20 @@ header.scrolled a {
     z-index: 3;
   }
 
+  .transparent-header-at-first {
+    box-shadow: none;
+  }
+
+  .regular-document-flow-white-background-color-header {
+    box-shadow: inset 0 -1px 0 0 #ececec;
+  }
+
+  #myHeader.on-header-hover {
+    background-color: white;
+    box-shadow: inset 0 -1px 0 0 #ececec;
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+  }
+
   .header-hero-brand-name-span-container-div {
     z-index: -1;
   }
@@ -593,6 +653,77 @@ header.scrolled a {
     z-index: 1;
   }
 
+  .hamburger-menu-nav ul {
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+  }
+
+  .header-hamburger-menu-first-unordered-list {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #ececec;
+  }
+
+  .hamburger-menu-nav li {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hamburger-menu-nav .menu-secondary-list-item a {
+    font-size: 1rem;
+  }
+
+  .hamburger-menu-nav button {
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    padding: .75rem 0;
+    border: 0;
+    text-align: left;
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    color: black;
+  }
+
+  .hamburger-menu-nav li span {
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-image: linear-gradient(black, black);
+    background-repeat: no-repeat;
+    transition: background-size .3s cubic-bezier(.39,.575,.565,1);
+  }
+
+  .hamburger-menu-nav li span:hover {
+    background-size: 100% 1px;
+  }
+
+  .hamburger-menu-nav button img {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    visibility: hidden;
+  }
+
+  .hamburger-menu-nav button:hover img {
+    visibility: visible;
+  }
+
+  .header-hamburger-menu-first-unordered-list-div:hover .menu-primary-list-item:not(:hover) {
+    opacity: 0.5;
+  }
+
+  .menu-secondary-list-item a {
+    line-height: 1.2;
+    color: black;
+    text-decoration: none;
+  }
+
   .menu-bg {
     transition: opacity 0.3s, width 0s ease 0.3s, z-index 0s ease 0.3s;
     z-index: -1;
@@ -649,17 +780,13 @@ header.scrolled a {
     z-index: -1;
   }
 
-  .nav li a {
-    line-height: 1.2;
-    padding-left: 0.8rem;
-  }
-
   /* BEGIN SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
   .shopping-bag-icon-container-div-2 {
     position: relative;
     z-index: -1;
     transition: z-index 0s ease 0.3s;
   }
+
   .shopping-bag-icon-container-div-2.after-clicking-on-shopping-bag-icon {
     z-index: 4;
     transition: z-index 0s ease 0s;
@@ -1082,10 +1209,10 @@ header.scrolled a {
   margin-right: 0;
   margin-bottom: 0px;
   margin-left: 0px;
-  padding-top: 0.8rem;
-  padding-right: 0.8rem;
-  padding-bottom: 0.8rem;
-  padding-left: 0.8rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
   cursor: pointer;
   border: 0px solid red;
 }
@@ -1132,40 +1259,6 @@ hr {
   border-bottom: 1px solid #ececec;
 }
 
-.nav ul {
-  padding: 0 22px;
-}
-
-.header-hamburger-menu-first-unordered-list {
-  border-bottom: 1px solid #ececec;
-}
-
-.nav li {
-  list-style: none;
-  padding: 12px 0;
-}
-
-.nav li a {
-  color: black;
-  text-decoration: none;
-}
-
-.nav li a:hover {
-  text-decoration: underline;
-}
-
-.nav .menu-primary-list-item {
-  font-size: 24px;
-}
-
-.nav .menu-secondary-list-item a {
-  font-size: 20px;
-}
-
-.nav .menu-tertiary-list-item a {
-  font-size: 16px;
-}
-
 .change .bar {
   background-color: black;
 }
@@ -1185,7 +1278,7 @@ hr {
 .on-menu-click-header {
   background-color: white;
   color: black;
-  border-bottom: 1px solid #ececec;
+  box-shadow: inset 0 -1px 0 0 #ececec;
   transition: none;
 }
 

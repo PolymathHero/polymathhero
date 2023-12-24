@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!isTouchDevice) {
         header.addEventListener("mouseover", function () {
             // Your mouseover styles
-            header.style.backgroundColor = "white";
-            header.style.borderBottom = "1px solid #ececec";
+            header.classList.add("on-header-hover");
             headerIcons.forEach(function (icon) {
                 icon.classList.add("on-header-hover");
             });
@@ -57,8 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         header.addEventListener("mouseout", function () {
             // Your mouseout styles
-            header.style.backgroundColor = "";
-            header.style.borderBottom = "";
+            header.classList.remove("on-header-hover");
             headerIcons.forEach(function (icon) {
                 icon.classList.remove("on-header-hover");
             });
