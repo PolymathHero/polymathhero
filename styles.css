@@ -323,8 +323,12 @@ header.scrolled a {
     list-style: none;
   }
 
-  .hamburger-menu-nav .menu-secondary-list-item a {
+  .menu-secondary-list-item a {
     font-size: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .nav li a {
@@ -728,6 +732,10 @@ header.scrolled a {
     line-height: 1.2;
     color: black;
     text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .menu-bg {
