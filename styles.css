@@ -267,6 +267,11 @@ header.scrolled a {
   header {
     padding: 0.45rem;
     z-index: 3;
+    height: 3.5rem;
+  }
+
+  .regular-document-flow-white-background-color-header {
+    box-shadow: inset 0 -1px 0 0 #ececec;
   }
 
   #herobrandname-p-block {
@@ -578,6 +583,7 @@ header.scrolled a {
   header {
     padding: 1.45rem;
     z-index: 3;
+    height: 5.5rem;
   }
 
   .transparent-header-at-first {
@@ -1225,7 +1231,7 @@ header.scrolled a {
 }
 
 .bar-transition-effect {
-  transition: 0.0s ease;
+  transition: transform 0.3s ease;
 }
 
 picture {
