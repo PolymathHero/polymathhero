@@ -85,6 +85,9 @@ function menuOnClick() {
     document.getElementById("myHeader").classList.toggle("on-menu-click-header");
     document.querySelector('.header-hamburger-menu-white-strip-div-for-computer').classList.toggle('after-clicking-on-hamburger-menu-icon-to-open-hamburger-menu');
     document.querySelector('.menu-bg-inside-bg-div').classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
+    document.body.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
+    document.documentElement.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
+    document.querySelector('main').classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
 
     // Iterate over each header-icon-svg element and toggle the class
     var headerIcons = document.querySelectorAll(".header-icon-svg");
@@ -114,7 +117,6 @@ function menuOnClick() {
         header.dispatchEvent(mouseoutEvent);
     }
 }
-
 // END hamburger menu (On click) SCRIPT
 
 // BEGIN EMAIL US (On click)
@@ -127,7 +129,7 @@ function emailUsOnClick() {
 // END EMAIL US (On click)
 
 // BEGIN CALCULATE HEADER HEIGHT AND MAKE MAIN ELEMENT BELOW THAT
-//MAIN ELEMENT TOP MARGIN = HEADER HEIGHT (FOR NON-INDEX-PAGES)
+//MAIN ELEMENT TOP MARGIN = HEADER HEIGHT (FOR NON-INDEX-PAGES). Could remove this script now that we have the header height specified in the CSS.
 document.addEventListener('DOMContentLoaded', function () {
     var nonIndexHeader = document.querySelector('.non-index-header');
     var mainElement = document.querySelector('main');
@@ -155,7 +157,7 @@ function togglePlayPause() {
 }
 // END VIDEO PLAY PAUSE BUTTON
 
-// BEGIN Add JavaScript for swipe functionality for the product page image container ??
+// BEGIN Add JavaScript for swipe functionality for the product page image container ?? don't even know if this is necessary
 document.addEventListener("DOMContentLoaded", function () {
     const imageContainer = document.querySelector(".product-page-image-container");
 
@@ -242,6 +244,7 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
     document.querySelector('.shopping-bag-white-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
     document.querySelector('.shopping-bag-in-page-menu-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
     document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
+    document.body.classList.add('after-clicking-on-shopping-bag-icon');
     // Begin keep header changed when shopping bag menu is open (not only one hover): open header classes
     document.getElementById("myHeader").classList.add("on-menu-click-header");
 
@@ -257,8 +260,8 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
 
     // End keep header changed when shopping bag menu is open (not only one hover): open header classes
 });
-
 //END OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
+
 // BEGIN CLOSE SHOPPING BAG ICON MENU ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 // Function to remove classes, and trigger mouseout on the header when we close the shopping bag menu
 function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
@@ -269,6 +272,7 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
     const header = document.getElementById('myHeader');
 
     document.querySelector('.shopping-bag-icon-container-div-2').classList.remove('after-clicking-on-shopping-bag-icon');
+    document.body.classList.remove('after-clicking-on-shopping-bag-icon');
 
     /* Begin keep header changed when shopping bag menu is open (not only on hover): close header classes
      because this function is for when the shopping bag menu is closed */
@@ -306,6 +310,12 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
 // Add the event listeners so that the function is called when the user clicks the close button or the dark half
 document.querySelector('.close-shopping-bag-in-page-menu-div-button-for-computer').addEventListener('click', removeClassesAndTriggerMouseoutOnShoppingBagMenuClose);
 document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').addEventListener('click', removeClassesAndTriggerMouseoutOnShoppingBagMenuClose);
-
 // END CLOSE SHOPPING BAG ICON ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 /* END SHOPPING BAG */
+
+/* BEGIN define custom CSS height variable for height units for mobile */
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+/* END define custom CSS height variable for height units for mobile */
