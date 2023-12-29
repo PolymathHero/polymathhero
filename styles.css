@@ -260,23 +260,21 @@ header.scrolled {
 /* MEDIA QUERY for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 768px) {
 
-  html {
-  }
+  html {}
 
-  body {
-  }
+  body {}
 
-  html.after-clicking-on-hamburger-menu-icon-in-header {
-  }
+  html.after-clicking-on-hamburger-menu-icon-in-header {}
 
   body.after-clicking-on-hamburger-menu-icon-in-header {
     touch-action: none;
-    height: 100dvh; /* Fallback for browsers that do not support Custom Properties */
+    height: 100dvh;
+    /* Fallback for browsers that do not support Custom Properties */
     overflow: hidden;
   }
 
   main.after-clicking-on-hamburger-menu-icon-in-header {
- /*   touch-action: none;
+    /*   touch-action: none;
     height: 1px;
     overflow: hidden;*/
   }
@@ -306,6 +304,24 @@ header.scrolled {
 
   #menu {
     z-index: 2;
+  }
+
+  .menu-title-span {
+    display: none;
+  }
+
+  #menu-bar {
+    width: 45px;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    cursor: pointer;
+    border: 0px solid red;
   }
 
   .nav {
@@ -494,8 +510,10 @@ header.scrolled {
   }
 
   .product-card-product-name-h2 {
-    line-height: 1rem;
+    font-size: 0.875rem;
     letter-spacing: 0.025rem;
+    line-height: 1rem;
+    padding: 0.5rem 0;
   }
 
   .product-card-img {
@@ -654,9 +672,37 @@ header.scrolled {
     border: 0px solid red;
   }
 
+  .hamburger-menu-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 0px solid red;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    z-index: 2;
+    position: relative;
+  }
+
   #menu-bar {
     position: relative;
     z-index: 2;
+    width: 45px;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border: 0px solid red;
+    display: inline-block;
+  }
+
+  .menu-title-span {
+    position: relative;
+    z-index: 2;
+    margin-left: 1rem;
+    font-size: 0.875rem;
   }
 
   .header-hamburger-menu-white-strip-div-for-computer {
@@ -1218,8 +1264,10 @@ header.scrolled {
   }
 
   .product-card-product-name-h2 {
-    line-height: 1rem;
+    font-size: 0.875rem;
     letter-spacing: 0.025rem;
+    line-height: 1rem;
+    margin: 0.5rem 0;
   }
 
   .product-card-price {
@@ -1294,20 +1342,6 @@ header.scrolled {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  border: 0px solid red;
-}
-
-#menu-bar {
-  width: 45px;
-  margin-top: 0px;
-  margin-right: 0;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  padding-top: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  cursor: pointer;
   border: 0px solid red;
 }
 
@@ -1851,13 +1885,6 @@ footer a {
 /* END FEEDBACK APP*/
 
 /* BEGIN PRODUCT LISTING PAGE */
-
-.product-card-product-name-h2 {
-  font-size: 0.875rem;
-  letter-spacing: 0.025rem;
-  line-height: 1rem;
-  padding: 0.5rem 0;
-}
 
 .product-card-price {
   font-size: 0.875rem;
