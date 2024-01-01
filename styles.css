@@ -306,8 +306,10 @@ header.scrolled {
     z-index: 2;
   }
 
-  .menu-title-span {
-    display: none;
+  .hamburger-menu-button {
+    outline: none;
+    border: 0px solid red;
+    background-color: transparent;
   }
 
   #menu-bar {
@@ -316,12 +318,12 @@ header.scrolled {
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 0px;
-    padding-top: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
     cursor: pointer;
-    border: 0px solid red;
+    border: 1px solid red;
+  }
+
+  .menu-title-span {
+    display: none;
   }
 
   .nav {
@@ -395,6 +397,7 @@ header.scrolled {
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
+    border: 0px solid red;
   }
 
   .hamburger-menu-nav button img {
@@ -468,6 +471,10 @@ header.scrolled {
     display: none;
   }
 
+  .main-under-fixed-header {
+    margin-top: 3.5rem;
+  }
+
   .feed-post-container {
     padding: 2rem 2rem 4rem;
   }
@@ -516,11 +523,6 @@ header.scrolled {
     padding: 0.5rem 0;
   }
 
-  .product-card-img {
-    display: block;
-    width: 100%;
-  }
-
   .product-card-a-pc {
     color: black;
     position: relative;
@@ -545,21 +547,8 @@ header.scrolled {
     background-size: cover;
     flex: 0 0 auto;
     width: 100%;
-    scroll-snap-align: start;
-  }
-
-  .product-card-button-layer-div-img-container-div {
-    background-image: url('gradient-background.svg');
-    background-size: cover;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-  }
-
-  .product-card-button-layer-div-img-container-div img {
-    flex: 0 0 auto;
-    width: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .product-card-button-layer-div {
@@ -599,7 +588,8 @@ header.scrolled {
   .product-page-image-container img {
     flex: 0 0 auto;
     width: 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   /* Add styles for the product details section */
@@ -681,21 +671,32 @@ header.scrolled {
     box-sizing: border-box;
     outline: none;
     background-color: transparent;
-    color: black;
     z-index: 2;
     position: relative;
+    color: black;
   }
 
   #menu-bar {
     position: relative;
     z-index: 2;
-    width: 45px;
+    width: 1rem;
+    height: 1rem;
     margin-top: 0px;
     margin-right: 0;
     margin-bottom: 0px;
     margin-left: 0px;
     border: 0px solid red;
-    display: inline-block;
+    cursor: pointer;
+  }
+
+  .top-bar {
+    top: .0625rem;
+    width: 100%;
+  }
+
+  .bottom-bar {
+    top: .8125rem;
+    width: 100%;
   }
 
   .menu-title-span {
@@ -1061,6 +1062,10 @@ header.scrolled {
     padding: 5rem;
   }
 
+  .main-under-fixed-header {
+    margin-top: 5.5rem;
+  }
+
   .feed-post-image {
     object-position: center;
     object-fit: cover;
@@ -1090,31 +1095,26 @@ header.scrolled {
   }
 
   /*BEGIN PRODUCT LISTING PAGE*/
-
   .product-cards-container-div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    background-color: #f6f5f3;
+    gap: 0px;
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    border: 0px solid black;
   }
 
   .product-card-div {
-    align-items: center;
-    justify-content: center;
     position: relative;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    display: block;
     width: 25%;
-    height: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
     border: 0px solid green;
-  }
-
-  .product-card-img {
-    display: block;
-    width: 100%;
+    display: flex;
+    background-color: #f6f5f3;
   }
 
   .product-card-a-pc {
@@ -1123,7 +1123,6 @@ header.scrolled {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    display: block;
     position: relative;
     width: 100%;
     height: 100%;
@@ -1132,12 +1131,13 @@ header.scrolled {
     right: 0;
     left: 0;
     z-index: 1;
+    min-width: 100%;
+    overflow: hidden;
   }
 
   .product-card-a-pc * {
     margin: 0;
   }
-
 
   .product-card-div:hover .product-card-left-chevron-button,
   .product-card-div:hover .product-card-right-chevron-button {
@@ -1148,27 +1148,59 @@ header.scrolled {
   .product-card-product-thumbnail-image-layer-div {
     border: 0px solid green;
     position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
   }
 
   .product-card-img-container-div::-webkit-scrollbar {
-    display: none;
+    /*display: none;*/
   }
 
   .product-card-img-container-div {
-    display: flex;
-    border: 0px solid greenyellow;
     position: relative;
-    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    gap: 0px;
     scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    white-space: pre;
+    background-color: transparent;
+    scroll-behavior: smooth;
   }
 
   .product-card-product-thumbnail-image-layer-div img {
-    flex: 0 0 auto;
-    width: 100%;
-    scroll-snap-align: start;
+    width: 101%;
+    flex-shrink: 0;
+    scroll-snap-align: end;
     background-image: url('gradient-background.svg');
     background-size: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    height: auto;
+    box-sizing: border-box;
+    white-space: pre;
+  }
+
+  .product-card-thumbnail-img-1 {
+    max-height: 100%;
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 25%;
+  }
+
+  .product-card-thumbnail-img-2-current-worn {
+    object-fit: cover;
   }
 
   .product-card-button-layer-div {
@@ -1346,39 +1378,34 @@ header.scrolled {
 }
 
 .bar {
-  height: 5px;
+  height: 0.0625rem;
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 0px;
+  border: 0px solid red;
+  flex-shrink: 0;
+  position: absolute;
+  transition: 0.3s ease;
 }
 
-.bar-transition-effect {
-  transition: 0.3s ease;
+.regular-document-flow-white-background-color-header .bar {
+  background-color: black;
+}
+
+.transparent-header-at-first .bar {
+  background-color: white;
 }
 
 header.scrolled .bar {
   background-color: black;
 }
 
-.index-bar {
-  background-color: white;
-}
-
-.non-index-bar {
-  background-color: black;
-}
-
 #bar1 {
-  transform: translateY(-4px);
+  top: .4375rem;
 }
 
 #bar3 {
-  transform: translateY(4px);
-}
-
-hr {
-  border-top: 0px;
-  border-bottom: 1px solid #ececec;
+  top: .4375rem;
 }
 
 .change .bar {
@@ -1386,15 +1413,20 @@ hr {
 }
 
 .change #bar1 {
-  transform: translateY(4px) rotateZ(-45deg);
-}
-
-.change #bar2 {
-  opacity: 0;
+  transform: rotateZ(45deg);
+  transform-origin: center;
 }
 
 .change #bar3 {
-  transform: translateY(-6px) rotateZ(45deg);
+  transform: rotateZ(-45deg);
+  transform-origin: center;
+}
+
+.change .top-bar,
+.change .bottom-bar {
+  visibility: hidden;
+  transition: visibility 0s ease 0s;
+  opacity: 0;
 }
 
 .on-menu-click-header {

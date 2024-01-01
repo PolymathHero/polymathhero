@@ -128,6 +128,9 @@ function emailUsOnClick() {
 }
 // END EMAIL US (On click)
 
+
+
+/*
 // BEGIN CALCULATE HEADER HEIGHT AND MAKE MAIN ELEMENT BELOW THAT
 //MAIN ELEMENT TOP MARGIN = HEADER HEIGHT (FOR NON-INDEX-PAGES). Could remove this script now that we have the header height specified in the CSS.
 document.addEventListener('DOMContentLoaded', function () {
@@ -143,6 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // END CALCULATE HEADER HEIGHT AND MAKE MAIN ELEMENT BELOW THAT
+*/
+
+
 
 // BEGIN VIDEO PLAY PAUSE BUTTON
 function togglePlayPause() {
@@ -157,35 +163,29 @@ function togglePlayPause() {
 }
 // END VIDEO PLAY PAUSE BUTTON
 
-// BEGIN Add JavaScript for swipe functionality for the product page image container ?? don't even know if this is necessary
-document.addEventListener("DOMContentLoaded", function () {
-    const imageContainer = document.querySelector(".product-page-image-container");
 
-    let isScrolling = false;
 
-    imageContainer.addEventListener("scroll", function () {
-        if (!isScrolling) {
-            window.requestAnimationFrame(function () {
-                // Add logic for updating UI or performing actions based on scroll position
-                isScrolling = false;
-            });
-
-            isScrolling = true;
-        }
-    });
-});
 
 // BEGIN PRODUCT CARD IMAGE BUTTONS (LEFT AND RIGHT)
 document.querySelectorAll('.product-card-div').forEach((card, index) => {
     const container = card.querySelector('.product-card-img-container-div');
     const leftBtn = card.querySelector('.product-card-left-chevron-button');
     const rightBtn = card.querySelector('.product-card-right-chevron-button');
-    const scrollAmount = 1;
-
-    // Get the total width of the container
-    const containerWidth = container.scrollWidth;
+    const scrollAmount = 3000;
 
     leftBtn.addEventListener('click', () => {
+        console.log('Left button clicked.');
+
+        // Log variables
+        console.log('container:', container);
+        console.log('leftBtn:', leftBtn);
+        console.log('rightBtn:', rightBtn);
+        console.log('scrollAmount:', scrollAmount);
+        console.log('container.scrollLeft:', container.scrollLeft);
+        console.log('container.clientWidth:', container.clientWidth);
+        console.log('container.offsetWidth:', container.offsetWidth);
+        console.log('container.scrollWidth:', container.scrollWidth);
+
         container.scrollBy({
             left: -scrollAmount,
             behavior: 'smooth'
@@ -193,23 +193,43 @@ document.querySelectorAll('.product-card-div').forEach((card, index) => {
 
         // Check if the scroll position is less than 0, then wrap to the end
         if (container.scrollLeft <= 0) {
-            container.scrollLeft = containerWidth;
+            console.log('Scrolling to the end.');
+            container.scrollLeft = container.scrollWidth;
         }
     });
 
     rightBtn.addEventListener('click', () => {
+
         container.scrollBy({
             left: scrollAmount,
             behavior: 'smooth'
         });
 
+        console.log('Right button clicked.');
+
+        // Log variables
+        console.log('container:', container);
+        console.log('leftBtn:', leftBtn);
+        console.log('rightBtn:', rightBtn);
+        console.log('scrollAmount:', scrollAmount);
+        console.log('container.scrollLeft:', container.scrollLeft);
+        console.log('container.clientWidth:', container.clientWidth);
+        console.log('container.offsetWidth:', container.offsetWidth);
+        console.log('container.scrollWidth:', container.scrollWidth);
+
         // Check if the scroll position is at the end, then wrap to the beginning
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        if (container.scrollLeft >= container.scrollWidth - container.offsetWidth - 100) {
             container.scrollLeft = 0;
         }
+
     });
 });
 // END PRODUCT CARD IMAGE BUTTONS (LEFT AND RIGHT)
+
+
+
+
+
 
 /* BEGIN SHOPPING BAG */
 // BEGIN ADD 1 EVERY TIME YOU PRESS PLACE IN CART
