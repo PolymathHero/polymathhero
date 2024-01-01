@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 // END HEADER APPEARANCE ON HOVER on computers
 
 // BEGIN hamburger menu (On click) SCRIPT
@@ -127,26 +126,6 @@ function emailUsOnClick() {
     }
 }
 // END EMAIL US (On click)
-
-
-
-/*
-// BEGIN CALCULATE HEADER HEIGHT AND MAKE MAIN ELEMENT BELOW THAT
-//MAIN ELEMENT TOP MARGIN = HEADER HEIGHT (FOR NON-INDEX-PAGES). Could remove this script now that we have the header height specified in the CSS.
-document.addEventListener('DOMContentLoaded', function () {
-    var nonIndexHeader = document.querySelector('.non-index-header');
-    var mainElement = document.querySelector('main');
-
-    // Set initial margin for main element based on header height
-    mainElement.style.marginTop = nonIndexHeader.offsetHeight + 'px';
-
-    // Update margin if the window is resized
-    window.addEventListener('resize', function () {
-        mainElement.style.marginTop = nonIndexHeader.offsetHeight + 'px';
-    });
-});
-// END CALCULATE HEADER HEIGHT AND MAKE MAIN ELEMENT BELOW THAT
-*/
 
 
 

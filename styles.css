@@ -704,6 +704,27 @@ header.scrolled {
     z-index: 2;
     margin-left: 1rem;
     font-size: 0.875rem;
+    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+  }
+
+  .transparent-header-at-first .menu-title-span {
+    color: white;
+  }
+
+  .regular-document-flow-white-background-color-header .menu-title-span {
+    color: black;
+  }
+
+  header.scrolled .menu-title-span {
+    color: black;
+  }
+
+  header.on-header-hover .menu-title-span {
+    color: black;
+  }
+
+  .on-menu-click-header .menu-title-span {
+    color: black;
   }
 
   .header-hamburger-menu-white-strip-div-for-computer {
