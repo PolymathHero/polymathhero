@@ -82,7 +82,6 @@ function menuOnClick() {
     document.getElementById("nav").classList.toggle("change-nav");
     document.getElementById("menu-bg").classList.toggle("change-bg");
     document.getElementById("myHeader").classList.toggle("on-menu-click-header");
-    document.querySelector('.header-hamburger-menu-white-strip-div-for-computer').classList.toggle('after-clicking-on-hamburger-menu-icon-to-open-hamburger-menu');
     document.querySelector('.menu-bg-inside-bg-div').classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.body.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.documentElement.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
@@ -107,7 +106,8 @@ function menuOnClick() {
 
     // Check if the mouse cursor is below the header offset height
     const mouseY = event.clientY || event.touches[0].clientY;
-    const headerHeight = header.offsetHeight;
+    // Set headerHeight to be exactly 5.5rem
+    const headerHeight = 5.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     // if mouse cursor is under the header offset height whatever that means then trigger a mouseout event as if the user just left the header
     if (mouseY > headerHeight) {
@@ -115,17 +115,10 @@ function menuOnClick() {
         const mouseoutEvent = new Event('mouseout');
         header.dispatchEvent(mouseoutEvent);
     }
+
+    console.log(header.offsetHeight)
 }
 // END hamburger menu (On click) SCRIPT
-
-// BEGIN EMAIL US (On click)
-function emailUsOnClick() {
-    var emailUsContentDiv = document.querySelector('.email-us-content-div');
-    if (emailUsContentDiv) {
-        emailUsContentDiv.classList.toggle('email-us-content-div-on-email-us-click');
-    }
-}
-// END EMAIL US (On click)
 
 
 
@@ -239,26 +232,35 @@ window.onload = function () {
 
 //BEGIN OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
 document.querySelector('.shopping-bag-icon-container-button').addEventListener('click', function () {
-    document.querySelector('.shopping-bag-icon-container-div-2').classList.add('after-clicking-on-shopping-bag-icon');
-    document.querySelector('.shopping-bag-white-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
-    document.querySelector('.shopping-bag-in-page-menu-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
-    document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
-    document.body.classList.add('after-clicking-on-shopping-bag-icon');
-    // Begin keep header changed when shopping bag menu is open (not only one hover): open header classes
-    document.getElementById("myHeader").classList.add("on-menu-click-header");
 
-    // Iterate over each header-icon-svg element and toggle the class
-    var headerIcons = document.querySelectorAll(".header-icon-svg");
-    headerIcons.forEach(function (icon) {
-        icon.classList.add("on-menu-click-header-icon");
+    // Check the screen width
+    if (window.innerWidth <= 768) {
+        // On mobile, navigate to a new page
+        window.location.href = 'cart.html';
+    } else {
+
+        document.querySelector('.shopping-bag-icon-container-div-2').classList.add('after-clicking-on-shopping-bag-icon');
+        document.querySelector('.shopping-bag-white-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
+        document.querySelector('.shopping-bag-in-page-menu-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
+        document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
+        document.body.classList.add('after-clicking-on-shopping-bag-icon');
+        // BEGIN keep header changed when shopping bag menu is open (not only one hover): open header classes
+        document.getElementById("myHeader").classList.add("on-menu-click-header");
+
+        // Iterate over each header-icon-svg element and toggle the class
+        var headerIcons = document.querySelectorAll(".header-icon-svg");
+        headerIcons.forEach(function (icon) {
+            icon.classList.add("on-menu-click-header-icon");
+        });
+
+        // Toggle the class on the header shopping bag counter
+        let headerShoppingBagCounter = document.querySelector('.header-shopping-bag-quantity-notification-span');
+        headerShoppingBagCounter.classList.add('on-menu-click');
+
+        // End keep header changed when shopping bag menu is open (not only one hover): open header classes
+    }
+    
     });
-
-    // Toggle the class on the header shopping bag counter
-    let headerShoppingBagCounter = document.querySelector('.header-shopping-bag-quantity-notification-span');
-    headerShoppingBagCounter.classList.add('on-menu-click');
-
-    // End keep header changed when shopping bag menu is open (not only one hover): open header classes
-});
 //END OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
 
 // BEGIN CLOSE SHOPPING BAG ICON MENU ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)

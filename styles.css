@@ -285,7 +285,6 @@ header.scrolled {
   }
 
   header {
-    padding: 0.45rem;
     z-index: 3;
     height: 3.5rem;
   }
@@ -312,6 +311,10 @@ header.scrolled {
     background-color: transparent;
     padding: 0.5rem;
     border-radius: 100vmax;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.5rem;
   }
 
   #menu-bar {
@@ -450,17 +453,26 @@ header.scrolled {
   }
 
   .shopping-bag-icon-container-div-2 {
-    display: none;
+    padding-right: 1rem;
   }
 
   .shopping-bag-icon-container-button {
+    cursor: pointer;
+    background-color: transparent;
     position: relative;
     margin-left: 0;
-    margin-right: 0.75rem;
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     border: 0px solid red;
+    padding: 0;
+  }
+
+  .shopping-bag-icon-container-button-inside-div {
+    margin-right: 0.75rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header-shopping-bag-quantity-notification-span {
@@ -481,7 +493,11 @@ header.scrolled {
     transition: 0.3s ease;
   }
 
-  .email-us-background {
+  .shopping-bag-in-page-menu-div-for-computer {
+    display: none;
+  }
+
+  .shopping-bag-dark-menu-half-div-for-computer {
     display: none;
   }
 
@@ -520,6 +536,7 @@ header.scrolled {
   .product-cards-container-div {
     display: flex;
     flex-wrap: wrap;
+    background-color: #f6f5f3;
   }
 
   .product-card-div {
@@ -638,6 +655,8 @@ header.scrolled {
 
 @media (min-width: 768px) {
 
+  body {}
+
   body.after-clicking-on-hamburger-menu-icon-in-header {
     overflow: hidden;
   }
@@ -647,7 +666,7 @@ header.scrolled {
   }
 
   header {
-    padding: 1.45rem;
+    padding: 0;
     z-index: 3;
     height: 5.5rem;
   }
@@ -686,7 +705,11 @@ header.scrolled {
     outline: none;
     background-color: transparent;
     z-index: 2;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: calc(3.125vw - .5rem);
     color: black;
   }
 
@@ -705,12 +728,12 @@ header.scrolled {
 
   .top-bar {
     top: .0625rem;
-    width: 100%;
+    transform: scale(1);
   }
 
   .bottom-bar {
     top: .8125rem;
-    width: 100%;
+    transform: scale(1);
   }
 
   .menu-title-span {
@@ -719,6 +742,8 @@ header.scrolled {
     margin-left: 1rem;
     font-size: 0.875rem;
     transition: all .3s cubic-bezier(.39, .575, .565, 1);
+    max-height: 1rem;
+    overflow: hidden;
   }
 
   .transparent-header-at-first .menu-title-span {
@@ -741,49 +766,41 @@ header.scrolled {
     color: black;
   }
 
-  .header-hamburger-menu-white-strip-div-for-computer {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: -33.3333333333%;
-    width: 33.3333333333%;
-    height: 100%;
-    max-width: 30rem;
-    border: 0px solid red;
-    transition: all .3s cubic-bezier(.39, .575, .565, 1);
-    z-index: 0;
+  .menu-title-span span {
+    font-size: .875rem;
+    letter-spacing: .025rem;
+    line-height: 1rem;
+    display: block;
+    transition: transform .3s cubic-bezier(.39, .575, .565, 1);
   }
 
-  .header-hamburger-menu-white-strip-div-for-computer.after-clicking-on-hamburger-menu-icon-to-open-hamburger-menu {
-    left: 0;
-    opacity: 1;
-    height: 100%;
-    background-color: white;
+  .on-menu-click-header .menu-title-span span {
+    transform: translateY(-100%);
   }
 
   .nav {
     position: absolute;
     opacity: 0;
-    top: 100%;
-    left: -33.3333333333%;
+    top: 0;
+    left: 0;
     width: 33.3333333333%;
-    height: calc(100vh - 5.5rem);
+    height: 100dvh;
     max-width: 30rem;
     border: 0px solid red;
-    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+    transition-property: transform, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
     box-sizing: border-box;
     z-index: 1;
+    transform: translate3d(-100%, 0, 0);
+    overflow: auto;
+    padding-top: 5rem;
+    background-color: white;
   }
 
   .change-nav {
-    position: absolute;
     opacity: 1;
-    left: 0;
-    height: calc(100vh - 5.5rem);
-    background-color: white;
-    z-index: 1;
-    border: 0px solid red;
-    overflow: auto;
+    transform: translate3d(0, 0, 0);
   }
 
   .hamburger-menu-nav ul {
@@ -793,6 +810,7 @@ header.scrolled {
 
   .header-hamburger-menu-first-unordered-list {
     padding-bottom: 2.5rem;
+    margin-top: 0;
     margin-bottom: 2.5rem;
     border-bottom: 1px solid #ececec;
   }
@@ -922,6 +940,9 @@ header.scrolled {
     position: relative;
     z-index: -1;
     transition: z-index 0s ease 0.3s;
+    border: 0px solid red;
+    padding-right: 3.125vw;
+    margin-right: 8px;
   }
 
   .shopping-bag-icon-container-div-2.after-clicking-on-shopping-bag-icon {
@@ -992,6 +1013,7 @@ header.scrolled {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.3s ease, right 0.3s ease, z-index 0s ease 0.3s;
+    transform: translateZ(0);
   }
 
   .shopping-bag-white-menu-half-div-for-computer.after-clicking-on-shopping-bag-icon {
@@ -1075,27 +1097,6 @@ header.scrolled {
   }
 
   /* END SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
-  .email-us-header-text-span {
-    cursor: pointer;
-  }
-
-  .email-us-content-div {
-    position: absolute;
-    background-color: white;
-    width: 0;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    transition: 0.3s ease;
-  }
-
-  .email-us-content-div-on-email-us-click {
-    width: 50vw;
-  }
-
-  .content {
-    padding: 5rem;
-  }
 
   .main-under-fixed-header {
     margin-top: 5.5rem;
@@ -1215,7 +1216,7 @@ header.scrolled {
   }
 
   .product-card-product-thumbnail-image-layer-div img {
-    width: 101%;
+    width: 100%;
     flex-shrink: 0;
     scroll-snap-align: end;
     background-image: url('gradient-background.svg');
@@ -1463,9 +1464,8 @@ header.scrolled .bar {
 
 .change .top-bar,
 .change .bottom-bar {
-  visibility: hidden;
-  transition: visibility 0s ease 0s;
-  opacity: 0;
+  transform: scale(0);
+  transition: none;
 }
 
 .on-menu-click-header {
@@ -1956,7 +1956,6 @@ footer a {
 /* END FEEDBACK APP*/
 
 /* BEGIN PRODUCT LISTING PAGE */
-
 .product-card-price {
   font-size: 0.875rem;
   letter-spacing: 0.025rem;
@@ -1966,7 +1965,6 @@ footer a {
 /* END PRODUCT LISTING PAGE */
 
 /* BEGIN PRODUCT PAGE */
-
 .product-page-product-details-overline-p {
   font-size: 0.625rem;
   line-height: 1rem;
