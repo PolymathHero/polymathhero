@@ -284,15 +284,26 @@ function updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIf
     document.querySelector('.header-shopping-bag-quantity-notification-span').innerHTML = shoppingBagProductQuantity;
     document.querySelector('.shopping-bag-menu-on-click-title-h1-span-quantity').innerHTML = shoppingBagProductQuantity;
 
+    if (document.querySelector('.cart-header-cart-quantity-span')) {
+    document.querySelector('.cart-header-cart-quantity-span').innerHTML = shoppingBagProductQuantity;
+    }
+
     // You can also enable or disable the button based on the quantity
     document.querySelector('.shopping-bag-icon-container-button').disabled = (shoppingBagProductQuantity < 1);
 
-    // You can also add and remove a class to the shopping bag button based on the quantity
+    /* You can also add and remove a class to the shopping bag button
+    based on the shopping bag quantity in order to change the cursor CSS property on computers */
     if (shoppingBagProductQuantity < 1) {
         document.querySelector('.shopping-bag-icon-container-button').classList.add('if-shopping-bag-quantity-is-less-than-1');
+        document.querySelector('.cart-header-for-when-there-is-products-in-the-cart-div').classList.add('if-shopping-bag-quantity-is-less-than-1');
+        document.querySelector('.empty-cart-div').classList.remove('if-shopping-bag-quantity-is-less-than-1');
+
+
     } else {
         // If you want to remove the class when the quantity is not less than 1
         document.querySelector('.shopping-bag-icon-container-button').classList.remove('if-shopping-bag-quantity-is-less-than-1');
+        document.querySelector('.cart-header-for-when-there-is-products-in-the-cart-div').classList.remove('if-shopping-bag-quantity-is-less-than-1');
+        document.querySelector('.empty-cart-div').classList.add('if-shopping-bag-quantity-is-less-than-1');
     }
 
 }
@@ -313,13 +324,13 @@ function placeInBag() {
 
 
 
-// BEGIN UPDATE .header-shopping-bag-quantity-notification-span WITH shoppingBagProductQuantity from localStorage on page load
+// BEGIN UPDATE shopping bag quantity everywhere on page load WITH shoppingBagProductQuantity from localStorage on page load
 
 window.onload = function () {
 
     updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0();
 }
-// END UPDATE .header-shopping-bag-quantity-notification-span WITH shoppingBagProductQuantity from localStorage on page load
+// END UPDATE shopping bag quantity everywhere on page load WITH shoppingBagProductQuantity from localStorage on page load
 
 
 
