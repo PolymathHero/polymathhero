@@ -1,3 +1,53 @@
+//  BEGIN script to stop body scrolling and keep the body scroll position and then re-allow body scrolling when the user closes the menu
+// Store the current scroll position
+var scrollPosition = window.scrollY || window.pageYOffset;
+
+// Add event listener to disable scrolling
+function disableScroll() {
+    // Store the current scroll position
+    scrollPosition = window.scrollY || window.pageYOffset;
+
+    // Set the body to fixed position and adjust the top position to maintain the scroll position
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.classList.add('after-disabling-scrolling');
+}
+
+// Add event listener to enable scrolling
+function enableScroll() {
+    // Reset the body styles to allow scrolling
+    document.body.classList.remove('after-disabling-scrolling');
+    document.body.style.top = '';
+
+    // Scroll to the previous position
+    window.scrollTo(0, scrollPosition);
+}
+
+// Example of usage:
+// Call disableScroll to stop scrolling
+// disableScroll();
+
+// Call enableScroll to allow scrolling again
+// enableScroll();
+
+// Function to toggle between enable and disable scroll
+function toggleScroll() {
+    if (document.body.classList.contains('after-disabling-scrolling')) {
+        enableScroll(); // If scrolling is disabled, enable it
+    } else {
+        disableScroll(); // If scrolling is enabled, disable it
+    }
+}
+
+// Example of usage:
+// Call toggleScroll to toggle between enable and disable scroll
+// toggleScroll();
+
+// END script to stop body scrolling and keep the body scroll position and then re-allow body scrolling when the user closes the menu
+
+
+
+
+
 // BEGIN SCRIPT TO CHANGE HEADER ON SCROLL
 document.addEventListener("DOMContentLoaded", function () {
     var header = document.getElementById("myHeader");
@@ -21,6 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 });
 // END SCRIPT TO CHANGE HEADER ON SCROLL
+
+
+
+
 
 // BEGIN HEADER APPEARANCE ON HOVER on computers
 document.addEventListener("DOMContentLoaded", function () {
@@ -76,16 +130,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // END HEADER APPEARANCE ON HOVER on computers
 
+
+
+
+
 // BEGIN hamburger menu (On click) SCRIPT
 function menuOnClick() {
+
+    toggleScroll();
+
+    document.body.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.getElementById("menu-bar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change-nav");
     document.getElementById("menu-bg").classList.toggle("change-bg");
     document.getElementById("myHeader").classList.toggle("on-menu-click-header");
     document.querySelector('.menu-bg-inside-bg-div').classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
-    document.body.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.documentElement.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.querySelector('main').classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
+    document.getElementById("myHeader").classList.toggle("after-clicking-on-hamburger-menu-icon-in-header");
+
+
+
+
 
     // Iterate over each header-icon-svg element and toggle the class
     var headerIcons = document.querySelectorAll(".header-icon-svg");
@@ -97,8 +163,6 @@ function menuOnClick() {
     let headerShoppingBagCounter = document.querySelector('.header-shopping-bag-quantity-notification-span');
     headerShoppingBagCounter.classList.toggle('on-menu-click');
 
-    // Toggle menu-opened class on body
-    document.body.classList.toggle("menu-opened");
 
     // Begin mouseout event on header if you close the menu and your mouse is under the header bar
     // Define header like the close shopping bag menu function so that we can trigger mouseout on the header when we close the menu
@@ -106,7 +170,7 @@ function menuOnClick() {
 
     // Check if the mouse cursor is below the header offset height
     const mouseY = event.clientY || event.touches[0].clientY;
-    // Set headerHeight to be exactly 5.5rem
+    // Set headerHeight to be exactly 5.5rem -- for purposes of clicking away to mouseout the header -- so doesn't apply to mobile -- even though technically it does
     const headerHeight = 5.5 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     // if mouse cursor is under the header offset height whatever that means then trigger a mouseout event as if the user just left the header
@@ -122,6 +186,8 @@ function menuOnClick() {
 
 
 
+
+
 // BEGIN VIDEO PLAY PAUSE BUTTON
 function togglePlayPause() {
     var video = document.getElementById("myVideo");
@@ -134,6 +200,7 @@ function togglePlayPause() {
     }
 }
 // END VIDEO PLAY PAUSE BUTTON
+
 
 
 
@@ -203,35 +270,69 @@ document.querySelectorAll('.product-card-div').forEach((card, index) => {
 
 
 
+
+
 /* BEGIN SHOPPING BAG */
+
+// define shoppingBagProductQuantity variable
+// Retrieve the shoppingBagProductQuantity from localStorage, or default to 0 if it doesn't exist
+let shoppingBagProductQuantity = parseInt(localStorage.getItem('shoppingBagProductQuantity')) || 0;
+
+
+// Function to update the displayed shopping bag product quantity and disable the shopping bag button if the quantity is 0
+function updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0() {
+    document.querySelector('.header-shopping-bag-quantity-notification-span').innerHTML = shoppingBagProductQuantity;
+    document.querySelector('.shopping-bag-menu-on-click-title-h1-span-quantity').innerHTML = shoppingBagProductQuantity;
+
+    // You can also enable or disable the button based on the quantity
+    document.querySelector('.shopping-bag-icon-container-button').disabled = (shoppingBagProductQuantity < 1);
+
+    // You can also add and remove a class to the shopping bag button based on the quantity
+    if (shoppingBagProductQuantity < 1) {
+        document.querySelector('.shopping-bag-icon-container-button').classList.add('if-shopping-bag-quantity-is-less-than-1');
+    } else {
+        // If you want to remove the class when the quantity is not less than 1
+        document.querySelector('.shopping-bag-icon-container-button').classList.remove('if-shopping-bag-quantity-is-less-than-1');
+    }
+
+}
+
 // BEGIN ADD 1 EVERY TIME YOU PRESS PLACE IN CART
 // Function to add 1 to the shopping cart variable
+
 function placeInBag() {
-    // Retrieve the bagQuantity from localStorage, or default to 0 if it doesn't exist
-    let bagQuantity = parseInt(localStorage.getItem('bagQuantity')) || 0;
 
-    bagQuantity++;
-    // Store the updated bagQuantity in localStorage
-    localStorage.setItem('bagQuantity', bagQuantity);
+    shoppingBagProductQuantity++;
+    // Store the updated shoppingBagProductQuantity in localStorage
+    localStorage.setItem('shoppingBagProductQuantity', shoppingBagProductQuantity);
 
-    document.querySelector('.header-shopping-bag-quantity-notification-span').innerHTML = bagQuantity;
-    document.querySelector('.shopping-bag-menu-on-click-title-h1-span-quantity').innerHTML = bagQuantity;
+    updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0();
 }
 // END ADD 1 EVERY TIME YOU PRESS PLACE IN CART
 
-// BEGIN UPDATE .header-shopping-bag-quantity-notification-span WITH bagQuantity from localStorage on page load
-window.onload = function () {
-    // Retrieve the bagQuantity from localStorage, or default to 0 if it doesn't exist
-    let bagQuantity = parseInt(localStorage.getItem('bagQuantity')) || 0;
 
-    // Set the inner HTML of the element to the bagQuantity
-    document.querySelector('.header-shopping-bag-quantity-notification-span').innerHTML = bagQuantity;
-    document.querySelector('.shopping-bag-menu-on-click-title-h1-span-quantity').innerHTML = bagQuantity;
+
+
+// BEGIN UPDATE .header-shopping-bag-quantity-notification-span WITH shoppingBagProductQuantity from localStorage on page load
+
+window.onload = function () {
+
+    updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0();
 }
-// END UPDATE .header-shopping-bag-quantity-notification-span WITH bagQuantity from localStorage on page load
+// END UPDATE .header-shopping-bag-quantity-notification-span WITH shoppingBagProductQuantity from localStorage on page load
+
+
+
 
 //BEGIN OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
+
 document.querySelector('.shopping-bag-icon-container-button').addEventListener('click', function () {
+
+    // Check if shoppingBagProductQuantity is less than 1, and if so, prevent opening the shopping bag menu
+    if (shoppingBagProductQuantity < 1) {
+        return;
+    }
+
 
     // Check the screen width
     if (window.innerWidth <= 768) {
@@ -239,12 +340,16 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
         window.location.href = 'cart.html';
     } else {
 
+
+        disableScroll();
+
+
         document.querySelector('.shopping-bag-icon-container-div-2').classList.add('after-clicking-on-shopping-bag-icon');
         document.querySelector('.shopping-bag-white-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
         document.querySelector('.shopping-bag-in-page-menu-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
         document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').classList.add('after-clicking-on-shopping-bag-icon');
         document.body.classList.add('after-clicking-on-shopping-bag-icon');
-        // BEGIN keep header changed when shopping bag menu is open (not only one hover): open header classes
+        // BEGIN keep header changed when shopping bag menu is open (not only on hover): open header classes
         document.getElementById("myHeader").classList.add("on-menu-click-header");
 
         // Iterate over each header-icon-svg element and toggle the class
@@ -259,12 +364,18 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
 
         // End keep header changed when shopping bag menu is open (not only one hover): open header classes
     }
-    
-    });
+
+});
 //END OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
+
+
+
 
 // BEGIN CLOSE SHOPPING BAG ICON MENU ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 // Function to remove classes, and trigger mouseout on the header when we close the shopping bag menu
+
+
+
 function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
 
     const closeButton = document.querySelector('.close-shopping-bag-in-page-menu-div-button-for-computer');
@@ -274,6 +385,10 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
 
     document.querySelector('.shopping-bag-icon-container-div-2').classList.remove('after-clicking-on-shopping-bag-icon');
     document.body.classList.remove('after-clicking-on-shopping-bag-icon');
+
+
+    enableScroll();
+
 
     /* Begin keep header changed when shopping bag menu is open (not only on hover): close header classes
      because this function is for when the shopping bag menu is closed */
@@ -306,6 +421,9 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
         const mouseoutEvent = new Event('mouseout');
         header.dispatchEvent(mouseoutEvent);
     }
+
+    /* Re-enable body element scrolling */
+
 }
 
 // Add the event listeners so that the function is called when the user clicks the close button or the dark half
@@ -314,7 +432,19 @@ document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').addEvent
 // END CLOSE SHOPPING BAG ICON ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 /* END SHOPPING BAG */
 
+
+
+
+
+
+
+
+
+
+
+
 /* BEGIN define custom CSS height variable for height units for mobile */
+
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
