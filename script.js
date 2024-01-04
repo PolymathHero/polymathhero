@@ -450,3 +450,45 @@ let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 /* END define custom CSS height variable for height units for mobile */
+
+
+
+
+
+
+
+
+/* BEGIN CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS
+and detecting when the thumbnail image current worn is shown to remove text details from product card */
+
+
+// Set up IntersectionObserver options
+let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.01,
+};
+
+// Create the IntersectionObserver
+let observer = new IntersectionObserver(handleIntersection, options);
+
+// Target all product cards
+document.querySelectorAll('.product-card-thumbnail-img-2-current-worn').forEach(target => {
+    // Observe each image
+    observer.observe(target);
+});
+
+// Callback function for the observer
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add the class when 10% or more visible
+            entry.target.closest('.product-card-div').querySelector('.product-card-text-details-div').classList.add('when-the-current-worn-product-thumbnail-image-is-in-view');
+        } else {
+            // Remove the class when less than 10% visible
+            entry.target.closest('.product-card-div').querySelector('.product-card-text-details-div').classList.remove('when-the-current-worn-product-thumbnail-image-is-in-view');
+        }
+    });
+}
+
+/* END CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS */

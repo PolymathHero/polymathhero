@@ -1,6 +1,8 @@
 /* styles.css */
 
-html {}
+html {
+  background-color: white;
+}
 
 /* CSS Reset */
 html,
@@ -1476,6 +1478,11 @@ header.scrolled {
     top: 0;
     height: 100%;
     box-sizing: border-box;
+    transition: opacity 0.3s cubic-bezier(.39, .575, .565, 1);
+  }
+
+  .product-card-text-details-div.when-the-current-worn-product-thumbnail-image-is-in-view {
+    opacity: 0;
   }
 
   .product-card-text-details-div-inner-div {
