@@ -10,7 +10,7 @@
 </head>
 
 <body id="body-id">
-  <header id="myHeader" class="non-index-header regular-document-flow-white-background-color-header">
+  <header id="myHeader" class="non-index-header regular-document-flow-white-background-color-header static-position-header">
     <!-- BEGIN MENU -->
     <div id="menu">
       <button class="hamburger-menu-button" onclick="menuOnClick()">
@@ -93,7 +93,7 @@
     </div>
   </header>
 
-  <main class="main-under-fixed-header">
+  <main class="main-under-static-header">
 
     <section class="cart-section">
 
@@ -105,7 +105,45 @@
           <a href="product-listing.html" class="empty-cart-a">Start Shopping</a>
         </div>
       </section>
-      <section class="right-unnecessary-cart-information-section-on-computer">
+
+      <section class="right-unnecessary-cart-information-section-on-computer bottom-cart-section-on-mobile">
+        <ul class="product-reinsurance-unordered-list">
+          <li class="product-reinsurance-list-item">
+            <button class="product-reinsurance-button">
+              <img src="svg/credit-card.svg" alt="Payment" class="product-reinsurance-img">
+              <div class="product-reinsurance-text-div">
+                <span class="product-reinsurance-title-span">Payment</span>
+                <span class="product-reinsurance-subtitle-span">Credit card, debit card, PayPal, or Apple Pay</span>
+              </div>
+            </button>
+          </li>
+          <li class="product-reinsurance-list-item">
+            <button class="product-reinsurance-button">
+              <img src="svg/truck.svg" alt="Payment" class="product-reinsurance-img">
+              <div class="product-reinsurance-text-div">
+                <span class="product-reinsurance-title-span">Shipping & Delivery</span>
+                <span class="product-reinsurance-subtitle-span">Complimentary Green Delivery</span>
+              </div>
+            </button>
+          </li>
+          <li class="product-reinsurance-list-item">
+            <button class="product-reinsurance-button">
+              <img src="svg/rotate-arrows.svg" alt="Payment" class="product-reinsurance-img">
+              <div class="product-reinsurance-text-div">
+                <span class="product-reinsurance-title-span">Returns & Exchanges</span>
+                <span class="product-reinsurance-subtitle-span">Complimentary</span>
+              </div>
+            </button>
+          </li>
+          <li class="product-reinsurance-list-item">
+            <button class="product-reinsurance-button">
+              <img src="svg/people-carrying-a-box.svg" alt="Payment" class="product-reinsurance-img">
+              <div class="product-reinsurance-text-div">
+                <span class="product-reinsurance-title-span">Next Day Collect-In-Store</span>
+              </div>
+            </button>
+          </li>
+        </ul>
       </section>
 
 

@@ -152,6 +152,10 @@ header {
   box-sizing: border-box;
 }
 
+.static-position-header {
+  position: relative;
+}
+
 .shopping-bag-icon-container-div-2 {
   border: 0px solid red;
   display: flex;
@@ -659,6 +663,76 @@ header.scrolled {
     padding: 1.5rem 6.4vw 2.5rem;
     box-sizing: border-box;
     position: relative;
+  }
+
+  .bottom-cart-section-on-mobile {
+    background-color: white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1.5rem 6.4vw;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .product-reinsurance-unordered-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .product-reinsurance-list-item:not(:last-child) {
+    border-bottom: 1px solid #e1dfd8;
+  }
+
+  .product-reinsurance-list-item {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    min-height: 6.875rem;
+  }
+
+  .product-reinsurance-button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: inherit;
+    outline: 0;
+    color: black;
+  }
+
+  .product-reinsurance-img {
+    margin-right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .product-reinsurance-text-div {
+    margin-right: 2rem;
+    flex: 1;
+  }
+
+  .product-reinsurance-title-span {
+    margin-bottom: 0.25rem;
+    display: block;
+    font-size: 1.125rem;
+    letter-spacing: .025rem;
+    line-height: 1.5rem;
+  }
+
+  .product-reinsurance-subtitle-span {
+    display: block;
+    font-size: .875rem;
+    letter-spacing: .025rem;
+    line-height: 1.25rem;
   }
 
   .empty-cart-div {
@@ -1495,6 +1569,77 @@ header.scrolled {
     padding: 1.5rem 6.4vw 2.5rem;
     box-sizing: border-box;
     position: relative;
+  }
+
+  .right-unnecessary-cart-information-section-on-computer {
+    width: 33.3333333333%;
+    background-color: white;
+    padding-bottom: 1rem;
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+    padding-top: 1rem;
+    box-sizing: border-box;
+  }
+
+  .product-reinsurance-unordered-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .product-reinsurance-list-item:not(:last-child) {
+    border-bottom: 1px solid #e1dfd8;
+  }
+
+  .product-reinsurance-list-item {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    min-height: 6.875rem;
+  }
+
+  .product-reinsurance-button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    text-align: inherit;
+    outline: 0;
+    color: black;
+  }
+
+  .product-reinsurance-img {
+    margin-right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .product-reinsurance-text-div {
+    margin-right: 2.5rem;
+    flex: 1;
+  }
+
+  .product-reinsurance-title-span {
+    margin-bottom: 0.25rem;
+    display: block;
+    font-size: 1.125rem;
+    letter-spacing: .025rem;
+    line-height: 1.5rem;
+  }
+
+  .product-reinsurance-subtitle-span {
+    display: block;
+    font-size: .875rem;
+    letter-spacing: .025rem;
+    line-height: 1.25rem;
   }
 
   .empty-cart-div {
