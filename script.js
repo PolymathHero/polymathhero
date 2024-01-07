@@ -137,7 +137,9 @@ document.addEventListener("DOMContentLoaded", function () {
 // BEGIN hamburger menu (On click) SCRIPT
 function menuOnClick() {
 
-    toggleScroll();
+    if (window.innerWidth <= 768) {
+        toggleScroll();
+    }
 
     document.body.classList.toggle('after-clicking-on-hamburger-menu-icon-in-header');
     document.getElementById("menu-bar").classList.toggle("change");
@@ -274,18 +276,21 @@ document.querySelectorAll('.product-card-div').forEach((card, index) => {
 
 /* BEGIN SHOPPING BAG */
 
-// define shoppingBagProductQuantity variable
-// Retrieve the shoppingBagProductQuantity from localStorage, or default to 0 if it doesn't exist
+// define shoppingBagProductQuantity variable:
+/* Retrieve the shoppingBagProductQuantity from localStorage,
+or default to 0 if it doesn't exist */
 let shoppingBagProductQuantity = parseInt(localStorage.getItem('shoppingBagProductQuantity')) || 0;
 
 
-// Function to update the displayed shopping bag product quantity and disable the shopping bag button if the quantity is 0
+/* Function to update the displayed shopping bag product quantity
+in the header, shopping cart, and mini cart, and disable the shopping
+bag icon button in the header if the quantity is 0 */
 function updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0() {
     document.querySelector('.header-shopping-bag-quantity-notification-span').innerHTML = shoppingBagProductQuantity;
     document.querySelector('.shopping-bag-menu-on-click-title-h1-span-quantity').innerHTML = shoppingBagProductQuantity;
 
     if (document.querySelector('.cart-header-cart-quantity-span')) {
-    document.querySelector('.cart-header-cart-quantity-span').innerHTML = shoppingBagProductQuantity;
+        document.querySelector('.cart-header-cart-quantity-span').innerHTML = shoppingBagProductQuantity;
     }
 
     // You can also enable or disable the button based on the quantity
@@ -324,10 +329,41 @@ function placeInBag() {
 
 
 
-// BEGIN UPDATE shopping bag quantity everywhere on page load WITH shoppingBagProductQuantity from localStorage on page load
+/* BEGIN function to add product cards to the mini cart in the shopping bag slide in tray depending on how much shoppingBagProductQuantity is worth */
+// Function to generate and append HTML blocks
+
+function addMiniCartProductCards() {
+    var container = document.querySelector('.mini-cart-product-card-container-div'); // Assuming you have a container div with class 'mini-cart-product-card-container-div'
+
+    for (var i = 0; i < shoppingBagProductQuantity; i++) {
+        var htmlBlock = `
+                <div class="mini-cart-product-card-div">
+                    <img class="mini-cart-img"
+                        src="images/louis-vuitton-embroidered-denim-blouson--HQA15WTZ0506_PM2_Front view-2.png"
+                        alt="Mini Cart Image">
+                    <div class="mini-cart-product-card-text-details-div">
+                        <span class="mini-cart-product-card-product-name">Monogram Flocked Silk Long-Sleeved Shirt</span>
+                        <span>$2,270.00</span>
+                    </div>
+                </div>
+            `;
+
+        container.insertAdjacentHTML('afterbegin', htmlBlock); // Prepend the generated block to the container
+    }
+}
+
+if (document.querySelector('.mini-cart-product-card-container-div')) {
+    // Call the function to add HTML blocks
+    addMiniCartProductCards();
+}
+/* END function to add product cards to the mini cart in the shopping bag slide in tray depending on how much shoppingBagProductQuantity is worth */
+
+
+
+
+// BEGIN UPDATE shopping bag quantity everywhere with shoppingBagProductQuantity from localStorage on page load
 
 window.onload = function () {
-
     updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0();
 }
 // END UPDATE shopping bag quantity everywhere on page load WITH shoppingBagProductQuantity from localStorage on page load
@@ -345,14 +381,12 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
     }
 
 
-    // Check the screen width
+    // Check the screen width and if bigger than mobile then open the slide in tray, else go to the cart page
     if (window.innerWidth <= 768) {
         // On mobile, navigate to a new page
         window.location.href = 'cart.html';
     } else {
 
-
-        disableScroll();
 
 
         document.querySelector('.shopping-bag-icon-container-div-2').classList.add('after-clicking-on-shopping-bag-icon');
@@ -397,8 +431,6 @@ function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
     document.querySelector('.shopping-bag-icon-container-div-2').classList.remove('after-clicking-on-shopping-bag-icon');
     document.body.classList.remove('after-clicking-on-shopping-bag-icon');
 
-
-    enableScroll();
 
 
     /* Begin keep header changed when shopping bag menu is open (not only on hover): close header classes
