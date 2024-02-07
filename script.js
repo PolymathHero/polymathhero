@@ -212,7 +212,7 @@ document.querySelectorAll('.product-card-div').forEach((card, index) => {
     const container = card.querySelector('.product-card-img-container-div');
     const leftBtn = card.querySelector('.product-card-left-chevron-button');
     const rightBtn = card.querySelector('.product-card-right-chevron-button');
-    const scrollAmount = 3000;
+    const scrollAmount = 1;
 
     leftBtn.addEventListener('click', () => {
         console.log('Left button clicked.');
@@ -282,7 +282,7 @@ or default to 0 if it doesn't exist */
 let shoppingBagProductQuantity = parseInt(localStorage.getItem('shoppingBagProductQuantity')) || 0;
 
 
-/* Function to update the displayed shopping bag product quantity
+/* BEGIN function to update the displayed shopping bag product quantity
 in the header, shopping cart, and mini cart, and disable the shopping
 bag icon button in the header if the quantity is 0 */
 function updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0() {
@@ -312,9 +312,12 @@ function updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIf
     }
 
 }
+/* END function to update the displayed shopping bag product quantity
+in the header, shopping cart, and mini cart, and disable the shopping
+bag icon button in the header if the quantity is 0 */
 
 // BEGIN ADD 1 EVERY TIME YOU PRESS PLACE IN CART
-// Function to add 1 to the shopping cart variable
+// Function to add 1 to the shopping cart variable every time the user presses 'place in cart'
 
 function placeInBag() {
 
@@ -329,14 +332,16 @@ function placeInBag() {
 
 
 
-/* BEGIN function to add product cards to the mini cart in the shopping bag slide in tray depending on how much shoppingBagProductQuantity is worth */
+/* BEGIN function to add product cards to the mini cart in the shopping bag slide in tray
+depending on how much shoppingBagProductQuantity is worth */
 // Function to generate and append HTML blocks
 
 function addMiniCartProductCards() {
-    var container = document.querySelector('.mini-cart-product-card-container-div'); // Assuming you have a container div with class 'mini-cart-product-card-container-div'
+    var container = document.querySelector('.mini-cart-product-card-container-div'); /* Assuming you have a container div
+    with class 'mini-cart-product-card-container-div' */
 
     for (var i = 0; i < shoppingBagProductQuantity; i++) {
-        var htmlBlock = `
+        var miniCartProductCard = `
                 <div class="mini-cart-product-card-div">
                     <img class="mini-cart-img"
                         src="images/louis-vuitton-embroidered-denim-blouson--HQA15WTZ0506_PM2_Front view-2.png"
@@ -348,7 +353,7 @@ function addMiniCartProductCards() {
                 </div>
             `;
 
-        container.insertAdjacentHTML('afterbegin', htmlBlock); // Prepend the generated block to the container
+        container.insertAdjacentHTML('afterbegin', miniCartProductCard); // Prepend the generated block to the container
     }
 }
 
@@ -362,7 +367,6 @@ if (document.querySelector('.mini-cart-product-card-container-div')) {
 
 
 // BEGIN UPDATE shopping bag quantity everywhere with shoppingBagProductQuantity from localStorage on page load
-
 window.onload = function () {
     updateShoppingBagProductQuantityDisplayAndDisableTheShoppingBagButtonIfTheQuantityIs0();
 }
@@ -372,7 +376,6 @@ window.onload = function () {
 
 
 //BEGIN OPEN SHOPPING BAG MENU ON CLICKING SHOPPING BAG ICON IN HEADER
-
 document.querySelector('.shopping-bag-icon-container-button').addEventListener('click', function () {
 
     // Check if shoppingBagProductQuantity is less than 1, and if so, prevent opening the shopping bag menu
@@ -418,9 +421,6 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
 
 // BEGIN CLOSE SHOPPING BAG ICON MENU ON CLICK either the X or by clicking outisde the shopping bag (clicking the dark half)
 // Function to remove classes, and trigger mouseout on the header when we close the shopping bag menu
-
-
-
 function removeClassesAndTriggerMouseoutOnShoppingBagMenuClose(event) {
 
     const closeButton = document.querySelector('.close-shopping-bag-in-page-menu-div-button-for-computer');
@@ -504,7 +504,6 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 /* BEGIN CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS
 and detecting when the thumbnail image current worn is shown to remove text details from product card */
 
-
 // Set up IntersectionObserver options
 let options = {
     root: null,
@@ -535,3 +534,90 @@ function handleIntersection(entries, observer) {
 }
 
 /* END CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS */
+
+
+
+
+
+
+
+
+
+/* BEGIN generic modal menu script */
+function genericModalMenuOpen() {
+
+    document.documentElement.classList.toggle('after-generic-modal-menu-open');
+
+}
+/* END generic modal menu script */
+
+/* BEGIN call us modal function */
+function callUsModal() {
+    document.querySelector('.generic-modal-title-h1').innerHTML = 'Call Us';
+    document.querySelector('.generic-modal-inner-content-div').innerHTML = `
+        <div class="call-us-inner-modal-content-div">
+            <p>Wherever you are, Louis Vuitton Client Advisors will be delighted to assist you.</p>
+            <div class="call-us-contacts-div">
+                <ul>
+                    <li><img src="svg/mobile.svg" alt="Phone">+1.866.VUITTON</li>
+                    <li><img src="svg/email.svg" alt="Email">Send an Email</li>
+                </ul>
+            </div>
+            <div class="call-us-need-help-div">
+                Need Help?
+                <ul>
+                    <li>FAQ</li>
+                    <li>Care Services</li>
+                    <li>Find a Store</li>
+                </ul>
+            </div>
+        </div>
+    `;
+
+    genericModalMenuOpen();
+}
+/* END call us modal function */
+
+/* BEGIN colors modal */
+function colorsModal() {
+    document.querySelector('.generic-modal-title-h1').innerHTML = 'Colors';
+    document.querySelector('.generic-modal-inner-content-div').innerHTML = `
+    <div class="color-options-modal-inner-content-div">
+    <ul>
+        <li>
+            <img src="images/lvcolor1.png" alt="Color Option 1">
+        </li>
+        <li>
+            <img src="images/lvcolor2.png" alt="Color Option 2">
+        </li>
+        <li>
+            <img src="images/lvcolor3.png" alt="Color Option 3">
+        </li>
+    </ul>
+</div>
+    `;
+
+    genericModalMenuOpen();
+
+}
+/* END colors modal */
+
+/* BEGIN sizes modal */
+function sizesModal() {
+    document.querySelector('.generic-modal-title-h1').innerHTML = 'Sizes';
+
+    genericModalMenuOpen();
+
+}
+/* END sizes modal */
+
+
+
+
+
+/* BEGIN Proceed to checkout button in cart navigation */
+
+function navigateToCheckoutPage() {
+    window.location.href = 'checkout.html';
+}
+/* END Proceed to checkout button in cart navigation */

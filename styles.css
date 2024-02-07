@@ -437,6 +437,10 @@ header.scrolled {
     display: none;
   }
 
+  .call-us-button {
+    display: none;
+  }
+
   .shopping-bag-icon-container-div-2 {
     padding-right: 1rem;
   }
@@ -718,6 +722,10 @@ header.scrolled {
     padding: 0.8125rem 2rem;
   }
 
+  .slide-in-modal-menu-div-for-computer {
+    display: none;
+  }
+
   /*END PRODUCT PAGE*/
 
   /* BEGIN cart page */
@@ -857,7 +865,18 @@ header.scrolled {
   }
 
   /* END cart page */
+  /* BEGIN checkout page */
+  .checkout-page-header-for-computer {
+    display: none;
+  }
 
+  .checkout-form-number-image {
+    height: 2rem;
+    width: 2rem;
+    background-color: black;
+    border-radius: 100%;
+  }
+  /* END checkout page */
 }
 
 @media (min-width: 768px) {
@@ -879,6 +898,10 @@ header.scrolled {
     width: 100%;
   }
 
+  .after-generic-modal-menu-open body {
+    overflow: hidden;
+  }
+
   header {
     padding: 0;
     z-index: 3;
@@ -896,7 +919,12 @@ header.scrolled {
   header.on-header-hover {
     background-color: white;
     box-shadow: inset 0 -1px 0 0 #ececec;
-    transition: all .3s cubic-bezier(.39, .575, .565, 1);
+    color: black;
+  }
+
+  .after-generic-modal-menu-open header {
+    background-color: white;
+    box-shadow: inset 0 -1px 0 0 #ececec;
     color: black;
   }
 
@@ -1152,14 +1180,35 @@ header.scrolled {
     z-index: -1;
   }
 
+  .nav-toolbar-div-for-computer {
+    border: 0px solid red;
+    display: flex;
+    flex-direction: row;
+    z-index: -1;
+    padding-right: 3.125vw;
+    margin-right: 8px;
+  }
+
+  .call-us-button {
+    border: 0px solid red;
+    appearance: none;
+    outline: none;
+    background-color: transparent;
+    margin-right: 13px;
+    padding: 0 .5rem;
+    font-size: .875rem;
+    letter-spacing: .025rem;
+    line-height: 1rem;
+    color: #000;
+    cursor: pointer;
+  }
+
   /* BEGIN SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
   .shopping-bag-icon-container-div-2 {
     position: relative;
     z-index: -1;
     transition: z-index 0s ease 0.3s;
     border: 0px solid red;
-    padding-right: 3.125vw;
-    margin-right: 8px;
   }
 
   .shopping-bag-icon-container-div-2.after-clicking-on-shopping-bag-icon {
@@ -1781,10 +1830,140 @@ header.scrolled {
     border: 1px solid black;
   }
 
+  /* BEGIN generic modal menu for computer in product page (has nothing to do with product page) */
+  .slide-in-modal-menu-div-for-computer {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+  }
+
+  .dark-background-div {
+    transform: translate3d(-100%, 0, 0);
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    width: 100vw;
+    height: 100dvh;
+    background-color: black;
+    border: 0px solid red;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0s ease 0.3s;
+  }
+
+  .after-generic-modal-menu-open .dark-background-div {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0s ease 0s;
+  }
+
+  .modal-white-half-menu-div {
+    transform: translate3d(100%, 0, 0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100dvh;
+    background-color: white;
+    transition-property: opacity, transform;
+    transition: 0.3s;
+  }
+
+  .after-generic-modal-menu-open .modal-white-half-menu-div {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .generic-modal-menu-content-container-div {
+    box-sizing: border-box;
+    border: 0px solid red;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - 3rem);
+  }
+
+  .generic-modal-title-and-close-button-container-div {
+    display: flex;
+    justify-content: space-between;
+    border: 0px solid orange;
+    margin-top: 0rem;
+    background-color: transparent;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+
+  .generic-modal-title-h1 {
+    font-size: 1.125rem;
+  }
+
+  .generic-modal-close-button {
+    background-color: transparent;
+    border: 0px solid blue;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .generic-modal-close-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .generic-modal-inner-content-div {
+    overflow: auto;
+    padding-bottom: 3rem;
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+
+  /* BEGIN call us inner modal menu content */
+  .call-us-inner-modal-content-div {
+    padding-top: 2rem;
+    font-size: .875rem;
+    letter-spacing: .025rem;
+    line-height: 1.25rem;
+  }
+
+  .call-us-inner-modal-content-div ul {
+    padding: 0;
+    margin: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+    list-style: none;
+  }
+
+  .call-us-contacts-div li {
+    display: flex;
+  }
+
+  .call-us-contacts-div img {
+    margin-right: .5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+
+  /* END call us inner modal menu content */
+  /* BEGIN color inner modal menu content */
+  .color-options-modal-inner-content-div li {
+    border: 1px solid #e1dfd8;
+    border-radius: 4px;
+    padding: .5rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  .color-options-modal-inner-content-div li img {
+    width: 100%;
+    background-image: url('gradient-background.svg');
+    background-size: cover;
+  }
+
+  /* END color inner modal menu content */
+  /* END generic modal menu for computer in product page */
   /* END PRODUCT PAGE */
 
   /* BEGIN cart page */
-
   .cart-section {
     display: flex;
     flex-wrap: wrap;
@@ -2002,19 +2181,37 @@ header.scrolled {
     width: 33.3333333333%;
     background-color: white;
     padding-bottom: 1rem;
-    padding-left: 3.125vw;
-    padding-right: 3.125vw;
-    padding-top: 1rem;
     box-sizing: border-box;
   }
 
+  .checkout-and-total-div {
+    padding-bottom: 2.5rem;
+    padding-top: 2.5rem;
+    box-sizing: border-box;
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+  }
+
+
+
+  .cart-proceed-to-checkout-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
   .product-reinsurance-unordered-list {
+    background-color: white;
+    border-top: 1px solid #ececec;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+    box-sizing: border-box;
   }
 
   .product-reinsurance-list-item:not(:last-child) {
@@ -2168,6 +2365,229 @@ header.scrolled {
   }
 
   /* END cart page */
+  /* BEGIN checkout page */
+  .checkout-page-header-for-computer {
+    background-color: white;
+    box-shadow: inset 0 -1px 0 #ececec;
+    height: 4.5rem;
+    position: static;
+  }
+
+  .checkout-page-logo-div {
+    font-family: 'HKGrotesk-SemiBold', sans-serif;
+    color: black;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    padding-left: 3.125vw;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+  }
+
+  .checkout-page-logo-div a {
+    color: black;
+  }
+
+  .checkout-page-header-for-computer button {
+    background-color: transparent;
+    border: 0;
+    height: 100%;
+    cursor: pointer;
+    color: black;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: .025rem;
+    line-height: 1rem;
+    border-left: 1px solid #ececec;
+  }
+
+  .checkout-page-header-for-computer button:hover span {
+    text-decoration: underline;
+  }
+
+  .checkout-page-header-for-computer img {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .checkout-page-main {
+    background-color: #f6f5f3;
+    position: static;
+    padding-left: 4.6875vw;
+    padding-right: 4.6875vw;
+    box-sizing: border-box;
+  }
+
+  .checkout-page-previous-page-button {
+    background-color: transparent;
+    border: 0;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: -1rem;
+  }
+
+  .checkout-page-previous-page-button img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .checkout-page-content-section {
+    display: flex;
+  }
+
+  .checkout-form {
+    margin-right: 1.5rem;
+  }
+
+  .checkout-form-step-title-div {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ececec;
+    background-color: white;
+  }
+
+  .checkout-form-number-image {
+    height: 2rem;
+    width: 2rem;
+    background-color: black;
+    border-radius: 100%;
+    margin-right: 1rem;
+  }
+
+  .checkout-form-step-title-span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .025rem;
+    line-height: 1.75rem;
+  }
+
+  .checkout-form-step-details-div {
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: white;
+  }
+
+  .checkout-form-step-description-span {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: .025rem;
+    line-height: 1.25rem;
+  }
+
+  .checkout-page-email-label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .checkout-page-email-input {
+    color: black;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+    font-size: 1rem;
+    letter-spacing: .025rem;
+    line-height: 3rem;
+    transition: border .3s cubic-bezier(.39,.575,.565,1);
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .checkout-page-email-input:hover {
+    border-color: black;
+  }
+
+  .checkout-page-email-input:focus {
+    border-color: black;
+    outline: none;
+  }
+
+  .checkout-form-newsletter-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .checkout-page-terms-and-conditions-checkbox-input {
+    margin-right: 1rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    width: 1rem;
+    height: 1rem;
+    color: red;
+    background-color: white;
+    appearance: none;
+  }
+
+  .checkout-page-terms-and-conditions-checkbox-input:checked {
+    background-color: black;
+  }
+
+  .checkout-page-terms-and-conditions-checkbox-label {
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: .025rem;
+    line-height: 1rem;
+  }
+
+  .privacy-policy-anchor {
+    color: black;
+    box-shadow: 0 2px 0 -1px black;
+    transition: color .3s cubic-bezier(.39, .575, .565, 1);
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+    white-space: nowrap;
+  }
+
+  .privacy-policy-anchor:hover {
+    box-shadow: 0 2px 0 -1px rgba(25, 17, 11, .6);
+    color: rgba(25, 17, 11, .6);
+  }
+
+  .checkout-form-step-action-buttons-div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .checkout-form-step-continue-button {
+    background-color: black;
+    color: white;
+    border-radius: 100vmax;
+    cursor: pointer;
+    min-height: 3rem;
+    min-width: 15rem;
+    font-size: 1rem;
+    letter-spacing: 0.025rem;
+    line-height: 1.25rem;
+    border: 1px solid black;
+    padding: 0.8125rem 2rem;
+    transition: border 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+      color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, background 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+      box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+  }
+
+  .checkout-form-step-continue-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  /* END checkout page */
 }
 
 /* BEGIN MENU */
@@ -2747,3 +3167,24 @@ footer a {
 }
 
 /* END PRODUCT PAGE */
+
+/* BEGIN CART PAGE */
+.cart-proceed-to-checkout-button {
+  background-color: black;
+  color: white;
+  border-radius: 100vmax;
+  cursor: pointer;
+  min-height: 3rem;
+  min-width: 13rem;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0.025rem;
+  line-height: 1.25rem;
+  border: 1px solid black;
+  padding: 0.8125rem 2rem;
+  transition: border 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    color 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s, background 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s,
+    box-shadow 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+}
+
+/* END CART PAGE */

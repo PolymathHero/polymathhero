@@ -4,12 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The official About Us page for the official website for Polymath Hero.">
-  <title>My Shopping Bag | POLYMATH HERO Online Store</title>
+  <meta name="description" content="The official Checkout page for the official website for Polymath Hero.">
+  <title>Checkout - Polymath Hero online store</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Media query for screens larger than mobile size */
+    @media screen and (min-width: 768px) {
+      header:last-of-type {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
-<body id="body-id">
+<body>
+
+  <header class="checkout-page-header-for-computer">
+    <div class="checkout-page-logo-div">
+      <a href="index.html">POLYMATH HERO</a>
+    </div>
+    <button class="checkout-page-secure-payment-button">
+      <img src="svg/lock.svg" alt="Secure payment">
+      <span>Secure Payment</span>
+    </button>
+    <button class="checkout-page-email-us-button">
+      <img src="svg/email.svg" alt="Email us">
+      <span>Email us at polymathhero@outlook.com</span>
+    </button>
+  </header>
+
   <header id="myHeader"
     class="non-index-header regular-document-flow-white-background-color-header static-position-header">
     <!-- BEGIN MENU -->
@@ -106,130 +129,63 @@
     </div>
   </header>
 
-  <main class="main-under-static-header">
+  <main class="checkout-page-main">
 
+    <button class="checkout-page-previous-page-button" onclick="window.history.back()">
+      <img src="svg/left-arrow.svg" alt="Back">
+    </button>
 
-
-
-
-
-    <section class="cart-section">
-
-
-      <section class="left-cart-section-on-computer top-cart-section-on-mobile">
-
-        <div class="empty-cart-div">
-          <img src="images/empty-cart.png" alt="Empty cart" class="empty-cart-img">
-          <h1 class="empty-cart-h1">Your shopping bag is empty</h1>
-          <a href="product-listing.html" class="empty-cart-a">Start Shopping</a>
+    <section class="checkout-page-content-section">
+      <form class="checkout-form">
+        <div class="checkout-form-step-title-div">
+          <img src="svg/one.svg" alt="Step 1" class="checkout-form-number-image">
+          <span class="checkout-form-step-title-span">Identification</span>
         </div>
-
-        <div class="cart-header-for-when-there-is-products-in-the-cart-div">
-          <h1 class="cart-header-for-when-there-is-products-in-the-cart-h1">My Shopping Cart
-            <span class="cart-header-span">(<span class="cart-header-cart-quantity-span"></span>)</span>
-          </h1>
-          <a href="index.html" class="cart-header-continue-shopping-a">Continue Shopping</a>
-        </div>
-
-        <div class="cart-product-item-div">
-          <div class="cart-product-item-card-div">
-            <div class="cart-product-item-media-wrap">
-              <img class="cart-product-item-img"
-                src="images/louis-vuitton-embroidered-denim-blouson--HQA15WTZ0506_PM2_Front view-2.png"
-                alt="Monogram Flocked Silk Long-Sleeved Shirt (Product zoom)">
-            </div>
-
-            <div class="cart-product-card-header-div">
-              <div class="cart-product-card-header-serial-number-div">
-                <span class="cart-product-card-header-serial-number-span">1AFAWS</span>
-              </div>
-              <h2 class="cart-product-card-header-h2">Monogram Flocked Silk Long-Sleeved Shirt</h2>
-            </div>
-
-            <div class="cart-product-card-variants-and-price-div">
-              <ul>
-                <li><span>Color</span><span>Red</span></li>
-                <li><span>Size</span><span>50</span></li>
-              </ul>
-              <div class="cart-product-card-dropdown-and-price-div">
-                <div class="cart-product-card-quantity-div">
-                  <img src="svg/down-chevron.svg" alt="Down Chevron"
-                    class="cart-product-card-quantity-dropdown-chevron-img">
-                  <select class="cart-product-card-quantity-dropdown">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                  </select>
-                </div>
-                <span class="cart-product-card-price-span">$2,270.00</span>
-              </div>
-            </div>
-
-            <div class="cart-product-card-actions-div">
-              <button class="cart-product-card-view-details-button"><img src="svg/eye.svg" alt="View Details"><span>View
-                  Details</span></button>
-              <button class="cart-product-card-remove-button"><img src="svg/circle-x.svg"
-                  alt="Remove"><span>Remove</span></button>
-            </div>
+        <div class="checkout-form-step-details-div">
+          <span class="checkout-form-step-description-span">Please enter your email address. You may continue as a
+            guest.</span>
+          <label for="email" class="checkout-page-email-label">Email*</label>
+          <input type="email" id="email" name="email" required class="checkout-page-email-input">
+          <div class="checkout-form-newsletter-div">
+            <input type="checkbox" id="terms-and-conditions-checkbox" name="terms-and-conditions-checkbox" checked
+              class="checkout-page-terms-and-conditions-checkbox-input">
+            <label for="terms-and-conditions-checkbox" class="checkout-page-terms-and-conditions-checkbox-label">I have
+              read and understood the <a href="privacy-policy.html" class="privacy-policy-anchor">Privacy Policy</a>, and I agree to
+              receive
+              marketing communications via email.</label>
+          </div>
+          <div class="checkout-form-step-action-buttons-div">
+            <button class="checkout-form-step-continue-button">Continue</button>
           </div>
         </div>
 
+        <div class="checkout-form-step-title-div">
+          <img src="svg/two.svg" alt="Step 2" class="checkout-form-number-image">
+          <span class="checkout-form-step-title-span">Delivery Options</span>
         </div>
-
-      </section>
-
-
-
-      <section class="right-unnecessary-cart-information-section-on-computer bottom-cart-section-on-mobile">
-
-        <div class="checkout-and-total-div">
-          <div class="price-info-div">
+        <div class="checkout-form-step-details-div">
+          <span>Deliver to an Address</span>
+          <div>
+            <input type="radio" id="green-delivery" name="delivery" value="green-delivery" checked>
+            <label for="green-delivery">
+              <div class="delivery-option-label-details-div">
+                <span>Green Delivery - Estimated between 10 and 13 days</span>
+                <span>Delivery with the least impact on the environment.</span>
+                <span>Complimentary</span>
+              </div>
+            </label>
           </div>
-          <button class="cart-proceed-to-checkout-button" onclick="navigateToCheckoutPage()">Proceed to checkout</button>
         </div>
 
-        <ul class="product-reinsurance-unordered-list">
-          <li class="product-reinsurance-list-item">
-            <button class="product-reinsurance-button">
-              <img src="svg/credit-card.svg" alt="Payment" class="product-reinsurance-img">
-              <div class="product-reinsurance-text-div">
-                <span class="product-reinsurance-title-span">Payment</span>
-                <span class="product-reinsurance-subtitle-span">Credit card, debit card, PayPal, or Apple Pay</span>
-              </div>
-            </button>
-          </li>
-          <li class="product-reinsurance-list-item">
-            <button class="product-reinsurance-button">
-              <img src="svg/truck.svg" alt="Payment" class="product-reinsurance-img">
-              <div class="product-reinsurance-text-div">
-                <span class="product-reinsurance-title-span">Shipping & Delivery</span>
-                <span class="product-reinsurance-subtitle-span">Complimentary Green Delivery</span>
-              </div>
-            </button>
-          </li>
-          <li class="product-reinsurance-list-item">
-            <button class="product-reinsurance-button">
-              <img src="svg/rotate-arrows.svg" alt="Payment" class="product-reinsurance-img">
-              <div class="product-reinsurance-text-div">
-                <span class="product-reinsurance-title-span">Returns & Exchanges</span>
-                <span class="product-reinsurance-subtitle-span">Complimentary</span>
-              </div>
-            </button>
-          </li>
-          <li class="product-reinsurance-list-item">
-            <button class="product-reinsurance-button">
-              <img src="svg/people-carrying-a-box.svg" alt="Payment" class="product-reinsurance-img">
-              <div class="product-reinsurance-text-div">
-                <span class="product-reinsurance-title-span">Next Day Collect-In-Store</span>
-              </div>
-            </button>
-          </li>
-        </ul>
-      </section>
-
+        <div class="checkout-form-step-title-div">
+          <img src="svg/three.svg" alt="Step 3" class="checkout-form-number-image">
+          <span class="checkout-form-step-title-span">Payment</span>
+        </div>
+        <div class="checkout-form-step-details-div">
+        </div>
+      </form>
 
     </section>
-
-
   </main>
 
   <script defer src="script.js"></script>
@@ -238,7 +194,6 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-
 </body>
 
 </html>
