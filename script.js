@@ -549,6 +549,14 @@ function genericModalMenuOpen() {
     document.documentElement.classList.toggle('after-generic-modal-menu-open');
 
 }
+
+function genericModalOpen() {
+    document.documentElement.classList.add('after-generic-modal-menu-open');
+}
+
+function genericModalClose() {
+    document.documentElement.classList.remove('after-generic-modal-menu-open');
+}
 /* END generic modal menu script */
 
 /* BEGIN call us modal function */
@@ -611,13 +619,47 @@ function sizesModal() {
 }
 /* END sizes modal */
 
+/* BEGIN checkout form delivery options modal */
+function checkoutFormDeliveryOptionsModalOpen() {
+    document.documentElement.classList.add('after-checkout-form-delivery-options-modal-open');
+
+    genericModalOpen();
+}
+
+function checkoutFormDeliveryOptionsModalClose() {
+    document.documentElement.classList.remove('after-checkout-form-delivery-options-modal-open');
+
+    genericModalClose();
+}
+/* END checkout form delivery options modal */
+
+/* BEGIN checkout form payment modal */
+function checkoutFormPaymentModalOpen() {
+    document.documentElement.classList.add('after-checkout-form-payment-modal-open');
+
+    genericModalOpen();
+}
+
+function checkoutFormPaymentModalClose() {
+    document.documentElement.classList.remove('after-checkout-form-payment-modal-open');
+
+    genericModalClose();
+}
+/* END checkout form payment modal */
 
 
 
 
-/* BEGIN Proceed to checkout button in cart navigation */
 
+
+
+
+
+
+
+
+/* BEGIN Proceed to checkout button in cart page */
 function navigateToCheckoutPage() {
     window.location.href = 'checkout.html';
 }
-/* END Proceed to checkout button in cart navigation */
+/* END Proceed to checkout button in cart page */
