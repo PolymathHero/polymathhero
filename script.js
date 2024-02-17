@@ -344,7 +344,7 @@ function addMiniCartProductCards() {
         var miniCartProductCard = `
                 <div class="mini-cart-product-card-div">
                     <img class="mini-cart-img"
-                        src="images/louis-vuitton-embroidered-denim-blouson--HQA15WTZ0506_PM2_Front view-2.png"
+                        src="/images/louis-vuitton-embroidered-denim-blouson--HQA15WTZ0506_PM2_Front view-2.png"
                         alt="Mini Cart Image">
                     <div class="mini-cart-product-card-text-details-div">
                         <span class="mini-cart-product-card-product-name">Monogram Flocked Silk Long-Sleeved Shirt</span>
@@ -567,8 +567,8 @@ function callUsModal() {
             <p>Wherever you are, Louis Vuitton Client Advisors will be delighted to assist you.</p>
             <div class="call-us-contacts-div">
                 <ul>
-                    <li><img src="svg/mobile.svg" alt="Phone">+1.866.VUITTON</li>
-                    <li><img src="svg/email.svg" alt="Email">Send an Email</li>
+                    <li><img src="/svg/mobile.svg" alt="Phone">+1.866.VUITTON</li>
+                    <li><img src="/svg/email.svg" alt="Email">Send an Email</li>
                 </ul>
             </div>
             <div class="call-us-need-help-div">
@@ -593,13 +593,13 @@ function colorsModal() {
     <div class="color-options-modal-inner-content-div">
     <ul>
         <li>
-            <img src="images/lvcolor1.png" alt="Color Option 1">
+            <img src="/images/lvcolor1.png" alt="Color Option 1">
         </li>
         <li>
-            <img src="images/lvcolor2.png" alt="Color Option 2">
+            <img src="/images/lvcolor2.png" alt="Color Option 2">
         </li>
         <li>
-            <img src="images/lvcolor3.png" alt="Color Option 3">
+            <img src="/images/lvcolor3.png" alt="Color Option 3">
         </li>
     </ul>
 </div>

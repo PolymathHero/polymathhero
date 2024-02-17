@@ -780,9 +780,62 @@
                   <h2>Cryptocurrency</h2>
                   <label>Payment Currency*</label>
                   <div class="checkout-form-payment-modal-payment-currency-div">
-                    <select required>
-                    </select>
-                    <img src="svg/down-chevron.svg" alt="Down Chevron">
+                    <button class="checkout-form-payment-modal-bitcoin-button" type="button">
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/bitcoin.png" alt="Bitcoin">
+                        <span>Bitcoin</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">BTC</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/ethereum.png" alt="Ethereum">
+                        <span>Ethereum</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">ETH</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/usdc.png" alt="USD Coin">
+                        <span>USD Coin</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">USDC</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/dogecoin.png" alt="Dogecoin">
+                        <span>Dogecoin</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">DOGE</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/litecoin.png" alt="Litecoin">
+                        <span>Litecoin</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">LTC</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/dai.png" alt="Dai">
+                        <span>Dai</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">DAI</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/bitcoin-cash.png" alt="Bitcoin Cash">
+                        <span>Bitcoin Cash</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">BCH</span>
+                    </button>
+                    <button>
+                      <div class="checkout-form-payment-modal-payment-currency-button-name-div">
+                        <img src="images/tether.png" alt="Tether">
+                        <span>Tether</span>
+                      </div>
+                      <span class="checkout-form-payment-modal-currency-ticker">USDT</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -794,9 +847,12 @@
     </section>
   </main>
 
-
+  <div class="payment-loading-bar-div"></div>
+  <div class="payment-loading-bar-blue-stripe-one-div"></div>
+  <div class="payment-loading-bar-blue-stripe-two-div"></div>
 
   <script defer src="script.js"></script>
+  <script src="api/checkout.mjs"></script>
 
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
