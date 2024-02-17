@@ -1,6 +1,6 @@
 document.querySelector('.checkout-form-payment-modal-bitcoin-button').addEventListener('click', function() {
     var myHeaders = new Headers();
-    myHeaders.append("x-api-key", "DATQ5KZ-A9J4T4E-GGVT4Q9-XQZXG0C");
+    myHeaders.append("x-api-key", "");
     
     var requestOptions = {
       method: 'GET',
