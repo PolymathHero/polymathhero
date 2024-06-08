@@ -387,7 +387,7 @@ document.querySelector('.shopping-bag-icon-container-button').addEventListener('
     // Check the screen width and if bigger than mobile then open the slide in tray, else go to the cart page
     if (window.innerWidth <= 768) {
         // On mobile, navigate to a new page
-        window.location.href = 'cart.html';
+        window.location.href = '/cart.html';
     } else {
 
 
@@ -487,7 +487,6 @@ document.querySelector('.shopping-bag-dark-menu-half-div-for-computer').addEvent
 
 
 /* BEGIN define custom CSS height variable for height units for mobile */
-
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -503,7 +502,6 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 /* BEGIN CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS
 and detecting when the thumbnail image current worn is shown to remove text details from product card */
-
 // Set up IntersectionObserver options
 let options = {
     root: null,
@@ -532,7 +530,6 @@ function handleIntersection(entries, observer) {
         }
     });
 }
-
 /* END CREATING INTERSECTION OBSERVER FOR THE PRODUCT CARD IMAGE CONTAINER DIVS */
 
 
@@ -561,14 +558,19 @@ function genericModalClose() {
 
 /* BEGIN call us modal function */
 function callUsModal() {
-    document.querySelector('.generic-modal-title-h1').innerHTML = 'Call Us';
+    document.querySelector('.generic-modal-title-h1').innerHTML = 'Contact Us';
     document.querySelector('.generic-modal-inner-content-div').innerHTML = `
         <div class="call-us-inner-modal-content-div">
-            <p>Wherever you are, Louis Vuitton Client Advisors will be delighted to assist you.</p>
+            <p>Wherever you are, Polymath Hero Client Advisors will be delighted to assist you.</p>
             <div class="call-us-contacts-div">
                 <ul>
-                    <li><img src="/svg/mobile.svg" alt="Phone">+1.866.VUITTON</li>
-                    <li><img src="/svg/email.svg" alt="Email">Send an Email</li>
+                    <li><img src="/svg/mobile.svg" alt="Phone">
+                    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/polymathhero/video-call?hide_gdpr_banner=1&primary_color=1a1a1a'});return false;">Schedule a Call</a>
+    <!-- Calendly link widget end -->
+                    </li>
+                    <!--<li><img src="/svg/email.svg" alt="Email">Send an Email</li>-->
                 </ul>
             </div>
             <div class="call-us-need-help-div">
@@ -619,6 +621,19 @@ function sizesModal() {
 }
 /* END sizes modal */
 
+/* BEGIN product details modal */
+function productDetailsModal() {
+    document.querySelector('.generic-modal-title-h1').innerHTML = 'Product Details';
+    document.querySelector('.generic-modal-inner-content-div').innerHTML = `
+    <div class="product-details-modal-inner-content-div">
+    <p>This electricity generation kit is aimed at beginners who want to begin their journey of understanding electricity; composed of copper wire, neodymium magnets, and a multimeter to detect electricity, we give the average person a chance at understanding electricity.</p>
+</div>
+    `;
+    genericModalMenuOpen();
+}
+
+/* END product details modal */
+
 /* BEGIN checkout form delivery options modal */
 function checkoutFormDeliveryOptionsModalOpen() {
     document.documentElement.classList.add('after-checkout-form-delivery-options-modal-open');
@@ -660,6 +675,6 @@ function checkoutFormPaymentModalClose() {
 
 /* BEGIN Proceed to checkout button in cart page */
 function navigateToCheckoutPage() {
-    window.location.href = 'checkout.html';
+    window.location.href = '/checkout.php';
 }
 /* END Proceed to checkout button in cart page */

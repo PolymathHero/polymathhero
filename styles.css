@@ -26,6 +26,8 @@
 
 html {
   background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* CSS Reset */
@@ -153,8 +155,33 @@ button {
   font-family: 'HKGrotesk-Regular', Arial, sans-serif;
 }
 
+.announcement-bar-div {
+  min-height: 36px;
+  text-align: center;
+  background-color: #f6f5f3;
+  border: 0px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.announcement-bar-div p {
+  margin: 0;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: .025rem;
+  line-height: 1.25rem;
+}
+
+.header-and-main-div {
+  position: relative;
+}
+
 header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -275,6 +302,16 @@ header.scrolled {
 
 .on-menu-click-header-icon path {
   fill: black;
+}
+
+main {
+  position: relative;
+  margin-top: -5.5rem;
+  width: 100%;
+}
+
+.main-under-static-header {
+  margin-top: 0;
 }
 
 /* MEDIA QUERY for screens with a maximum width of 768px (typical for mobile devices) */
@@ -507,8 +544,12 @@ header.scrolled {
     display: none;
   }
 
+  main {
+    margin-top: -3.5rem;
+  }
+
   .main-under-fixed-header {
-    margin-top: 3.5rem;
+    margin-top: 0;
   }
 
   .feed-post-container {
@@ -917,6 +958,10 @@ header.scrolled {
   /* BEGIN checkout page */
   .checkout-page-header-for-computer {
     display: none;
+  }
+
+  .checkout-page-main {
+    margin-top: 0;
   }
 
   .checkout-form-number-image {
@@ -1495,7 +1540,7 @@ header.scrolled {
   /* END SHOPPING BAG ICON ON CLICK MENU FOR COMPUTER */
 
   .main-under-fixed-header {
-    margin-top: 5.5rem;
+    margin-top: 0;
   }
 
   .feed-post-link video {
@@ -2461,6 +2506,7 @@ header.scrolled {
     padding-left: 4.6875vw;
     padding-right: 4.6875vw;
     box-sizing: border-box;
+    margin-top: 0;
   }
 
   .checkout-page-previous-page-button {
@@ -2483,6 +2529,14 @@ header.scrolled {
   }
 
   .checkout-form {
+    margin-right: 1.5rem;
+  }
+
+  .checkout-form-div {
+    display: flex;
+  }
+
+  .checkout-form-part-one-div {
     margin-right: 1.5rem;
   }
 
@@ -2838,6 +2892,10 @@ header.scrolled {
     height: 1.5rem;
   }
 
+  .checkout-page-cart-review-div {
+    background-color: white;
+  }
+
   /* END checkout page */
   /* BEGIN generic modal menu for computer */
   .slide-in-modal-menu-div-for-computer {
@@ -2994,12 +3052,17 @@ header.scrolled {
 
   .call-us-contacts-div li {
     display: flex;
+    align-items: center;
   }
 
   .call-us-contacts-div img {
     margin-right: .5rem;
     height: 1rem;
     width: 1rem;
+  }
+
+  .call-us-contacts-div a:visited {
+    color: black;
   }
 
   /* END call us inner modal menu content */
@@ -3021,6 +3084,19 @@ header.scrolled {
   }
 
   /* END color inner modal menu content */
+  /* BEGIN product details inner modal menu content */
+  .product-details-modal-inner-content-div {
+    padding-top: 2rem;
+    font-size: 0.875rem;
+    letter-spacing: .025rem;
+    line-height: 1.25rem;
+  }
+
+  .product-details-modal-inner-content-div p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  /* END product details inner modal menu content */
   /* BEGIN checkout form delivery options modal */
 
   .checkout-form-delivery-options-modal-title-div {
@@ -3339,10 +3415,6 @@ header.scrolled .bar {
 }
 
 /* END MENU */
-
-main {
-  position: relative;
-}
 
 #brandnameanchor {
   color: black;

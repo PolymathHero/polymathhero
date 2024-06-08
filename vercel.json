@@ -1,6 +1,0 @@
-{
-    "rewrites": [
-      { "source": "/feedback/(.*)", "destination": "/feedback-app/feedback-app.html" }
-    ]
-  }
-  
